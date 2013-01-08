@@ -8,7 +8,7 @@
                 <Button x:Name="btnManageClasses" Click="btnManageClasses_Click">Manage Classes</Button>
                 <Button x:Name="btnManageTeachers" Click="btnManageTeachers_Click">Manage Teachers</Button>
             </StackPanel>
-            <Frame x:Name="frameMainContent">
+            <Frame x:Name="frameMainContent" NavigationUIVisibility="Hidden" >
                 
             </Frame>
         </WrapPanel>

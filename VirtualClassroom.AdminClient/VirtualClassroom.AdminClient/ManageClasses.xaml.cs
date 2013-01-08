@@ -16,25 +16,24 @@ using VirtualClassroom.AdminClient.AdminService;
 namespace VirtualClassroom.AdminClient
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ManageClasses.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ManageClasses : Page
     {
-        private AdminServiceClient client = new AdminServiceClient();
+        public static List<Class> Classes { get; set; }
 
-        public MainWindow()
+        public ManageClasses()
         {
             InitializeComponent();
+            this.dataGridClasses.ItemsSource = Classes;
         }
 
-        private void btnManageClasses_Click(object sender, RoutedEventArgs e)
+        private void btnAddClass_Click(object sender, RoutedEventArgs e)
         {
-            Class[] classes = client.GetClasses();
-            ManageClasses.Classes = classes.ToList();
-            this.frameMainContent.Source = new Uri("ManageClasses.xaml", UriKind.Relative);
+
         }
 
-        private void btnManageTeachers_Click(object sender, RoutedEventArgs e)
+        private void btnRemoveClass_Click(object sender, RoutedEventArgs e)
         {
 
         }
