@@ -1,0 +1,16 @@
+﻿<Window x:Class="VirtualClassroom.AdminClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Admin Client" Height="350" Width="525">
+    <Grid>
+        <WrapPanel VerticalAlignment="Center">
+            <StackPanel x:Name="navigation" VerticalAlignment="Center">
+                <Button x:Name="btnManageClasses" Click="btnManageClasses_Click">Manage Classes</Button>
+                <Button x:Name="btnManageTeachers" Click="btnManageTeachers_Click">Manage Teachers</Button>
+            </StackPanel>
+            <Frame x:Name="frameMainContent">
+                
+            </Frame>
+        </WrapPanel>
+    </Grid>
+</Window>

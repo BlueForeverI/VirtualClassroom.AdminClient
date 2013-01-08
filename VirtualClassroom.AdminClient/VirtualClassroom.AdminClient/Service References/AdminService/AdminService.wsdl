@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdminService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAdminService_AddClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddClass" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_RegisterStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterStudent" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_RegisterStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetClasses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClasses" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetClasses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClassesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubject" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_RegisterTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterTeacher" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_RegisterTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterTeacherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetTeachers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeachers" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetTeachers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeachersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddClassesToSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddClassesToSubject" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddClassesToSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClassesToSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetSubjectsByClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectsByClass" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetSubjectsByClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectsByClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetSubjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjects" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetSubjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_LoginStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginStudent" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_LoginStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_LoginTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginTeacher" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_LoginTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginTeacherResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAdminService">
+    <wsdl:operation name="AddClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddClass" message="tns:IAdminService_AddClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddClassResponse" message="tns:IAdminService_AddClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterStudent" message="tns:IAdminService_RegisterStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterStudentResponse" message="tns:IAdminService_RegisterStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClasses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetClasses" message="tns:IAdminService_GetClasses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetClassesResponse" message="tns:IAdminService_GetClasses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddSubject" message="tns:IAdminService_AddSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddSubjectResponse" message="tns:IAdminService_AddSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterTeacher" message="tns:IAdminService_RegisterTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterTeacherResponse" message="tns:IAdminService_RegisterTeacher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTeachers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetTeachers" message="tns:IAdminService_GetTeachers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetTeachersResponse" message="tns:IAdminService_GetTeachers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddClassesToSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddClassesToSubject" message="tns:IAdminService_AddClassesToSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddClassesToSubjectResponse" message="tns:IAdminService_AddClassesToSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectsByClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsByClass" message="tns:IAdminService_GetSubjectsByClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsByClassResponse" message="tns:IAdminService_GetSubjectsByClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjects">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjects" message="tns:IAdminService_GetSubjects_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsResponse" message="tns:IAdminService_GetSubjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/LoginStudent" message="tns:IAdminService_LoginStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/LoginStudentResponse" message="tns:IAdminService_LoginStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/LoginTeacher" message="tns:IAdminService_LoginTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/LoginTeacherResponse" message="tns:IAdminService_LoginTeacher_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAdminService" type="tns:IAdminService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddClass">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/AddClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterStudent">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/RegisterStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClasses">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetClasses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubject">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/AddSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterTeacher">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/RegisterTeacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTeachers">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetTeachers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddClassesToSubject">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/AddClassesToSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectsByClass">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetSubjectsByClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjects">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetSubjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginStudent">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/LoginStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginTeacher">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/LoginTeacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminService">
+    <wsdl:port name="BasicHttpBinding_IAdminService" binding="tns:BasicHttpBinding_IAdminService">
+      <soap:address location="http://virtualclassroomservices.apphb.com/Services/AdminService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
