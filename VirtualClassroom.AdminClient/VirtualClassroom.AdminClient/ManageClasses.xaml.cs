@@ -20,12 +20,13 @@ namespace VirtualClassroom.AdminClient
     /// </summary>
     public partial class ManageClasses : Page
     {
-        public static List<Class> Classes { get; set; }
+        private AdminServiceClient client = ClientManager.GetClient();
 
         public ManageClasses()
         {
             InitializeComponent();
-            this.dataGridClasses.ItemsSource = Classes;
+            this.dataGridClasses.Items.Clear();
+            this.dataGridClasses.ItemsSource = client.GetClasses();
         }
 
         private void btnAddClass_Click(object sender, RoutedEventArgs e)

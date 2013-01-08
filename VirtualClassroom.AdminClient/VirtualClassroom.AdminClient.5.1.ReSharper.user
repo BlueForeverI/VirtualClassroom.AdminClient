@@ -10,22 +10,28 @@
     <RecentFiles>
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Service References/d:AdminService/f:Reference.cs" caret="460" fromTop="8" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml" caret="705" fromTop="8" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml" caret="977" fromTop="5" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml.cs" caret="796" fromTop="16" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="901" fromTop="11" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml.cs" caret="872" fromTop="17" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="634" fromTop="4" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ClientManager.cs" caret="509" fromTop="19" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml" caret="1" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="757" fromTop="24" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="721" fromTop="24" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml" caret="311" fromTop="4" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml" caret="966" fromTop="5" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml" caret="1211" fromTop="6" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml" caret="1100" fromTop="6" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml" caret="776" fromTop="3" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml" caret="1172" fromTop="6" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml" caret="861" fromTop="6" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml" caret="705" fromTop="8" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml.cs" caret="656" fromTop="11" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml.cs" caret="796" fromTop="16" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="668" fromTop="14" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="955" fromTop="24" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="495" fromTop="14" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml.cs" caret="851" fromTop="23" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml.cs" caret="981" fromTop="16" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ClientManager.cs" caret="509" fromTop="19" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="813" fromTop="13" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml.cs" caret="673" fromTop="11" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml.cs" caret="872" fromTop="17" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="634" fromTop="4" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml" caret="853" fromTop="3" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClasses.xaml" caret="398" fromTop="6" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -49,36 +55,51 @@
       <Item value="Uri" priority="0" />
       <Item value="UriKind`0" priority="0" />
       <Item value="ManageClasses`0" priority="1" />
-      <Item value="public" priority="0" />
-      <Item value="static" priority="0" />
+      <Item value="public" priority="1" />
+      <Item value="static" priority="2" />
       <Item value="List`0" priority="0" />
       <Item value="Classes" priority="0" />
-      <Item value="private" priority="0" />
-      <Item value="AdminClient" priority="0" />
+      <Item value="private" priority="2" />
+      <Item value="AdminClient" priority="1" />
       <Item value="AdminService" priority="0" />
-      <Item value="AdminServiceClient`0" priority="0" />
-      <Item value="AdminServiceClient" priority="0" />
-      <Item value="client" priority="2" />
-      <Item value="var" priority="0" />
+      <Item value="AdminServiceClient`0" priority="3" />
+      <Item value="AdminServiceClient" priority="2" />
+      <Item value="client" priority="4" />
+      <Item value="var" priority="1" />
       <Item value="classes" priority="0" />
       <Item value="ToArray`1" priority="1" />
       <Item value="Class`0" priority="0" />
       <Item value="ToList`1" priority="0" />
+      <Item value="new" priority="1" />
+      <Item value="this" priority="1" />
+      <Item value="IEnumerable" priority="0" />
+      <Item value="null" priority="1" />
+      <Item value="if" priority="0" />
+      <Item value="clientInstance" priority="2" />
+      <Item value="return" priority="0" />
+      <Item value="ClientManager`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.UriKind">
       <Item value="Relative" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.ManageClasses">
-      <Item value="dataGridClasses" priority="0" />
+      <Item value="dataGridClasses" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Controls.DataGrid">
-      <Item value="ItemsSource" priority="0" />
+      <Item value="ItemsSource" priority="1" />
+      <Item value="Items" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.AdminService.AdminServiceClient">
-      <Item value="GetClasses`0" priority="1" />
+      <Item value="GetClasses`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@VirtualClassroom.AdminClient.ManageClasses">
       <Item value="Classes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ItemCollection">
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@VirtualClassroom.AdminClient.ClientManager">
+      <Item value="GetClient`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

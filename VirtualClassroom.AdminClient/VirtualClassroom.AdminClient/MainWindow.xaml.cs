@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VirtualClassroom.AdminClient;
 using VirtualClassroom.AdminClient.AdminService;
 
 namespace VirtualClassroom.AdminClient
@@ -20,8 +21,6 @@ namespace VirtualClassroom.AdminClient
     /// </summary>
     public partial class MainWindow : Window
     {
-        private AdminServiceClient client = new AdminServiceClient();
-
         public MainWindow()
         {
             InitializeComponent();
@@ -29,8 +28,6 @@ namespace VirtualClassroom.AdminClient
 
         private void btnManageClasses_Click(object sender, RoutedEventArgs e)
         {
-            Class[] classes = client.GetClasses();
-            ManageClasses.Classes = classes.ToList();
             this.frameMainContent.Source = new Uri("ManageClasses.xaml", UriKind.Relative);
         }
 
