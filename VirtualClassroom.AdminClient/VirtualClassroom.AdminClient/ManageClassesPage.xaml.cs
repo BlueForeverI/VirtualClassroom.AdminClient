@@ -18,11 +18,11 @@ namespace VirtualClassroom.AdminClient
     /// <summary>
     /// Interaction logic for ManageClasses.xaml
     /// </summary>
-    public partial class ManageClasses : Page
+    public partial class ManageClassesPage : Page
     {
         private AdminServiceClient client = ClientManager.GetClient();
 
-        public ManageClasses()
+        public ManageClassesPage()
         {
             InitializeComponent();
             this.dataGridClasses.Items.Clear();
@@ -31,7 +31,15 @@ namespace VirtualClassroom.AdminClient
 
         private void btnAddClass_Click(object sender, RoutedEventArgs e)
         {
-
+            AddClassWindow addClassWindow = new AddClassWindow();
+            if(addClassWindow.ShowDialog() == true)
+            {
+                string letter = addClassWindow.Letter;
+                int number = addClassWindow.Number;
+                client.AddClass(new Class(){Letter = letter, Number = number});
+                MessageBox.Show("Class added successfully!");
+                this.dataGridClasses.ItemsSource = client.GetClasses();
+            }
         }
 
         private void btnRemoveClass_Click(object sender, RoutedEventArgs e)

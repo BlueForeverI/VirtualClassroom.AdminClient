@@ -4,13 +4,19 @@
         Title="Admin Client" Height="350" Width="525">
     <Grid>
         <WrapPanel VerticalAlignment="Center">
-            <StackPanel x:Name="navigation" VerticalAlignment="Center">
-                <Button x:Name="btnManageClasses" Click="btnManageClasses_Click">Manage Classes</Button>
-                <Button x:Name="btnManageTeachers" Click="btnManageTeachers_Click">Manage Teachers</Button>
-            </StackPanel>
-            <Frame x:Name="frameMainContent" NavigationUIVisibility="Hidden" >
+            <WrapPanel VerticalAlignment="Center">
+                <StackPanel x:Name="navigation" VerticalAlignment="Center">
+                    <Button x:Name="btnManageClasses" Click="btnManageClasses_Click">Manage Classes</Button>
+                    <Button x:Name="btnManageTeachers" Click="btnManageTeachers_Click">Manage Teachers</Button>
+                </StackPanel>
                 
-            </Frame>
+            </WrapPanel>
+            <StackPanel>
+                <Label x:Name="lblMessage" Content="" />
+                <Frame x:Name="frameMainContent" NavigationUIVisibility="Hidden" >
+
+                </Frame>
+            </StackPanel>
         </WrapPanel>
     </Grid>
 </Window>

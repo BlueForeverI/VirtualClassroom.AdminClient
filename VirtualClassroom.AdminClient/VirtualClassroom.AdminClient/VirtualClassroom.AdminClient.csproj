@@ -57,15 +57,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddClassWindow.xaml.cs">
+      <DependentUpon>AddClassWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ClientManager.cs" />
-    <Compile Include="ManageClasses.xaml.cs">
-      <DependentUpon>ManageClasses.xaml</DependentUpon>
+    <Compile Include="ManageClassesPage.xaml.cs">
+      <DependentUpon>ManageClassesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service References\AdminService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Page Include="AddClassWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -78,7 +85,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ManageClasses.xaml">
+    <Page Include="ManageClassesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
