@@ -1,0 +1,30 @@
+﻿<Page x:Class="VirtualClassroom.AdminClient.ManageStudentsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      Height="auto" Width="auto"
+	  Title="Manage Students">
+
+    <Grid>
+        <GroupBox Header="Students">
+            <WrapPanel>
+                <DataGrid x:Name="dataGridStudents" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Username" Binding="{Binding Path=Username}" />
+                        <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}" />
+                        <DataGridTextColumn Header="Middle Name" Binding="{Binding Path=MiddleName}" />
+                        <DataGridTextColumn Header="Last Name" Binding="{Binding Path=LastName}" />
+                        <DataGridTextColumn Header="EGN" Binding="{Binding Path=EGN}" />
+                        <DataGridTextColumn Header="Class" Binding="{Binding Path=Class}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel>
+                    <Button x:Name="btnAddStudent" Click="btnAddStudent_Click">Add Student</Button>
+                    <Button x:Name="btnRemoveStudent" Click="btnRemoveStudent_Click">Remove Student</Button>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+    </Grid>
+</Page>

@@ -8,6 +8,8 @@
                 <StackPanel x:Name="navigation" VerticalAlignment="Center">
                     <Button x:Name="btnManageClasses" Click="btnManageClasses_Click">Manage Classes</Button>
                     <Button x:Name="btnManageTeachers" Click="btnManageTeachers_Click">Manage Teachers</Button>
+                    <Button x:Name="btnManageStudents" Click="btnManageStudents_Click">Manage Students</Button>
+                    <Button x:Name="btnManageSubjects" Click="btnManageSubjects_Click">Manage Subjects</Button>
                 </StackPanel>
                 
             </WrapPanel>

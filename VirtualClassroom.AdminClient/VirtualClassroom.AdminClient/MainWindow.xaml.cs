@@ -35,5 +35,15 @@ namespace VirtualClassroom.AdminClient
         {
             this.frameMainContent.Source = new Uri("ManageTeachersPage.xaml", UriKind.Relative);
         }
+
+        private void btnManageStudents_Click(object sender, RoutedEventArgs e)
+        {
+            this.frameMainContent.Source = new Uri("ManageStudentsPage.xaml", UriKind.Relative);
+        }
+
+        private void btnManageSubjects_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

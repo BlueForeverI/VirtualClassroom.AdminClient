@@ -60,12 +60,18 @@
     <Compile Include="AddClassWindow.xaml.cs">
       <DependentUpon>AddClassWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddStudentWindow.xaml.cs">
+      <DependentUpon>AddStudentWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddTeacherWindow.xaml.cs">
       <DependentUpon>AddTeacherWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ClientManager.cs" />
     <Compile Include="ManageClassesPage.xaml.cs">
       <DependentUpon>ManageClassesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageStudentsPage.xaml.cs">
+      <DependentUpon>ManageStudentsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ManageTeachersPage.xaml.cs">
       <DependentUpon>ManageTeachersPage.xaml</DependentUpon>
@@ -76,6 +82,10 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Page Include="AddClassWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddStudentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -96,6 +106,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ManageClassesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageStudentsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,9 +172,6 @@
     <WCFMetadataStorage Include="Service References\AdminService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\AdminService\AdminService.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\AdminService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +182,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdminService\AdminService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

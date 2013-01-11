@@ -907,6 +907,9 @@ namespace VirtualClassroom.AdminClient.AdminService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RemoveStudent", ReplyAction="http://tempuri.org/IAdminService/RemoveStudentResponse")]
         void RemoveStudent(VirtualClassroom.AdminClient.AdminService.Student student);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetStudents", ReplyAction="http://tempuri.org/IAdminService/GetStudentsResponse")]
+        VirtualClassroom.AdminClient.AdminService.Student[] GetStudents();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddSubject", ReplyAction="http://tempuri.org/IAdminService/AddSubjectResponse")]
         void AddSubject(VirtualClassroom.AdminClient.AdminService.Subject subject);
         
@@ -983,6 +986,10 @@ namespace VirtualClassroom.AdminClient.AdminService {
         
         public void RemoveStudent(VirtualClassroom.AdminClient.AdminService.Student student) {
             base.Channel.RemoveStudent(student);
+        }
+        
+        public VirtualClassroom.AdminClient.AdminService.Student[] GetStudents() {
+            return base.Channel.GetStudents();
         }
         
         public void AddSubject(VirtualClassroom.AdminClient.AdminService.Subject subject) {
