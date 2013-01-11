@@ -60,9 +60,15 @@
     <Compile Include="AddClassWindow.xaml.cs">
       <DependentUpon>AddClassWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddTeacherWindow.xaml.cs">
+      <DependentUpon>AddTeacherWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ClientManager.cs" />
     <Compile Include="ManageClassesPage.xaml.cs">
       <DependentUpon>ManageClassesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTeachersPage.xaml.cs">
+      <DependentUpon>ManageTeachersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service References\AdminService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -70,6 +76,10 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Page Include="AddClassWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddTeacherWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,6 +96,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ManageClassesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageTeachersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

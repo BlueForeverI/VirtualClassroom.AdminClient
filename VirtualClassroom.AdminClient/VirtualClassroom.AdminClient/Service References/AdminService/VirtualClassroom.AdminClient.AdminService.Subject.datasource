@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="Subject" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>VirtualClassroom.AdminClient.AdminService.Subject</TypeInfo>
+   <TypeInfo>VirtualClassroom.AdminClient.AdminService.Subject, Service References.AdminService.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

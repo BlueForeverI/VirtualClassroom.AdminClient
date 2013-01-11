@@ -44,7 +44,14 @@ namespace VirtualClassroom.AdminClient
 
         private void btnRemoveClass_Click(object sender, RoutedEventArgs e)
         {
-
+            if(MessageBox.Show("Do you really want to remove this class?", "Are you sure?", 
+                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                Class c = this.dataGridClasses.SelectedItem as Class;
+                client.RemoveClass(c);
+                MessageBox.Show("Class removed successfully!");
+                this.dataGridClasses.ItemsSource = client.GetClasses();
+            }
         }
     }
 }

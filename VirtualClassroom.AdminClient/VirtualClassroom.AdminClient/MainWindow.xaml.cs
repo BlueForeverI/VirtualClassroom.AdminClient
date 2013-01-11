@@ -33,7 +33,7 @@ namespace VirtualClassroom.AdminClient
 
         private void btnManageTeachers_Click(object sender, RoutedEventArgs e)
         {
-
+            this.frameMainContent.Source = new Uri("ManageTeachersPage.xaml", UriKind.Relative);
         }
     }
 }
