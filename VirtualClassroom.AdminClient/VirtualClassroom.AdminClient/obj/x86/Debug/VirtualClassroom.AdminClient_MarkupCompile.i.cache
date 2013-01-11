@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\Dev\Projects\VirtualClassroom\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\App.xaml
-7-126345427
+9-1557224666
 
-14603344563
+16-350359698
 141997438473
-AddClassWindow.xaml;AddStudentWindow.xaml;AddTeacherWindow.xaml;MainWindow.xaml;ManageClassesPage.xaml;ManageStudentsPage.xaml;ManageTeachersPage.xaml;
+AddClassWindow.xaml;AddStudentWindow.xaml;AddSubjectWindow.xaml;AddTeacherWindow.xaml;MainWindow.xaml;ManageClassesPage.xaml;ManageStudentsPage.xaml;ManageSubjectsPage.xaml;ManageTeachersPage.xaml;
 
 False
 

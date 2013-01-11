@@ -63,6 +63,9 @@
     <Compile Include="AddStudentWindow.xaml.cs">
       <DependentUpon>AddStudentWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddSubjectWindow.xaml.cs">
+      <DependentUpon>AddSubjectWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddTeacherWindow.xaml.cs">
       <DependentUpon>AddTeacherWindow.xaml</DependentUpon>
     </Compile>
@@ -72,6 +75,9 @@
     </Compile>
     <Compile Include="ManageStudentsPage.xaml.cs">
       <DependentUpon>ManageStudentsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSubjectsPage.xaml.cs">
+      <DependentUpon>ManageSubjectsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ManageTeachersPage.xaml.cs">
       <DependentUpon>ManageTeachersPage.xaml</DependentUpon>
@@ -86,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddStudentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddSubjectWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ManageStudentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageSubjectsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -43,7 +43,7 @@ namespace VirtualClassroom.AdminClient
 
         private void btnManageSubjects_Click(object sender, RoutedEventArgs e)
         {
-
+            this.frameMainContent.Source = new Uri("ManageSubjectsPage.xaml", UriKind.Relative);
         }
     }
 }

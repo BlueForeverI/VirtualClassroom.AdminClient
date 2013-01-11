@@ -1,0 +1,26 @@
+﻿<Page x:Class="VirtualClassroom.AdminClient.ManageSubjectsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      Height="auto" Width="auto"
+	Title="Manage Subjects">
+
+    <Grid>
+        <GroupBox Header="Subjects">
+            <WrapPanel>
+                <DataGrid x:Name="dataGridSubjects" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" />
+                        <DataGridTextColumn Header="Teacher" Binding="{Binding Path=FullName}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel>
+                    <Button x:Name="btnAddSubject" Click="btnAddSubject_Click">Add Subject</Button>
+                    <Button x:Name="btnRemoveSubject" Click="btnRemoveSubject_Click">Remove Subject</Button>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+    </Grid>
+</Page>
