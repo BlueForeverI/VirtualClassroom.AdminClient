@@ -17,8 +17,9 @@
             </DataGrid>
             <StackPanel>
                 <Button x:Name="btnAddClass" Click="btnAddClass_Click">Add Class</Button>
-                <Button x:Name="btnRemoveClass" Click="btnRemoveClass_Click">Remove Class</Button>
-            </StackPanel>
+                <Button x:Name="btnRemoveClass" Click="btnRemoveClass_Click">Remove Classes</Button>
+                <Button x:Name="btnAddToSubject" Click="btnAddToSubject_Click">Add to Subject</Button>
+                </StackPanel>
             </WrapPanel>
         </GroupBox>
     </Grid>

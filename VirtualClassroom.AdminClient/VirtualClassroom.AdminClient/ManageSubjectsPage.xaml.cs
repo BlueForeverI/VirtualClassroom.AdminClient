@@ -65,17 +65,38 @@ namespace VirtualClassroom.AdminClient
 
         private void btnRemoveSubject_Click(object sender, RoutedEventArgs e)
         {
-            if(MessageBox.Show("Do you really want to remove this subject?", "Are you sure?",
+            if(MessageBox.Show("Do you really want to remove these subjects?", "Are you sure?",
                 MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
+                var subjects = new List<Subject>();
+                foreach (dynamic selected in this.dataGridSubjects.SelectedItems)
+                {
+                    int id = int.Parse(selected.Id.ToString());
+                    subjects.Add(new Subject(){ Id = id});
+                }
 
-                dynamic selected = this.dataGridSubjects.SelectedItem;
-                int id = int.Parse(selected.Id.ToString());
-
-                Subject subject = new Subject() { Id = id };
-                client.RemoveSubject(subject);
-                MessageBox.Show("Subject removed successfully!");
+                client.RemoveSubjects(subjects.ToArray());
+                MessageBox.Show("Subjects removed successfully!");
                 UpdateDataGrid();
+            }
+        }
+
+        private void btnAddToClass_Click(object sender, RoutedEventArgs e)
+        {
+            AddToClassWindow addToClassWindow = new AddToClassWindow();
+            if(addToClassWindow.ShowDialog() == true)
+            {
+                Class c = new Class(){ Id = addToClassWindow.ClassId};
+                List<Subject> subjects = new List<Subject>();
+
+                foreach (dynamic selected in this.dataGridSubjects.SelectedItems)
+                {
+                    int id = int.Parse(selected.Id.ToString());
+                    subjects.Add(new Subject(){ Id = id});
+                }
+
+                client.AddSubjectsToClass(c, subjects.ToArray());
+                MessageBox.Show("Subjects added successfully!");
             }
         }
     }

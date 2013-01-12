@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Dev\Projects\VirtualClassroom\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\obj\x86\Debug\
+E:\Dev\Projects\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\obj\x86\Debug\
 VirtualClassroom.AdminClient
 none
 false
 DEBUG;TRACE
-E:\Dev\Projects\VirtualClassroom\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\App.xaml
-9-1557224666
+E:\Dev\Projects\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\App.xaml
+111138740870
 
-16-350359698
-141997438473
-AddClassWindow.xaml;AddStudentWindow.xaml;AddSubjectWindow.xaml;AddTeacherWindow.xaml;MainWindow.xaml;ManageClassesPage.xaml;ManageStudentsPage.xaml;ManageSubjectsPage.xaml;ManageTeachersPage.xaml;
+181943910802
+14637617180
+AddClassWindow.xaml;AddStudentWindow.xaml;AddSubjectWindow.xaml;AddTeacherWindow.xaml;AddToClassWindow.xaml;AddToSubjectWindow.xaml;MainWindow.xaml;ManageClassesPage.xaml;ManageStudentsPage.xaml;ManageSubjectsPage.xaml;ManageTeachersPage.xaml;
 
 False
 

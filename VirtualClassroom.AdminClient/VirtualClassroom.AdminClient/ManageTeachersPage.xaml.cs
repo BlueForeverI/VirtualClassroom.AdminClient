@@ -51,12 +51,17 @@ namespace VirtualClassroom.AdminClient
 
         private void btnRemoveTeacher_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Do you really want to remove this teacher?", "Are you sure?",
+            if (MessageBox.Show("Do you really want to remove these teachers?", "Are you sure?",
                 MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                Teacher t = this.dataGridTeachers.SelectedItem as Teacher;
-                client.RemoveTeacher(t);
-                MessageBox.Show("Teacher removed successfully!");
+                var teachers = new List<Teacher>();
+                foreach (var selected in this.dataGridTeachers.SelectedItems)
+                {
+                    teachers.Add(new Teacher(){ Id = (selected as Teacher).Id});
+                }
+
+                client.RemoveTeachers(teachers.ToArray());
+                MessageBox.Show("Teachers removed successfully!");
                 this.dataGridTeachers.ItemsSource = client.GetTeachers();
             }
         }

@@ -73,15 +73,19 @@ namespace VirtualClassroom.AdminClient
 
         private void btnRemoveStudent_Click(object sender, RoutedEventArgs e)
         {
-            if(MessageBox.Show("Do you really want to remove this student?", 
+            if(MessageBox.Show("Do you really want to remove these students?", 
                 "Are you sure?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                Student student = new Student();
-                dynamic selected = this.dataGridStudents.SelectedItem;
-                student.Id = int.Parse(selected.Id.ToString());
+                var students = new List<Student>();
+                foreach (var selected in this.dataGridStudents.SelectedItems)
+                {
+                    dynamic item = selected;
+                    int id = int.Parse(item.Id.ToString());
+                    students.Add(new Student(){ Id = id });
+                }
 
-                client.RemoveStudent(student);
-                MessageBox.Show("Student removed successfully!");
+                client.RemoveStudents(students.ToArray());
+                MessageBox.Show("Students removed successfully!");
                 UpdateDataGrid();
             }
         }

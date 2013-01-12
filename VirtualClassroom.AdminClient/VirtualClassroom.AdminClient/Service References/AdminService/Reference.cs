@@ -895,8 +895,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddClass", ReplyAction="http://tempuri.org/IAdminService/AddClassResponse")]
         void AddClass(VirtualClassroom.AdminClient.AdminService.Class c);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RemoveClass", ReplyAction="http://tempuri.org/IAdminService/RemoveClassResponse")]
-        void RemoveClass(VirtualClassroom.AdminClient.AdminService.Class c);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RemoveClasses", ReplyAction="http://tempuri.org/IAdminService/RemoveClassesResponse")]
+        void RemoveClasses(VirtualClassroom.AdminClient.AdminService.Class[] classes);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetClasses", ReplyAction="http://tempuri.org/IAdminService/GetClassesResponse")]
         VirtualClassroom.AdminClient.AdminService.Class[] GetClasses();
@@ -904,8 +904,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RegisterStudent", ReplyAction="http://tempuri.org/IAdminService/RegisterStudentResponse")]
         void RegisterStudent(VirtualClassroom.AdminClient.AdminService.Student student, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RemoveStudent", ReplyAction="http://tempuri.org/IAdminService/RemoveStudentResponse")]
-        void RemoveStudent(VirtualClassroom.AdminClient.AdminService.Student student);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RemoveStudents", ReplyAction="http://tempuri.org/IAdminService/RemoveStudentsResponse")]
+        void RemoveStudents(VirtualClassroom.AdminClient.AdminService.Student[] students);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetStudents", ReplyAction="http://tempuri.org/IAdminService/GetStudentsResponse")]
         VirtualClassroom.AdminClient.AdminService.Student[] GetStudents();
@@ -913,8 +913,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddSubject", ReplyAction="http://tempuri.org/IAdminService/AddSubjectResponse")]
         void AddSubject(VirtualClassroom.AdminClient.AdminService.Subject subject);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RemoveSubject", ReplyAction="http://tempuri.org/IAdminService/RemoveSubjectResponse")]
-        void RemoveSubject(VirtualClassroom.AdminClient.AdminService.Subject subject);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RemoveSubjects", ReplyAction="http://tempuri.org/IAdminService/RemoveSubjectsResponse")]
+        void RemoveSubjects(VirtualClassroom.AdminClient.AdminService.Subject[] subjects);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetSubjects", ReplyAction="http://tempuri.org/IAdminService/GetSubjectsResponse")]
         VirtualClassroom.AdminClient.AdminService.Subject[] GetSubjects();
@@ -922,14 +922,17 @@ namespace VirtualClassroom.AdminClient.AdminService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RegisterTeacher", ReplyAction="http://tempuri.org/IAdminService/RegisterTeacherResponse")]
         void RegisterTeacher(VirtualClassroom.AdminClient.AdminService.Teacher teacher, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RemoveTeacher", ReplyAction="http://tempuri.org/IAdminService/RemoveTeacherResponse")]
-        void RemoveTeacher(VirtualClassroom.AdminClient.AdminService.Teacher teacher);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RemoveTeachers", ReplyAction="http://tempuri.org/IAdminService/RemoveTeachersResponse")]
+        void RemoveTeachers(VirtualClassroom.AdminClient.AdminService.Teacher[] teachers);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetTeachers", ReplyAction="http://tempuri.org/IAdminService/GetTeachersResponse")]
         VirtualClassroom.AdminClient.AdminService.Teacher[] GetTeachers();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddClassesToSubject", ReplyAction="http://tempuri.org/IAdminService/AddClassesToSubjectResponse")]
         void AddClassesToSubject(VirtualClassroom.AdminClient.AdminService.Subject subject, VirtualClassroom.AdminClient.AdminService.Class[] classes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddSubjectsToClass", ReplyAction="http://tempuri.org/IAdminService/AddSubjectsToClassResponse")]
+        void AddSubjectsToClass(VirtualClassroom.AdminClient.AdminService.Class c, VirtualClassroom.AdminClient.AdminService.Subject[] subjects);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetSubjectsByClass", ReplyAction="http://tempuri.org/IAdminService/GetSubjectsByClassResponse")]
         VirtualClassroom.AdminClient.AdminService.Subject[] GetSubjectsByClass(int classId);
@@ -972,8 +975,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
             base.Channel.AddClass(c);
         }
         
-        public void RemoveClass(VirtualClassroom.AdminClient.AdminService.Class c) {
-            base.Channel.RemoveClass(c);
+        public void RemoveClasses(VirtualClassroom.AdminClient.AdminService.Class[] classes) {
+            base.Channel.RemoveClasses(classes);
         }
         
         public VirtualClassroom.AdminClient.AdminService.Class[] GetClasses() {
@@ -984,8 +987,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
             base.Channel.RegisterStudent(student, password);
         }
         
-        public void RemoveStudent(VirtualClassroom.AdminClient.AdminService.Student student) {
-            base.Channel.RemoveStudent(student);
+        public void RemoveStudents(VirtualClassroom.AdminClient.AdminService.Student[] students) {
+            base.Channel.RemoveStudents(students);
         }
         
         public VirtualClassroom.AdminClient.AdminService.Student[] GetStudents() {
@@ -996,8 +999,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
             base.Channel.AddSubject(subject);
         }
         
-        public void RemoveSubject(VirtualClassroom.AdminClient.AdminService.Subject subject) {
-            base.Channel.RemoveSubject(subject);
+        public void RemoveSubjects(VirtualClassroom.AdminClient.AdminService.Subject[] subjects) {
+            base.Channel.RemoveSubjects(subjects);
         }
         
         public VirtualClassroom.AdminClient.AdminService.Subject[] GetSubjects() {
@@ -1008,8 +1011,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
             base.Channel.RegisterTeacher(teacher, password);
         }
         
-        public void RemoveTeacher(VirtualClassroom.AdminClient.AdminService.Teacher teacher) {
-            base.Channel.RemoveTeacher(teacher);
+        public void RemoveTeachers(VirtualClassroom.AdminClient.AdminService.Teacher[] teachers) {
+            base.Channel.RemoveTeachers(teachers);
         }
         
         public VirtualClassroom.AdminClient.AdminService.Teacher[] GetTeachers() {
@@ -1018,6 +1021,10 @@ namespace VirtualClassroom.AdminClient.AdminService {
         
         public void AddClassesToSubject(VirtualClassroom.AdminClient.AdminService.Subject subject, VirtualClassroom.AdminClient.AdminService.Class[] classes) {
             base.Channel.AddClassesToSubject(subject, classes);
+        }
+        
+        public void AddSubjectsToClass(VirtualClassroom.AdminClient.AdminService.Class c, VirtualClassroom.AdminClient.AdminService.Subject[] subjects) {
+            base.Channel.AddSubjectsToClass(c, subjects);
         }
         
         public VirtualClassroom.AdminClient.AdminService.Subject[] GetSubjectsByClass(int classId) {

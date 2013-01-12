@@ -13,11 +13,11 @@
   <wsdl:message name="IAdminService_AddClass_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddClassResponse" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_RemoveClass_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveClass" />
+  <wsdl:message name="IAdminService_RemoveClasses_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveClasses" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_RemoveClass_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveClassResponse" />
+  <wsdl:message name="IAdminService_RemoveClasses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveClassesResponse" />
   </wsdl:message>
   <wsdl:message name="IAdminService_GetClasses_InputMessage">
     <wsdl:part name="parameters" element="tns:GetClasses" />
@@ -31,11 +31,11 @@
   <wsdl:message name="IAdminService_RegisterStudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegisterStudentResponse" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_RemoveStudent_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveStudent" />
+  <wsdl:message name="IAdminService_RemoveStudents_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveStudents" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_RemoveStudent_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveStudentResponse" />
+  <wsdl:message name="IAdminService_RemoveStudents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveStudentsResponse" />
   </wsdl:message>
   <wsdl:message name="IAdminService_GetStudents_InputMessage">
     <wsdl:part name="parameters" element="tns:GetStudents" />
@@ -49,11 +49,11 @@
   <wsdl:message name="IAdminService_AddSubject_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddSubjectResponse" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_RemoveSubject_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveSubject" />
+  <wsdl:message name="IAdminService_RemoveSubjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSubjects" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_RemoveSubject_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveSubjectResponse" />
+  <wsdl:message name="IAdminService_RemoveSubjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSubjectsResponse" />
   </wsdl:message>
   <wsdl:message name="IAdminService_GetSubjects_InputMessage">
     <wsdl:part name="parameters" element="tns:GetSubjects" />
@@ -67,11 +67,11 @@
   <wsdl:message name="IAdminService_RegisterTeacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegisterTeacherResponse" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_RemoveTeacher_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveTeacher" />
+  <wsdl:message name="IAdminService_RemoveTeachers_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTeachers" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_RemoveTeacher_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveTeacherResponse" />
+  <wsdl:message name="IAdminService_RemoveTeachers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTeachersResponse" />
   </wsdl:message>
   <wsdl:message name="IAdminService_GetTeachers_InputMessage">
     <wsdl:part name="parameters" element="tns:GetTeachers" />
@@ -84,6 +84,12 @@
   </wsdl:message>
   <wsdl:message name="IAdminService_AddClassesToSubject_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddClassesToSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddSubjectsToClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubjectsToClass" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddSubjectsToClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubjectsToClassResponse" />
   </wsdl:message>
   <wsdl:message name="IAdminService_GetSubjectsByClass_InputMessage">
     <wsdl:part name="parameters" element="tns:GetSubjectsByClass" />
@@ -108,9 +114,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddClass" message="tns:IAdminService_AddClass_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddClassResponse" message="tns:IAdminService_AddClass_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveClass">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveClass" message="tns:IAdminService_RemoveClass_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveClassResponse" message="tns:IAdminService_RemoveClass_OutputMessage" />
+    <wsdl:operation name="RemoveClasses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveClasses" message="tns:IAdminService_RemoveClasses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveClassesResponse" message="tns:IAdminService_RemoveClasses_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetClasses">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetClasses" message="tns:IAdminService_GetClasses_InputMessage" />
@@ -120,9 +126,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterStudent" message="tns:IAdminService_RegisterStudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterStudentResponse" message="tns:IAdminService_RegisterStudent_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveStudent">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveStudent" message="tns:IAdminService_RemoveStudent_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveStudentResponse" message="tns:IAdminService_RemoveStudent_OutputMessage" />
+    <wsdl:operation name="RemoveStudents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveStudents" message="tns:IAdminService_RemoveStudents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveStudentsResponse" message="tns:IAdminService_RemoveStudents_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetStudents">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetStudents" message="tns:IAdminService_GetStudents_InputMessage" />
@@ -132,9 +138,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddSubject" message="tns:IAdminService_AddSubject_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddSubjectResponse" message="tns:IAdminService_AddSubject_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveSubject">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveSubject" message="tns:IAdminService_RemoveSubject_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveSubjectResponse" message="tns:IAdminService_RemoveSubject_OutputMessage" />
+    <wsdl:operation name="RemoveSubjects">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveSubjects" message="tns:IAdminService_RemoveSubjects_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveSubjectsResponse" message="tns:IAdminService_RemoveSubjects_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetSubjects">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjects" message="tns:IAdminService_GetSubjects_InputMessage" />
@@ -144,9 +150,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterTeacher" message="tns:IAdminService_RegisterTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterTeacherResponse" message="tns:IAdminService_RegisterTeacher_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveTeacher">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveTeacher" message="tns:IAdminService_RemoveTeacher_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveTeacherResponse" message="tns:IAdminService_RemoveTeacher_OutputMessage" />
+    <wsdl:operation name="RemoveTeachers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveTeachers" message="tns:IAdminService_RemoveTeachers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveTeachersResponse" message="tns:IAdminService_RemoveTeachers_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetTeachers">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetTeachers" message="tns:IAdminService_GetTeachers_InputMessage" />
@@ -155,6 +161,10 @@
     <wsdl:operation name="AddClassesToSubject">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddClassesToSubject" message="tns:IAdminService_AddClassesToSubject_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddClassesToSubjectResponse" message="tns:IAdminService_AddClassesToSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubjectsToClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddSubjectsToClass" message="tns:IAdminService_AddSubjectsToClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddSubjectsToClassResponse" message="tns:IAdminService_AddSubjectsToClass_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetSubjectsByClass">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsByClass" message="tns:IAdminService_GetSubjectsByClass_InputMessage" />
@@ -180,8 +190,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="RemoveClass">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveClass" style="document" />
+    <wsdl:operation name="RemoveClasses">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveClasses" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -207,8 +217,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="RemoveStudent">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveStudent" style="document" />
+    <wsdl:operation name="RemoveStudents">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveStudents" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -234,8 +244,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="RemoveSubject">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveSubject" style="document" />
+    <wsdl:operation name="RemoveSubjects">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveSubjects" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -261,8 +271,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="RemoveTeacher">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveTeacher" style="document" />
+    <wsdl:operation name="RemoveTeachers">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveTeachers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -281,6 +291,15 @@
     </wsdl:operation>
     <wsdl:operation name="AddClassesToSubject">
       <soap:operation soapAction="http://tempuri.org/IAdminService/AddClassesToSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubjectsToClass">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/AddSubjectsToClass" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

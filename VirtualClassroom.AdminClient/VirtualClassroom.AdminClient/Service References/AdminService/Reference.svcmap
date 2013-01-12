@@ -21,11 +21,11 @@
     <MetadataSource Address="http://virtualclassroomservices.apphb.com/Services/AdminService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AdminService.xsd" MetadataType="Schema" ID="a4dfc803-f036-43c2-8c1d-05a2a6c99f36" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd2" />
-    <MetadataFile FileName="AdminService1.xsd" MetadataType="Schema" ID="746c0dfe-b30b-4763-9307-26bae97bd49a" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd0" />
-    <MetadataFile FileName="AdminService.wsdl" MetadataType="Wsdl" ID="0ddb65bc-7101-4797-a3a3-668219d85a20" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?wsdl" />
-    <MetadataFile FileName="AdminService2.xsd" MetadataType="Schema" ID="57208425-1e1c-4025-93cb-dd271889b8f7" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd1" />
-    <MetadataFile FileName="AdminService.disco" MetadataType="Disco" ID="184025a0-93ee-4b44-b88d-f0e3d792e575" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?disco" />
+    <MetadataFile FileName="AdminService.xsd" MetadataType="Schema" ID="1597e521-5c46-4df5-9732-ec26e74ed261" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AdminService1.xsd" MetadataType="Schema" ID="eb087c0e-fd13-4832-b866-9765f93d119d" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AdminService.wsdl" MetadataType="Wsdl" ID="dabd3f61-b94b-4bce-9b05-7f163762e42f" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?wsdl" />
+    <MetadataFile FileName="AdminService2.xsd" MetadataType="Schema" ID="c013227e-6fac-4aa1-89ca-9667a19b54bd" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AdminService.disco" MetadataType="Disco" ID="2c0b1ac7-7753-47a6-8f56-feaa9e3bef2c" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

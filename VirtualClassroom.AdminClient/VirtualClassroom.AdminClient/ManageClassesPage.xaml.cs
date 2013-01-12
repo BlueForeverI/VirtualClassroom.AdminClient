@@ -44,13 +44,35 @@ namespace VirtualClassroom.AdminClient
 
         private void btnRemoveClass_Click(object sender, RoutedEventArgs e)
         {
-            if(MessageBox.Show("Do you really want to remove this class?", "Are you sure?", 
+            if(MessageBox.Show("Do you really want to remove these classes?", "Are you sure?", 
                 MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                Class c = this.dataGridClasses.SelectedItem as Class;
-                client.RemoveClass(c);
-                MessageBox.Show("Class removed successfully!");
+                List<Class> classes = new List<Class>();
+                foreach (var selected in this.dataGridClasses.SelectedItems)
+                {
+                    classes.Add(new Class() { Id = (selected as Class).Id });
+                }
+
+                client.RemoveClasses(classes.ToArray());
+                MessageBox.Show("Classes removed successfully!");
                 this.dataGridClasses.ItemsSource = client.GetClasses();
+            }
+        }
+
+        private void btnAddToSubject_Click(object sender, RoutedEventArgs e)
+        {
+            AddToSubjectWindow addToSubjectWindow = new AddToSubjectWindow();
+            if(addToSubjectWindow.ShowDialog() == true)
+            {
+                List<Class> classes = new List<Class>();
+                foreach (var selected in this.dataGridClasses.SelectedItems)
+                {
+                    classes.Add(new Class(){ Id = (selected as Class).Id });
+                }
+
+                Subject subject = new Subject(){Id = addToSubjectWindow.SubjectId};
+                client.AddClassesToSubject(subject, classes.ToArray());
+                MessageBox.Show("Classes added to subject successfully!");
             }
         }
     }

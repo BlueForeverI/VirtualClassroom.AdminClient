@@ -22,7 +22,7 @@
                 </DataGrid>
                 <StackPanel>
                     <Button x:Name="btnAddStudent" Click="btnAddStudent_Click">Add Student</Button>
-                    <Button x:Name="btnRemoveStudent" Click="btnRemoveStudent_Click">Remove Student</Button>
+                    <Button x:Name="btnRemoveStudent" Click="btnRemoveStudent_Click">Remove Students</Button>
                 </StackPanel>
             </WrapPanel>
         </GroupBox>
