@@ -76,6 +76,9 @@
       <DependentUpon>AddToSubjectWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ClientManager.cs" />
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ManageClassesPage.xaml.cs">
       <DependentUpon>ManageClassesPage.xaml</DependentUpon>
     </Compile>
@@ -116,6 +119,10 @@
     <Page Include="AddToSubjectWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -179,6 +186,9 @@
     </None>
     <None Include="Service References\AdminService\AdminService2.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdminService\VirtualClassroom.AdminClient.AdminService.Admin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AdminService\VirtualClassroom.AdminClient.AdminService.Class.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

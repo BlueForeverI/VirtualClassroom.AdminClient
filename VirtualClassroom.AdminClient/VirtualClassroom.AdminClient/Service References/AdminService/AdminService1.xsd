@@ -187,7 +187,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="LoginStudent">
+  <xs:element name="RegisterAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="admin" nillable="true" type="q18:Admin" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterAdminResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginAdmin">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
@@ -195,25 +208,10 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="LoginStudentResponse">
+  <xs:element name="LoginAdminResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="LoginStudentResult" nillable="true" type="q18:Student" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="LoginTeacher">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="LoginTeacherResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="LoginTeacherResult" nillable="true" type="q19:Teacher" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="LoginAdminResult" nillable="true" type="q19:Admin" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

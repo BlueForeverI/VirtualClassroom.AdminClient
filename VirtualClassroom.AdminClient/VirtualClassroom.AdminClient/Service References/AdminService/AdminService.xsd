@@ -40,6 +40,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Content" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Filename" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="LessonId" type="xs:int" />
       <xs:element minOccurs="0" name="Marks" nillable="true" type="tns:ArrayOfMark" />
@@ -55,9 +56,12 @@
   <xs:element name="ArrayOfMark" nillable="true" type="tns:ArrayOfMark" />
   <xs:complexType name="Mark">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
       <xs:element minOccurs="0" name="HomeworkId" type="xs:int" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Value" type="xs:int" />
+      <xs:element minOccurs="0" name="LessonName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubjectName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" type="xs:float" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Mark" nillable="true" type="tns:Mark" />
@@ -91,9 +95,12 @@
   <xs:element name="ArrayOfLesson" nillable="true" type="tns:ArrayOfLesson" />
   <xs:complexType name="Lesson">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ContentFilename" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
       <xs:element minOccurs="0" name="HomeworkContent" nillable="true" type="xs:base64Binary" />
-      <xs:element minOccurs="0" name="HomeworkDueDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HomeworkDeadline" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HomeworkFilename" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Homeworks" nillable="true" type="tns:ArrayOfHomework" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
@@ -119,4 +126,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfTeacher" nillable="true" type="tns:ArrayOfTeacher" />
+  <xs:complexType name="Admin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="PasswordHash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Admin" nillable="true" type="tns:Admin" />
 </xs:schema>

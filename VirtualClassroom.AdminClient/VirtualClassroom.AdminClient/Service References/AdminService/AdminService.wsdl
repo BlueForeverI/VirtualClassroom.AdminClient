@@ -97,17 +97,17 @@
   <wsdl:message name="IAdminService_GetSubjectsByClass_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetSubjectsByClassResponse" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_LoginStudent_InputMessage">
-    <wsdl:part name="parameters" element="tns:LoginStudent" />
+  <wsdl:message name="IAdminService_RegisterAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterAdmin" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_LoginStudent_OutputMessage">
-    <wsdl:part name="parameters" element="tns:LoginStudentResponse" />
+  <wsdl:message name="IAdminService_RegisterAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterAdminResponse" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_LoginTeacher_InputMessage">
-    <wsdl:part name="parameters" element="tns:LoginTeacher" />
+  <wsdl:message name="IAdminService_LoginAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginAdmin" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_LoginTeacher_OutputMessage">
-    <wsdl:part name="parameters" element="tns:LoginTeacherResponse" />
+  <wsdl:message name="IAdminService_LoginAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginAdminResponse" />
   </wsdl:message>
   <wsdl:portType name="IAdminService">
     <wsdl:operation name="AddClass">
@@ -170,13 +170,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsByClass" message="tns:IAdminService_GetSubjectsByClass_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsByClassResponse" message="tns:IAdminService_GetSubjectsByClass_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="LoginStudent">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/LoginStudent" message="tns:IAdminService_LoginStudent_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/LoginStudentResponse" message="tns:IAdminService_LoginStudent_OutputMessage" />
+    <wsdl:operation name="RegisterAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterAdmin" message="tns:IAdminService_RegisterAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterAdminResponse" message="tns:IAdminService_RegisterAdmin_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="LoginTeacher">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/LoginTeacher" message="tns:IAdminService_LoginTeacher_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/LoginTeacherResponse" message="tns:IAdminService_LoginTeacher_OutputMessage" />
+    <wsdl:operation name="LoginAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/LoginAdmin" message="tns:IAdminService_LoginAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/LoginAdminResponse" message="tns:IAdminService_LoginAdmin_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAdminService" type="tns:IAdminService">
@@ -316,8 +316,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="LoginStudent">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/LoginStudent" style="document" />
+    <wsdl:operation name="RegisterAdmin">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/RegisterAdmin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -325,8 +325,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="LoginTeacher">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/LoginTeacher" style="document" />
+    <wsdl:operation name="LoginAdmin">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/LoginAdmin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

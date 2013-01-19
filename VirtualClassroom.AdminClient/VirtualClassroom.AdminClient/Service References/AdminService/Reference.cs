@@ -420,6 +420,9 @@ namespace VirtualClassroom.AdminClient.AdminService {
         private System.DateTime DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FilenameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -463,6 +466,19 @@ namespace VirtualClassroom.AdminClient.AdminService {
                 if ((this.DateField.Equals(value) != true)) {
                     this.DateField = value;
                     this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Filename {
+            get {
+                return this.FilenameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FilenameField, value) != true)) {
+                    this.FilenameField = value;
+                    this.RaisePropertyChanged("Filename");
                 }
             }
         }
@@ -539,13 +555,22 @@ namespace VirtualClassroom.AdminClient.AdminService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int HomeworkIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ValueField;
+        private string LessonNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SubjectNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float ValueField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -554,6 +579,19 @@ namespace VirtualClassroom.AdminClient.AdminService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
             }
         }
         
@@ -584,7 +622,33 @@ namespace VirtualClassroom.AdminClient.AdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Value {
+        public string LessonName {
+            get {
+                return this.LessonNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LessonNameField, value) != true)) {
+                    this.LessonNameField = value;
+                    this.RaisePropertyChanged("LessonName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SubjectName {
+            get {
+                return this.SubjectNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SubjectNameField, value) != true)) {
+                    this.SubjectNameField = value;
+                    this.RaisePropertyChanged("SubjectName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float Value {
             get {
                 return this.ValueField;
             }
@@ -616,13 +680,22 @@ namespace VirtualClassroom.AdminClient.AdminService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContentFilenameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private byte[] HomeworkContentField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> HomeworkDueDateField;
+        private System.Nullable<System.DateTime> HomeworkDeadlineField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HomeworkFilenameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private VirtualClassroom.AdminClient.AdminService.Homework[] HomeworksField;
@@ -643,6 +716,32 @@ namespace VirtualClassroom.AdminClient.AdminService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ContentFilename {
+            get {
+                return this.ContentFilenameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentFilenameField, value) != true)) {
+                    this.ContentFilenameField = value;
+                    this.RaisePropertyChanged("ContentFilename");
+                }
             }
         }
         
@@ -673,14 +772,27 @@ namespace VirtualClassroom.AdminClient.AdminService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> HomeworkDueDate {
+        public System.Nullable<System.DateTime> HomeworkDeadline {
             get {
-                return this.HomeworkDueDateField;
+                return this.HomeworkDeadlineField;
             }
             set {
-                if ((this.HomeworkDueDateField.Equals(value) != true)) {
-                    this.HomeworkDueDateField = value;
-                    this.RaisePropertyChanged("HomeworkDueDate");
+                if ((this.HomeworkDeadlineField.Equals(value) != true)) {
+                    this.HomeworkDeadlineField = value;
+                    this.RaisePropertyChanged("HomeworkDeadline");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HomeworkFilename {
+            get {
+                return this.HomeworkFilenameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HomeworkFilenameField, value) != true)) {
+                    this.HomeworkFilenameField = value;
+                    this.RaisePropertyChanged("HomeworkFilename");
                 }
             }
         }
@@ -888,6 +1000,83 @@ namespace VirtualClassroom.AdminClient.AdminService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Admin", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services")]
+    [System.SerializableAttribute()]
+    public partial class Admin : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordHashField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PasswordHash {
+            get {
+                return this.PasswordHashField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordHashField, value) != true)) {
+                    this.PasswordHashField = value;
+                    this.RaisePropertyChanged("PasswordHash");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdminService.IAdminService")]
     public interface IAdminService {
@@ -937,11 +1126,11 @@ namespace VirtualClassroom.AdminClient.AdminService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetSubjectsByClass", ReplyAction="http://tempuri.org/IAdminService/GetSubjectsByClassResponse")]
         VirtualClassroom.AdminClient.AdminService.Subject[] GetSubjectsByClass(int classId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/LoginStudent", ReplyAction="http://tempuri.org/IAdminService/LoginStudentResponse")]
-        VirtualClassroom.AdminClient.AdminService.Student LoginStudent(string username, string password);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RegisterAdmin", ReplyAction="http://tempuri.org/IAdminService/RegisterAdminResponse")]
+        void RegisterAdmin(VirtualClassroom.AdminClient.AdminService.Admin admin, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/LoginTeacher", ReplyAction="http://tempuri.org/IAdminService/LoginTeacherResponse")]
-        VirtualClassroom.AdminClient.AdminService.Teacher LoginTeacher(string username, string password);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/LoginAdmin", ReplyAction="http://tempuri.org/IAdminService/LoginAdminResponse")]
+        VirtualClassroom.AdminClient.AdminService.Admin LoginAdmin(string username, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1031,12 +1220,12 @@ namespace VirtualClassroom.AdminClient.AdminService {
             return base.Channel.GetSubjectsByClass(classId);
         }
         
-        public VirtualClassroom.AdminClient.AdminService.Student LoginStudent(string username, string password) {
-            return base.Channel.LoginStudent(username, password);
+        public void RegisterAdmin(VirtualClassroom.AdminClient.AdminService.Admin admin, string password) {
+            base.Channel.RegisterAdmin(admin, password);
         }
         
-        public VirtualClassroom.AdminClient.AdminService.Teacher LoginTeacher(string username, string password) {
-            return base.Channel.LoginTeacher(username, password);
+        public VirtualClassroom.AdminClient.AdminService.Admin LoginAdmin(string username, string password) {
+            return base.Channel.LoginAdmin(username, password);
         }
     }
 }

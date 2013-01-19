@@ -23,7 +23,13 @@ namespace VirtualClassroom.AdminClient
     {
         public MainWindow()
         {
-            InitializeComponent();
+            LoginWindow loginWindow = new LoginWindow();
+
+            if (loginWindow.ShowDialog() == true)
+            {
+                MessageBox.Show("Login successfull. Welcome!");
+                InitializeComponent();
+            }
         }
 
         private void btnManageClasses_Click(object sender, RoutedEventArgs e)
