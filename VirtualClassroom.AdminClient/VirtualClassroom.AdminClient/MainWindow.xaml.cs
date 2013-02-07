@@ -25,10 +25,13 @@ namespace VirtualClassroom.AdminClient
         {
             LoginWindow loginWindow = new LoginWindow();
 
-            if (loginWindow.ShowDialog() == true)
+            if(loginWindow.ShowDialog() == true)
             {
-                MessageBox.Show("Login successfull. Welcome!");
                 InitializeComponent();
+            }
+            else
+            {
+                this.Close();
             }
         }
 

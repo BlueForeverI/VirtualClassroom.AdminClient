@@ -1,7 +1,8 @@
 ﻿<Window x:Class="VirtualClassroom.AdminClient.AddTeacherWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Add Teacher" SizeToContent="WidthAndHeight">
+        Title="Add Teacher" SizeToContent="WidthAndHeight"
+        Background="{DynamicResource WindowBackgroundBrush}">
     <Grid>
         <StackPanel>
             <WrapPanel Margin="10">

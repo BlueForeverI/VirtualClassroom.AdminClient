@@ -1,24 +1,23 @@
 ﻿<Window x:Class="VirtualClassroom.AdminClient.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Admin Client" Height="350" Width="525">
+        Title="Admin Client" Height="350" SizeToContent="Width"
+        Background="{DynamicResource WindowBackgroundBrush}">
     <Grid>
-        <WrapPanel VerticalAlignment="Center">
-            <WrapPanel VerticalAlignment="Center">
-                <StackPanel x:Name="navigation" VerticalAlignment="Center">
-                    <Button x:Name="btnManageClasses" Click="btnManageClasses_Click">Manage Classes</Button>
-                    <Button x:Name="btnManageTeachers" Click="btnManageTeachers_Click">Manage Teachers</Button>
-                    <Button x:Name="btnManageStudents" Click="btnManageStudents_Click">Manage Students</Button>
-                    <Button x:Name="btnManageSubjects" Click="btnManageSubjects_Click">Manage Subjects</Button>
-                </StackPanel>
-                
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+            <WrapPanel x:Name="navigation" VerticalAlignment="Top"  HorizontalAlignment="Center">
+                <Button x:Name="btnManageClasses" Click="btnManageClasses_Click" Padding="20">Manage Classes</Button>
+                <Button x:Name="btnManageTeachers" Click="btnManageTeachers_Click" Padding="20">Manage Teachers</Button>
+                <Button x:Name="btnManageStudents" Click="btnManageStudents_Click" Padding="20">Manage Students</Button>
+                <Button x:Name="btnManageSubjects" Click="btnManageSubjects_Click" Padding="20">Manage Subjects</Button>
             </WrapPanel>
+            
             <StackPanel>
                 <Label x:Name="lblMessage" Content="" />
                 <Frame x:Name="frameMainContent" NavigationUIVisibility="Hidden" >
-
+                
                 </Frame>
             </StackPanel>
-        </WrapPanel>
+        </StackPanel>
     </Grid>
 </Window>
