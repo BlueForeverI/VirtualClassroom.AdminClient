@@ -9,8 +9,8 @@
 
     <Grid>
         <GroupBox Header="Subjects">
-            <WrapPanel>
-                <DataGrid x:Name="dataGridSubjects" AutoGenerateColumns="False">
+            <StackPanel Orientation="Horizontal">
+                <DataGrid x:Name="dataGridSubjects" AutoGenerateColumns="False" Margin="0 0 10 0">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" />
                         <DataGridTextColumn Header="Teacher" Binding="{Binding Path=FullName}" />
@@ -21,7 +21,7 @@
                     <Button x:Name="btnRemoveSubject" Click="btnRemoveSubject_Click">Remove Subjects</Button>
                     <Button x:Name="btnAddToClass" Click="btnAddToClass_Click">Add to Class</Button>
                 </StackPanel>
-            </WrapPanel>
+            </StackPanel>
         </GroupBox>
     </Grid>
 </Page>

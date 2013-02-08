@@ -8,8 +8,8 @@
 	Title="Manage Classes">
     <Grid>
         <GroupBox Header="Classes">
-            <WrapPanel>
-                <DataGrid x:Name="dataGridClasses" AutoGenerateColumns="False">
+            <StackPanel Orientation="Horizontal">
+                <DataGrid x:Name="dataGridClasses" AutoGenerateColumns="False" Margin="0 0 10 0" >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Number" Binding="{Binding Path=Number}" />
                         <DataGridTextColumn Header="Letter" Binding="{Binding Path=Letter}" />
@@ -20,7 +20,7 @@
                     <Button x:Name="btnRemoveClass" Click="btnRemoveClass_Click">Remove Classes</Button>
                     <Button x:Name="btnAddToSubject" Click="btnAddToSubject_Click">Add to Subject</Button>
                 </StackPanel>
-            </WrapPanel>
+            </StackPanel>
         </GroupBox>
     </Grid>
 </Page>

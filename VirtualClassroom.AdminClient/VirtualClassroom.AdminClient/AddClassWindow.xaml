@@ -7,15 +7,15 @@
         <StackPanel>
             <WrapPanel Margin="10">
                 <Label>Number: </Label>
-                <TextBox x:Name="txtNumber" Width="100" />
+                <TextBox x:Name="txtNumber" Width="100"  Margin="10 0 0 0"/>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <Label>Letter: </Label>
-                <TextBox x:Name="txtLetter" Width="100" />
+                <TextBox x:Name="txtLetter" Width="100"  Margin="10 0 0 0"/>
             </WrapPanel>
             <WrapPanel HorizontalAlignment="Right">
-                <Button x:Name="btnAdd" Margin="10" Click="btnAdd_Click">Add</Button>
-                <Button x:Name="btnCancel" Margin="10" Click="btnCancel_Click" >Cancel</Button>
+                <Button x:Name="btnAdd" Margin="10" Click="btnAdd_Click" Padding="5">Add</Button>
+                <Button x:Name="btnCancel" Margin="10" Click="btnCancel_Click" Padding="5">Cancel</Button>
             </WrapPanel>
         </StackPanel>
     </Grid>

@@ -7,23 +7,23 @@
         <StackPanel>
             <WrapPanel Margin="10">
                 <Label>Username: </Label>
-                <TextBox x:Name="txtUsername" Width="130" />
+                <TextBox x:Name="txtUsername" Width="130" Margin="10 0 0 0"/>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <Label>First Name:</Label>
-                <TextBox x:Name="txtFirstName" Width="130" />
+                <TextBox x:Name="txtFirstName" Width="130" Margin="10 0 0 0"/>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <Label>Middle Name:</Label>
-                <TextBox x:Name="txtMiddleName" Width="130" />
+                <TextBox x:Name="txtMiddleName" Width="130" Margin="10 0 0 0"/>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <Label>Last Name:</Label>
-                <TextBox x:Name="txtLastName" Width="130" />
+                <TextBox x:Name="txtLastName" Width="130" Margin="10 0 0 0"/>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <Label>Password:</Label>
-                <TextBox x:Name="txtPassword" Width="130" />
+                <TextBox x:Name="txtPassword" Width="130" Margin="10 0 0 0"/>
             </WrapPanel>
             <WrapPanel HorizontalAlignment="Right">
                 <Button x:Name="btnAdd" Margin="10" Click="btnAdd_Click">Add</Button>

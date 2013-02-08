@@ -9,8 +9,8 @@
 
     <Grid>
         <GroupBox Header="Students">
-            <WrapPanel>
-                <DataGrid x:Name="dataGridStudents" AutoGenerateColumns="False">
+            <StackPanel Orientation="Horizontal">
+                <DataGrid x:Name="dataGridStudents" AutoGenerateColumns="False" Margin="0 0 10 0">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Username" Binding="{Binding Path=Username}" />
                         <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}" />
@@ -24,7 +24,7 @@
                     <Button x:Name="btnAddStudent" Click="btnAddStudent_Click">Add Student</Button>
                     <Button x:Name="btnRemoveStudent" Click="btnRemoveStudent_Click">Remove Students</Button>
                 </StackPanel>
-            </WrapPanel>
+            </StackPanel>
         </GroupBox>
     </Grid>
 </Page>

@@ -8,7 +8,7 @@
         <StackPanel>
             <WrapPanel Margin="10">
                 <Label>Subject: </Label>
-                <ComboBox x:Name="comboSubjects" SelectedIndex="0">
+                <ComboBox x:Name="comboSubjects" SelectedIndex="0" Margin="10 0 0 0" >
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <Label Content="{Binding Path=Name}" />
@@ -17,8 +17,8 @@
                 </ComboBox>
             </WrapPanel>
             <WrapPanel HorizontalAlignment="Right">
-                <Button x:Name="btnAdd" Click="btnAdd_Click" Margin="10">Add</Button>
-                <Button x:Name="btnCancel" Click="btnCancel_Click" Margin="10">Cancel</Button>
+                <Button x:Name="btnAdd" Click="btnAdd_Click" Margin="10" >Add</Button>
+                <Button x:Name="btnCancel" Click="btnCancel_Click" Margin="10" >Cancel</Button>
             </WrapPanel>
         </StackPanel>
     </Grid>
