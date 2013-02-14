@@ -4,7 +4,8 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" />
+      <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" />
+      <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Views" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IAdminService_AddClass_InputMessage">
@@ -37,11 +38,11 @@
   <wsdl:message name="IAdminService_RemoveStudents_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveStudentsResponse" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_GetStudents_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetStudents" />
+  <wsdl:message name="IAdminService_GetStudentViews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentViews" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_GetStudents_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetStudentsResponse" />
+  <wsdl:message name="IAdminService_GetStudentViews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentViewsResponse" />
   </wsdl:message>
   <wsdl:message name="IAdminService_AddSubject_InputMessage">
     <wsdl:part name="parameters" element="tns:AddSubject" />
@@ -55,11 +56,11 @@
   <wsdl:message name="IAdminService_RemoveSubjects_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveSubjectsResponse" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_GetSubjects_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetSubjects" />
+  <wsdl:message name="IAdminService_GetSubjectViews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectViews" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_GetSubjects_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetSubjectsResponse" />
+  <wsdl:message name="IAdminService_GetSubjectViews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectViewsResponse" />
   </wsdl:message>
   <wsdl:message name="IAdminService_RegisterTeacher_InputMessage">
     <wsdl:part name="parameters" element="tns:RegisterTeacher" />
@@ -130,9 +131,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveStudents" message="tns:IAdminService_RemoveStudents_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveStudentsResponse" message="tns:IAdminService_RemoveStudents_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetStudents">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetStudents" message="tns:IAdminService_GetStudents_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetStudentsResponse" message="tns:IAdminService_GetStudents_OutputMessage" />
+    <wsdl:operation name="GetStudentViews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetStudentViews" message="tns:IAdminService_GetStudentViews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetStudentViewsResponse" message="tns:IAdminService_GetStudentViews_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddSubject">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddSubject" message="tns:IAdminService_AddSubject_InputMessage" />
@@ -142,9 +143,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveSubjects" message="tns:IAdminService_RemoveSubjects_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveSubjectsResponse" message="tns:IAdminService_RemoveSubjects_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetSubjects">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjects" message="tns:IAdminService_GetSubjects_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsResponse" message="tns:IAdminService_GetSubjects_OutputMessage" />
+    <wsdl:operation name="GetSubjectViews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjectViews" message="tns:IAdminService_GetSubjectViews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSubjectViewsResponse" message="tns:IAdminService_GetSubjectViews_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RegisterTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterTeacher" message="tns:IAdminService_RegisterTeacher_InputMessage" />
@@ -226,8 +227,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetStudents">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/GetStudents" style="document" />
+    <wsdl:operation name="GetStudentViews">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetStudentViews" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -253,8 +254,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetSubjects">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/GetSubjects" style="document" />
+    <wsdl:operation name="GetSubjectViews">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetSubjectViews" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

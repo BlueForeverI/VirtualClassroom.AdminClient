@@ -32,20 +32,20 @@ namespace VirtualClassroom.AdminClient
 
         private void UpdateDataGrid()
         {
-            var subjects = client.GetSubjects();
-            var teachers = client.GetTeachers();
+            //var subjects = client.GetSubjects();
+            //var teachers = client.GetTeachers();
 
-            var list = (from s in subjects
-                        from t in teachers
-                        where s.TeacherId == t.Id
-                        select new
-                                   {
-                                       Id = s.Id,
-                                       Name = s.Name,
-                                       FullName = t.FirstName + " " + t.LastName
-                                   });
+            //var list = (from s in subjects
+            //            from t in teachers
+            //            where s.TeacherId == t.Id
+            //            select new
+            //                       {
+            //                           Id = s.Id,
+            //                           Name = s.Name,
+            //                           FullName = t.FirstName + " " + t.LastName
+            //                       });
 
-            this.dataGridSubjects.ItemsSource = list;
+            this.dataGridSubjects.ItemsSource = client.GetSubjectViews();
         }
 
         private void btnAddSubject_Click(object sender, RoutedEventArgs e)

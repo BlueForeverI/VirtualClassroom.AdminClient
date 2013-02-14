@@ -13,7 +13,7 @@
                 <DataGrid x:Name="dataGridSubjects" AutoGenerateColumns="False" Margin="0 0 10 0">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" />
-                        <DataGridTextColumn Header="Teacher" Binding="{Binding Path=FullName}" />
+                        <DataGridTextColumn Header="Teacher" Binding="{Binding Path=TeacherFullName}" />
                     </DataGrid.Columns>
                 </DataGrid>
                 <StackPanel>

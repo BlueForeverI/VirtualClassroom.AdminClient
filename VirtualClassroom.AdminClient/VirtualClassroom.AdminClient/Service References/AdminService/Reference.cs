@@ -15,7 +15,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Class", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Class", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models")]
     [System.SerializableAttribute()]
     public partial class Class : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -124,7 +124,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Student", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Student", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models")]
     [System.SerializableAttribute()]
     public partial class Student : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -297,7 +297,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Subject", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Subject", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models")]
     [System.SerializableAttribute()]
     public partial class Subject : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -406,7 +406,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Homework", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Homework", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models")]
     [System.SerializableAttribute()]
     public partial class Homework : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -547,7 +547,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Mark", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Mark", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models")]
     [System.SerializableAttribute()]
     public partial class Mark : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -672,7 +672,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Lesson", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Lesson", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models")]
     [System.SerializableAttribute()]
     public partial class Lesson : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -861,7 +861,193 @@ namespace VirtualClassroom.AdminClient.AdminService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Teacher", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StudentView", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Views")]
+    [System.SerializableAttribute()]
+    public partial class StudentView : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ClassField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EGNField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FullNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Class {
+            get {
+                return this.ClassField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ClassField, value) != true)) {
+                    this.ClassField = value;
+                    this.RaisePropertyChanged("Class");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EGN {
+            get {
+                return this.EGNField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EGNField, value) != true)) {
+                    this.EGNField = value;
+                    this.RaisePropertyChanged("EGN");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FullName {
+            get {
+                return this.FullNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FullNameField, value) != true)) {
+                    this.FullNameField = value;
+                    this.RaisePropertyChanged("FullName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SubjectView", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Views")]
+    [System.SerializableAttribute()]
+    public partial class SubjectView : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TeacherFullNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TeacherFullName {
+            get {
+                return this.TeacherFullNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TeacherFullNameField, value) != true)) {
+                    this.TeacherFullNameField = value;
+                    this.RaisePropertyChanged("TeacherFullName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Teacher", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models")]
     [System.SerializableAttribute()]
     public partial class Teacher : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -1002,7 +1188,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Admin", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Admin", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models")]
     [System.SerializableAttribute()]
     public partial class Admin : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -1096,8 +1282,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RemoveStudents", ReplyAction="http://tempuri.org/IAdminService/RemoveStudentsResponse")]
         void RemoveStudents(VirtualClassroom.AdminClient.AdminService.Student[] students);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetStudents", ReplyAction="http://tempuri.org/IAdminService/GetStudentsResponse")]
-        VirtualClassroom.AdminClient.AdminService.Student[] GetStudents();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetStudentViews", ReplyAction="http://tempuri.org/IAdminService/GetStudentViewsResponse")]
+        VirtualClassroom.AdminClient.AdminService.StudentView[] GetStudentViews();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddSubject", ReplyAction="http://tempuri.org/IAdminService/AddSubjectResponse")]
         void AddSubject(VirtualClassroom.AdminClient.AdminService.Subject subject);
@@ -1105,8 +1291,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RemoveSubjects", ReplyAction="http://tempuri.org/IAdminService/RemoveSubjectsResponse")]
         void RemoveSubjects(VirtualClassroom.AdminClient.AdminService.Subject[] subjects);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetSubjects", ReplyAction="http://tempuri.org/IAdminService/GetSubjectsResponse")]
-        VirtualClassroom.AdminClient.AdminService.Subject[] GetSubjects();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetSubjectViews", ReplyAction="http://tempuri.org/IAdminService/GetSubjectViewsResponse")]
+        VirtualClassroom.AdminClient.AdminService.SubjectView[] GetSubjectViews();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RegisterTeacher", ReplyAction="http://tempuri.org/IAdminService/RegisterTeacherResponse")]
         void RegisterTeacher(VirtualClassroom.AdminClient.AdminService.Teacher teacher, string password);
@@ -1180,8 +1366,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
             base.Channel.RemoveStudents(students);
         }
         
-        public VirtualClassroom.AdminClient.AdminService.Student[] GetStudents() {
-            return base.Channel.GetStudents();
+        public VirtualClassroom.AdminClient.AdminService.StudentView[] GetStudentViews() {
+            return base.Channel.GetStudentViews();
         }
         
         public void AddSubject(VirtualClassroom.AdminClient.AdminService.Subject subject) {
@@ -1192,8 +1378,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
             base.Channel.RemoveSubjects(subjects);
         }
         
-        public VirtualClassroom.AdminClient.AdminService.Subject[] GetSubjects() {
-            return base.Channel.GetSubjects();
+        public VirtualClassroom.AdminClient.AdminService.SubjectView[] GetSubjectViews() {
+            return base.Channel.GetSubjectViews();
         }
         
         public void RegisterTeacher(VirtualClassroom.AdminClient.AdminService.Teacher teacher, string password) {

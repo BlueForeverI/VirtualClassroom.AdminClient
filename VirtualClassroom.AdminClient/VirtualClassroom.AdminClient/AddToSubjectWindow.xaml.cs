@@ -26,7 +26,7 @@ namespace VirtualClassroom.AdminClient
             InitializeComponent();
 
             this.comboSubjects.Items.Clear();
-            this.comboSubjects.ItemsSource = client.GetSubjects();
+            this.comboSubjects.ItemsSource = client.GetSubjectViews();
         }
 
         public int SubjectId { get; private set; }

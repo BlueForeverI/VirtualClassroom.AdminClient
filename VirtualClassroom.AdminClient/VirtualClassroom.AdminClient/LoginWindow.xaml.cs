@@ -37,7 +37,7 @@ namespace VirtualClassroom.AdminClient
             Admin admin = new Admin();
 
             string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            string password = txtPassword.Password;
 
             worker.DoWork += (o, ea) =>
                                  {

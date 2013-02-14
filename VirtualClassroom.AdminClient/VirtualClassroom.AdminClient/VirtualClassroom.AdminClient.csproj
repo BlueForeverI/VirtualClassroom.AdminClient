@@ -196,16 +196,22 @@
     <None Include="Service References\AdminService\AdminService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\AdminService\AdminService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\AdminService\VirtualClassroom.AdminClient.AdminService.Admin.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AdminService\VirtualClassroom.AdminClient.AdminService.Class.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\AdminService\VirtualClassroom.AdminClient.AdminService.Student.datasource">
+    <None Include="Service References\AdminService\VirtualClassroom.AdminClient.AdminService.StudentView.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AdminService\VirtualClassroom.AdminClient.AdminService.Subject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdminService\VirtualClassroom.AdminClient.AdminService.SubjectView.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AdminService\VirtualClassroom.AdminClient.AdminService.Teacher.datasource">

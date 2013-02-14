@@ -13,9 +13,7 @@
                 <DataGrid x:Name="dataGridStudents" AutoGenerateColumns="False" Margin="0 0 10 0">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Username" Binding="{Binding Path=Username}" />
-                        <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}" />
-                        <DataGridTextColumn Header="Middle Name" Binding="{Binding Path=MiddleName}" />
-                        <DataGridTextColumn Header="Last Name" Binding="{Binding Path=LastName}" />
+                        <DataGridTextColumn Header="Full Name" Binding="{Binding Path=FullName}" />
                         <DataGridTextColumn Header="EGN" Binding="{Binding Path=EGN}" />
                         <DataGridTextColumn Header="Class" Binding="{Binding Path=Class}" />
                     </DataGrid.Columns>

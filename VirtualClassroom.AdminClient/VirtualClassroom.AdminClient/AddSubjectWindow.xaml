@@ -16,6 +16,9 @@
                         <DataTemplate>
                             <WrapPanel>
                                 <Label Content="{Binding Path=FirstName}" />
+                                <Label Content=" " />
+                                <Label Content="{Binding Path=MiddleName}" />
+                                <Label Content=" " />
                                 <Label Content="{Binding Path=LastName}" />
                             </WrapPanel>
                         </DataTemplate>
