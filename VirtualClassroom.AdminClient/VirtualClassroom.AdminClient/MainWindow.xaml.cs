@@ -54,5 +54,10 @@ namespace VirtualClassroom.AdminClient
         {
             this.frameMainContent.Source = new Uri("ManageSubjectsPage.xaml", UriKind.Relative);
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            ClientManager.CloseClient();
+        }
     }
 }

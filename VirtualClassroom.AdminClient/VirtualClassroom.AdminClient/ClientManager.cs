@@ -19,5 +19,13 @@ namespace VirtualClassroom.AdminClient
 
             return clientInstance;
         }
+
+        public static void CloseClient()
+        {
+            if (clientInstance != null)
+            {
+                clientInstance.Close();
+            }
+        }
     }
 }

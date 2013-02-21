@@ -2,7 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Admin Client" Height="350" SizeToContent="Width"
-        Background="{DynamicResource WindowBackgroundBrush}">
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Closing="Window_Closing">
     <Grid>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
             <WrapPanel x:Name="navigation" VerticalAlignment="Top"  HorizontalAlignment="Center" Margin="0 10 0 20" >

@@ -24,10 +24,12 @@ namespace VirtualClassroom.AdminClient
     /// </summary>
     public partial class LoginWindow : Window
     {
-        private AdminServiceClient client = ClientManager.GetClient();
+        private AdminServiceClient client;
 
         public LoginWindow()
         {
+            ClientManager.CloseClient();
+            client = ClientManager.GetClient();
             InitializeComponent();
         }
 
