@@ -33,7 +33,7 @@ namespace VirtualClassroom.AdminClient
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            this.SubjectId = (this.comboSubjects.SelectedItem as Subject).Id;
+            this.SubjectId = (this.comboSubjects.SelectedItem as SubjectView).Id;
             this.DialogResult = true;
             this.Close();
         }
