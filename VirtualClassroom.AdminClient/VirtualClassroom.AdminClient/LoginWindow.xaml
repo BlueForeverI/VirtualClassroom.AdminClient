@@ -3,7 +3,7 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Login" SizeToContent="WidthAndHeight"
-        Background="{DynamicResource WindowBackgroundBrush}">
+        Background="{DynamicResource WindowBackgroundBrush}" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="True">
     <Grid>
         <xctk:BusyIndicator x:Name="busyIndicator" IsBusy="False">
             <StackPanel>
@@ -13,7 +13,6 @@
                 </WrapPanel>
                 <WrapPanel Margin="10">
                     <Label>Password:</Label>
-                    <!--<TextBox x:Name="txtPassword" Width="150" />-->
                     <PasswordBox x:Name="txtPassword" Width="150" />
                 </WrapPanel>
                 <WrapPanel HorizontalAlignment="Right">

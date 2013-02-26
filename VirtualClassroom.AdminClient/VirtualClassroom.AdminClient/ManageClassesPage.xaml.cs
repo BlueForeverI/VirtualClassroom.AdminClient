@@ -32,21 +32,27 @@ namespace VirtualClassroom.AdminClient
 
         private void btnAddClass_Click(object sender, RoutedEventArgs e)
         {
-            AddClassWindow addClassWindow = new AddClassWindow();
-            if(addClassWindow.ShowDialog() == true)
+            try
             {
-                string letter = addClassWindow.Letter;
-                int number = addClassWindow.Number;
-                client.AddClass(new Class(){Letter = letter, Number = number});
-                MessageBox.Show("Class added successfully!");
-                this.dataGridClasses.ItemsSource = client.GetClasses();
+                AddClassWindow addClassWindow = new AddClassWindow();
+                if (addClassWindow.ShowDialog() == true)
+                {
+                    string letter = addClassWindow.Letter;
+                    int number = addClassWindow.Number;
+                    client.AddClass(new Class() { Letter = letter, Number = number });
+                    MessageBox.Show("Class added successfully!");
+                    this.dataGridClasses.ItemsSource = client.GetClasses();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnRemoveClass_Click(object sender, RoutedEventArgs e)
         {
-            if(MessageBox.Show("Do you really want to remove these classes?", "Are you sure?", 
-                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            try
             {
                 List<Class> classes = new List<Class>();
                 foreach (var selected in this.dataGridClasses.SelectedItems)
@@ -54,26 +60,55 @@ namespace VirtualClassroom.AdminClient
                     classes.Add(new Class() { Id = (selected as Class).Id });
                 }
 
-                client.RemoveClasses(classes.ToArray());
-                MessageBox.Show("Classes removed successfully!");
-                this.dataGridClasses.ItemsSource = client.GetClasses();
+                if (classes.Count == 0)
+                {
+                    MessageBox.Show("You have not selected any classes!");
+                }
+                else
+                {
+                    if (MessageBox.Show("Do you really want to remove these classes?", "Are you sure?",
+                        MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    {
+                        client.RemoveClasses(classes.ToArray());
+                        MessageBox.Show("Classes removed successfully!");
+                        this.dataGridClasses.ItemsSource = client.GetClasses();
+                    }
+                }   
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnAddToSubject_Click(object sender, RoutedEventArgs e)
         {
-            AddToSubjectWindow addToSubjectWindow = new AddToSubjectWindow();
-            if(addToSubjectWindow.ShowDialog() == true)
+            try
             {
-                List<Class> classes = new List<Class>();
-                foreach (var selected in this.dataGridClasses.SelectedItems)
+                AddToSubjectWindow addToSubjectWindow = new AddToSubjectWindow();
+                if (addToSubjectWindow.ShowDialog() == true)
                 {
-                    classes.Add(new Class(){ Id = (selected as Class).Id });
-                }
+                    List<Class> classes = new List<Class>();
+                    foreach (var selected in this.dataGridClasses.SelectedItems)
+                    {
+                        classes.Add(new Class() { Id = (selected as Class).Id });
+                    }
 
-                Subject subject = new Subject(){Id = addToSubjectWindow.SubjectId};
-                client.AddClassesToSubject(subject, classes.ToArray());
-                MessageBox.Show("Classes added to subject successfully!");
+                    if (classes.Count == 0)
+                    {
+                        MessageBox.Show("You have not selected any classes!");
+                    }
+                    else
+                    {
+                        Subject subject = new Subject() { Id = addToSubjectWindow.SubjectId };
+                        client.AddClassesToSubject(subject, classes.ToArray());
+                        MessageBox.Show("Classes added to subject successfully!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

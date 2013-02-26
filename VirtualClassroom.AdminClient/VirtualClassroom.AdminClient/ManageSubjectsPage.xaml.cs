@@ -27,76 +27,93 @@ namespace VirtualClassroom.AdminClient
             InitializeComponent();
 
             this.dataGridSubjects.Items.Clear();
-            UpdateDataGrid();
-        }
-
-        private void UpdateDataGrid()
-        {
-            //var subjects = client.GetSubjects();
-            //var teachers = client.GetTeachers();
-
-            //var list = (from s in subjects
-            //            from t in teachers
-            //            where s.TeacherId == t.Id
-            //            select new
-            //                       {
-            //                           Id = s.Id,
-            //                           Name = s.Name,
-            //                           FullName = t.FirstName + " " + t.LastName
-            //                       });
-
             this.dataGridSubjects.ItemsSource = client.GetSubjectViews();
         }
 
         private void btnAddSubject_Click(object sender, RoutedEventArgs e)
         {
-            AddSubjectWindow addSubjectWindow = new AddSubjectWindow();
-            if(addSubjectWindow.ShowDialog() == true)
+            try
             {
-                Subject subject = new Subject();
-                subject.Name = addSubjectWindow.Name;
-                subject.TeacherId = addSubjectWindow.TeacherId;
+                AddSubjectWindow addSubjectWindow = new AddSubjectWindow();
+                if (addSubjectWindow.ShowDialog() == true)
+                {
+                    Subject subject = new Subject();
+                    subject.Name = addSubjectWindow.SubjectName;
+                    subject.TeacherId = addSubjectWindow.TeacherId;
 
-                client.AddSubject(subject);
-                MessageBox.Show("Subject added successfully!");
-                UpdateDataGrid();
+                    client.AddSubject(subject);
+                    MessageBox.Show("Subject added successfully!");
+                    this.dataGridSubjects.ItemsSource = client.GetSubjectViews();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnRemoveSubject_Click(object sender, RoutedEventArgs e)
         {
-            if(MessageBox.Show("Do you really want to remove these subjects?", "Are you sure?",
-                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            try
             {
                 var subjects = new List<Subject>();
                 foreach (dynamic selected in this.dataGridSubjects.SelectedItems)
                 {
                     int id = int.Parse(selected.Id.ToString());
-                    subjects.Add(new Subject(){ Id = id});
+                    subjects.Add(new Subject() { Id = id });
                 }
 
-                client.RemoveSubjects(subjects.ToArray());
-                MessageBox.Show("Subjects removed successfully!");
-                UpdateDataGrid();
+                if (subjects.Count == 0)
+                {
+                    MessageBox.Show("You have not selected any subjects!");
+                }
+                else
+                {
+                    if (MessageBox.Show("Do you really want to remove these subjects?", "Are you sure?",
+                        MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    {
+                        client.RemoveSubjects(subjects.ToArray());
+                        MessageBox.Show("Subjects removed successfully!");
+                        this.dataGridSubjects.ItemsSource = client.GetSubjectViews();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnAddToClass_Click(object sender, RoutedEventArgs e)
         {
-            AddToClassWindow addToClassWindow = new AddToClassWindow();
-            if(addToClassWindow.ShowDialog() == true)
+            try
             {
-                Class c = new Class(){ Id = addToClassWindow.ClassId};
                 List<Subject> subjects = new List<Subject>();
 
                 foreach (dynamic selected in this.dataGridSubjects.SelectedItems)
                 {
                     int id = int.Parse(selected.Id.ToString());
-                    subjects.Add(new Subject(){ Id = id});
+                    subjects.Add(new Subject() { Id = id });
                 }
 
-                client.AddSubjectsToClass(c, subjects.ToArray());
-                MessageBox.Show("Subjects added successfully!");
+                if (subjects.Count == 0)
+                {
+                    MessageBox.Show("You have not selected any subjects!");
+                }
+                else
+                {
+                    AddToClassWindow addToClassWindow = new AddToClassWindow();
+                    if (addToClassWindow.ShowDialog() == true)
+                    {
+                        Class c = new Class() {Id = addToClassWindow.ClassId};
+                        client.AddSubjectsToClass(c, subjects.ToArray());
+                        MessageBox.Show("Subjects added successfully!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

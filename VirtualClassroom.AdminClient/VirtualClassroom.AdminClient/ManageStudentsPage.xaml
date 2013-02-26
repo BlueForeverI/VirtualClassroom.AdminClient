@@ -8,9 +8,10 @@
 	  Title="Manage Students">
 
     <Grid>
-        <GroupBox Header="Students">
+        <GroupBox Header="Students" Padding="5 10 10 10" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
-                <DataGrid x:Name="dataGridStudents" AutoGenerateColumns="False" Margin="0 0 10 0">
+                <DataGrid x:Name="dataGridStudents" AutoGenerateColumns="False" Margin="0 0 10 0"
+                          VerticalScrollBarVisibility="Auto" MaxHeight="600">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Username" Binding="{Binding Path=Username}" />
                         <DataGridTextColumn Header="Full Name" Binding="{Binding Path=FullName}" />

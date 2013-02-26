@@ -37,27 +37,62 @@ namespace VirtualClassroom.AdminClient
 
         private void btnManageClasses_Click(object sender, RoutedEventArgs e)
         {
-            this.frameMainContent.Source = new Uri("ManageClassesPage.xaml", UriKind.Relative);
+            try
+            {
+                this.frameMainContent.Source = new Uri("ManageClassesPage.xaml", UriKind.Relative);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnManageTeachers_Click(object sender, RoutedEventArgs e)
         {
-            this.frameMainContent.Source = new Uri("ManageTeachersPage.xaml", UriKind.Relative);
+            try
+            {
+                this.frameMainContent.Source = new Uri("ManageTeachersPage.xaml", UriKind.Relative);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnManageStudents_Click(object sender, RoutedEventArgs e)
         {
-            this.frameMainContent.Source = new Uri("ManageStudentsPage.xaml", UriKind.Relative);
+            try
+            {
+                this.frameMainContent.Source = new Uri("ManageStudentsPage.xaml", UriKind.Relative);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnManageSubjects_Click(object sender, RoutedEventArgs e)
         {
-            this.frameMainContent.Source = new Uri("ManageSubjectsPage.xaml", UriKind.Relative);
+            try
+            {
+                this.frameMainContent.Source = new Uri("ManageSubjectsPage.xaml", UriKind.Relative);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            ClientManager.CloseClient();
+            try
+            {
+                ClientManager.CloseClient();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -43,7 +43,14 @@ namespace VirtualClassroom.AdminClient
 
             worker.DoWork += (o, ea) =>
                                  {
-                                     admin = client.LoginAdmin(username, password);
+                                     try
+                                     {
+                                         admin = client.LoginAdmin(username, password);
+                                     }
+                                     catch (Exception ex)
+                                     {
+                                         MessageBox.Show(ex.Message);
+                                     }
                                  };
 
             worker.RunWorkerCompleted += (o, ea) =>

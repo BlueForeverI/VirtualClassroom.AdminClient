@@ -8,9 +8,10 @@
 	Title="Manage Subjects">
 
     <Grid>
-        <GroupBox Header="Subjects">
+        <GroupBox Header="Subjects" Padding="5 10 10 10" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
-                <DataGrid x:Name="dataGridSubjects" AutoGenerateColumns="False" Margin="0 0 10 0">
+                <DataGrid x:Name="dataGridSubjects" AutoGenerateColumns="False" Margin="0 0 10 0"
+                          VerticalScrollBarVisibility="Auto" MaxHeight="600">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" />
                         <DataGridTextColumn Header="Teacher" Binding="{Binding Path=TeacherFullName}" />

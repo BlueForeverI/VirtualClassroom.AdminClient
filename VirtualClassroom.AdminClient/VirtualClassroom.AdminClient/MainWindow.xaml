@@ -1,9 +1,9 @@
 ﻿<Window x:Class="VirtualClassroom.AdminClient.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Admin Client" Height="350" SizeToContent="Width"
+        Title="Admin Client" SizeToContent="WidthAndHeight" MinHeight="350" MinWidth="600" 
         Background="{DynamicResource WindowBackgroundBrush}"
-        Closing="Window_Closing">
+        Closing="Window_Closing" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
             <WrapPanel x:Name="navigation" VerticalAlignment="Top"  HorizontalAlignment="Center" Margin="0 10 0 20" >

@@ -31,38 +31,64 @@ namespace VirtualClassroom.AdminClient
 
         private void btnAddTeacher_Click(object sender, RoutedEventArgs e)
         {
-            AddTeacherWindow addTeacherWindow = new AddTeacherWindow();
-            if(addTeacherWindow.ShowDialog() == true)
+            try
             {
-                string username = addTeacherWindow.Username;
-                string firstName = addTeacherWindow.FirstName;
-                string middleName = addTeacherWindow.MiddleName;
-                string lastName = addTeacherWindow.LastName;
-                string password = addTeacherWindow.Password;
+                AddTeacherWindow addTeacherWindow = new AddTeacherWindow();
+                if (addTeacherWindow.ShowDialog() == true)
+                {
+                    string username = addTeacherWindow.Username;
+                    string firstName = addTeacherWindow.FirstName;
+                    string middleName = addTeacherWindow.MiddleName;
+                    string lastName = addTeacherWindow.LastName;
+                    string password = addTeacherWindow.Password;
 
-                Teacher teacher = new Teacher(){Username = username,
-                FirstName = firstName, MiddleName = middleName, LastName = lastName};
+                    Teacher teacher = new Teacher()
+                    {
+                        Username = username,
+                        FirstName = firstName,
+                        MiddleName = middleName,
+                        LastName = lastName
+                    };
 
-                client.RegisterTeacher(teacher, password);
-                MessageBox.Show("Teacher added successfully!");
-                this.dataGridTeachers.ItemsSource = client.GetTeachers();
+                    client.RegisterTeacher(teacher, password);
+                    MessageBox.Show("Teacher added successfully!");
+                    this.dataGridTeachers.ItemsSource = client.GetTeachers();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnRemoveTeacher_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Do you really want to remove these teachers?", "Are you sure?",
-                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            try
             {
                 var teachers = new List<Teacher>();
                 foreach (var selected in this.dataGridTeachers.SelectedItems)
                 {
-                    teachers.Add(new Teacher(){ Id = (selected as Teacher).Id});
+                    teachers.Add(new Teacher() { Id = (selected as Teacher).Id });
                 }
 
-                client.RemoveTeachers(teachers.ToArray());
-                MessageBox.Show("Teachers removed successfully!");
-                this.dataGridTeachers.ItemsSource = client.GetTeachers();
+                if (teachers.Count == 0)
+                {
+                    MessageBox.Show("You have not selected any teachers!");
+                }
+                else
+                {
+                    if (MessageBox.Show("Do you really want to remove these teachers?", "Are you sure?",
+                        MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    {
+                        client.RemoveTeachers(teachers.ToArray());
+                        MessageBox.Show("Teachers removed successfully!");
+                        this.dataGridTeachers.ItemsSource = client.GetTeachers();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
