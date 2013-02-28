@@ -10,7 +10,6 @@
   <RecentFiles>
     <RecentFiles>
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Service References/d:AdminService/f:Reference.cs" caret="460" fromTop="8" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="287" fromTop="5" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ClientManager.cs" caret="687" fromTop="27" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToSubjectWindow.xaml.cs" caret="1244" fromTop="11" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToClassWindow.xaml.cs" caret="647" fromTop="21" />
@@ -20,12 +19,10 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml.cs" caret="686" fromTop="22" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml.cs" caret="4709" fromTop="10" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml.cs" caret="1702" fromTop="10" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="2407" fromTop="19" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="3308" fromTop="27" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml.cs" caret="455" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="604" fromTop="20" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml" caret="1140" fromTop="13" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml" caret="525" fromTop="7" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClassesPage.xaml.cs" caret="1111" fromTop="16" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddClassWindow.xaml" caret="368" fromTop="5" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml" caret="357" fromTop="5" />
@@ -36,13 +33,13 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClassesPage.xaml" caret="705" fromTop="3" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml" caret="714" fromTop="6" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml" caret="762" fromTop="13" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml" caret="964" fromTop="16" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml" caret="1" fromTop="0" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="1050" fromTop="17" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="0" fromTop="0" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml" caret="532" fromTop="7" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="115" fromTop="4" />
     </RecentFiles>
     <RecentEdits>
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml.cs" caret="3107" fromTop="11" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml.cs" caret="4040" fromTop="24" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml.cs" caret="4041" fromTop="32" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml.cs" caret="821" fromTop="13" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml.cs" caret="1493" fromTop="14" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml.cs" caret="2790" fromTop="25" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="2163" fromTop="6" />
@@ -55,7 +52,6 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="3224" fromTop="22" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="3349" fromTop="27" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml" caret="133" fromTop="1" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml" caret="547" fromTop="7" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClassesPage.xaml.cs" caret="1111" fromTop="16" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddClassWindow.xaml" caret="449" fromTop="5" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml" caret="357" fromTop="5" />
@@ -69,6 +65,11 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml" caret="764" fromTop="6" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml" caret="762" fromTop="13" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml" caret="762" fromTop="8" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="317" fromTop="11" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="535" fromTop="15" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="174" fromTop="5" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml" caret="725" fromTop="11" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml" caret="929" fromTop="15" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

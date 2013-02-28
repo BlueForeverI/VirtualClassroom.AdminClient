@@ -9,11 +9,11 @@
             <StackPanel>
                 <WrapPanel Margin="10">
                     <Label>Username:</Label>
-                    <TextBox x:Name="txtUsername" Width="150" />
+                    <TextBox x:Name="txtUsername" Width="150" Margin="10 0 0 0"/>
                 </WrapPanel>
                 <WrapPanel Margin="10">
                     <Label>Password:</Label>
-                    <PasswordBox x:Name="txtPassword" Width="150" />
+                    <PasswordBox x:Name="txtPassword" Width="150" Margin="10 0 0 0"/>
                 </WrapPanel>
                 <WrapPanel HorizontalAlignment="Right">
                     <Button x:Name="btnLogin" Click="btnLogin_Click"  Margin="10" Padding="5" >Login</Button>
