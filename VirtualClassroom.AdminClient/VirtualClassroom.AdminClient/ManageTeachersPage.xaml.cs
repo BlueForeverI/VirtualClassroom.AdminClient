@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VirtualClassroom.AdminClient.AdminService;
+using VirtualClassroom.Services.Services;
 
 namespace VirtualClassroom.AdminClient
 {
@@ -50,7 +51,13 @@ namespace VirtualClassroom.AdminClient
                         LastName = lastName
                     };
 
-                    client.RegisterTeacher(teacher, password);
+                    string secret = Crypto.GenerateRandomSecret(30);
+                    teacher.Username = Crypto.EncryptStringAES(teacher.Username, secret);
+
+                    client.RegisterTeacher(teacher,
+                        Crypto.EncryptStringAES(addTeacherWindow.Password, secret),
+                        secret);
+
                     MessageBox.Show("Teacher added successfully!");
                     this.dataGridTeachers.ItemsSource = client.GetTeachers();
                 }

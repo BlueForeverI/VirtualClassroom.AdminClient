@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdminService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IAdminService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="600000" />
+          <wsrm:AcknowledgementInterval Milliseconds="200" />
+        </wsrm:RMAssertion>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/AdminService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
@@ -110,235 +121,239 @@
   <wsdl:message name="IAdminService_LoginAdmin_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoginAdminResponse" />
   </wsdl:message>
-  <wsdl:portType name="IAdminService">
-    <wsdl:operation name="AddClass">
+  <wsdl:portType msc:usingSession="true" name="IAdminService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddClass">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddClass" message="tns:IAdminService_AddClass_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddClassResponse" message="tns:IAdminService_AddClass_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveClasses">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RemoveClasses">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveClasses" message="tns:IAdminService_RemoveClasses_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveClassesResponse" message="tns:IAdminService_RemoveClasses_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetClasses">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetClasses">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetClasses" message="tns:IAdminService_GetClasses_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetClassesResponse" message="tns:IAdminService_GetClasses_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RegisterStudent">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RegisterStudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterStudent" message="tns:IAdminService_RegisterStudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterStudentResponse" message="tns:IAdminService_RegisterStudent_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveStudents">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RemoveStudents">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveStudents" message="tns:IAdminService_RemoveStudents_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveStudentsResponse" message="tns:IAdminService_RemoveStudents_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetStudentViews">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetStudentViews">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetStudentViews" message="tns:IAdminService_GetStudentViews_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetStudentViewsResponse" message="tns:IAdminService_GetStudentViews_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddSubject">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddSubject">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddSubject" message="tns:IAdminService_AddSubject_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddSubjectResponse" message="tns:IAdminService_AddSubject_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveSubjects">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RemoveSubjects">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveSubjects" message="tns:IAdminService_RemoveSubjects_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveSubjectsResponse" message="tns:IAdminService_RemoveSubjects_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetSubjectViews">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSubjectViews">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjectViews" message="tns:IAdminService_GetSubjectViews_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSubjectViewsResponse" message="tns:IAdminService_GetSubjectViews_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RegisterTeacher">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RegisterTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterTeacher" message="tns:IAdminService_RegisterTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterTeacherResponse" message="tns:IAdminService_RegisterTeacher_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveTeachers">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RemoveTeachers">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveTeachers" message="tns:IAdminService_RemoveTeachers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveTeachersResponse" message="tns:IAdminService_RemoveTeachers_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetTeachers">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetTeachers">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetTeachers" message="tns:IAdminService_GetTeachers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetTeachersResponse" message="tns:IAdminService_GetTeachers_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddClassesToSubject">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddClassesToSubject">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddClassesToSubject" message="tns:IAdminService_AddClassesToSubject_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddClassesToSubjectResponse" message="tns:IAdminService_AddClassesToSubject_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddSubjectsToClass">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddSubjectsToClass">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddSubjectsToClass" message="tns:IAdminService_AddSubjectsToClass_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddSubjectsToClassResponse" message="tns:IAdminService_AddSubjectsToClass_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetSubjectsByClass">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSubjectsByClass">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsByClass" message="tns:IAdminService_GetSubjectsByClass_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsByClassResponse" message="tns:IAdminService_GetSubjectsByClass_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RegisterAdmin">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RegisterAdmin">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterAdmin" message="tns:IAdminService_RegisterAdmin_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterAdminResponse" message="tns:IAdminService_RegisterAdmin_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="LoginAdmin">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="LoginAdmin">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/LoginAdmin" message="tns:IAdminService_LoginAdmin_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/LoginAdminResponse" message="tns:IAdminService_LoginAdmin_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="BasicHttpBinding_IAdminService" type="tns:IAdminService">
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+  <wsdl:binding name="WSHttpBinding_IAdminService" type="tns:IAdminService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IAdminService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="AddClass">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/AddClass" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/AddClass" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveClasses">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveClasses" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/RemoveClasses" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetClasses">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/GetClasses" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/GetClasses" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RegisterStudent">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/RegisterStudent" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/RegisterStudent" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveStudents">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveStudents" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/RemoveStudents" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetStudentViews">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/GetStudentViews" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/GetStudentViews" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddSubject">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/AddSubject" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/AddSubject" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveSubjects">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveSubjects" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/RemoveSubjects" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetSubjectViews">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/GetSubjectViews" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/GetSubjectViews" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RegisterTeacher">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/RegisterTeacher" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/RegisterTeacher" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveTeachers">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/RemoveTeachers" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/RemoveTeachers" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetTeachers">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/GetTeachers" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/GetTeachers" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddClassesToSubject">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/AddClassesToSubject" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/AddClassesToSubject" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddSubjectsToClass">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/AddSubjectsToClass" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/AddSubjectsToClass" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetSubjectsByClass">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/GetSubjectsByClass" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/GetSubjectsByClass" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RegisterAdmin">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/RegisterAdmin" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/RegisterAdmin" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="LoginAdmin">
-      <soap:operation soapAction="http://tempuri.org/IAdminService/LoginAdmin" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/LoginAdmin" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="AdminService">
-    <wsdl:port name="BasicHttpBinding_IAdminService" binding="tns:BasicHttpBinding_IAdminService">
-      <soap:address location="http://virtualclassroomservices.apphb.com/Services/AdminService.svc" />
+    <wsdl:port name="WSHttpBinding_IAdminService" binding="tns:WSHttpBinding_IAdminService">
+      <soap12:address location="http://virtualclassroomservices.apphb.com/Services/AdminService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://virtualclassroomservices.apphb.com/Services/AdminService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

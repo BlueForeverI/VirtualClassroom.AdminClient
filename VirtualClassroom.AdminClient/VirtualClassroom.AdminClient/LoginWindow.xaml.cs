@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using VirtualClassroom.AdminClient.AdminService;
+using VirtualClassroom.Services.Services;
 using Xceed.Wpf.Toolkit;
 using MessageBox = System.Windows.MessageBox;
 
@@ -45,7 +46,10 @@ namespace VirtualClassroom.AdminClient
                                  {
                                      try
                                      {
-                                         admin = client.LoginAdmin(username, password);
+                                         string secret = Crypto.GenerateRandomSecret(30);
+                                         admin = client.LoginAdmin(Crypto.EncryptStringAES(username, secret),
+                                                                   Crypto.EncryptStringAES(password, secret),
+                                                                   secret);
                                      }
                                      catch (Exception ex)
                                      {

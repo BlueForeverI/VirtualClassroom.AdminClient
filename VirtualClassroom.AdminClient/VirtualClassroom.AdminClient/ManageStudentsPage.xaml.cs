@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VirtualClassroom.AdminClient.AdminService;
+using VirtualClassroom.Services.Services;
 
 namespace VirtualClassroom.AdminClient
 {
@@ -45,7 +46,12 @@ namespace VirtualClassroom.AdminClient
                     student.EGN = addStudentWindow.EGN;
                     student.ClassId = addStudentWindow.ClassId;
 
-                    client.RegisterStudent(student, addStudentWindow.Password);
+                    string secret = Crypto.GenerateRandomSecret(30);
+                    student.Username = Crypto.EncryptStringAES(student.Username, secret);
+
+                    client.RegisterStudent(student,
+                        Crypto.EncryptStringAES(addStudentWindow.Password, secret), secret);
+
                     MessageBox.Show("Student added successfully!");
                     this.dataGridStudents.ItemsSource = client.GetStudentViews();
                 }
