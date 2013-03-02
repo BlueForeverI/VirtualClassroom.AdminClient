@@ -25,9 +25,16 @@ namespace VirtualClassroom.AdminClient
 
         public ManageClassesPage()
         {
-            InitializeComponent();
-            this.dataGridClasses.Items.Clear();
-            this.dataGridClasses.ItemsSource = client.GetClasses();
+            try
+            {
+                InitializeComponent();
+                this.dataGridClasses.Items.Clear();
+                this.dataGridClasses.ItemsSource = client.GetClasses();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnAddClass_Click(object sender, RoutedEventArgs e)
@@ -40,7 +47,7 @@ namespace VirtualClassroom.AdminClient
                     string letter = addClassWindow.Letter;
                     int number = addClassWindow.Number;
                     client.AddClass(new Class() { Letter = letter, Number = number });
-                    MessageBox.Show("Class added successfully!");
+                    MessageBox.Show("Класът беше добавен успешно");
                     this.dataGridClasses.ItemsSource = client.GetClasses();
                 }
             }
@@ -62,15 +69,15 @@ namespace VirtualClassroom.AdminClient
 
                 if (classes.Count == 0)
                 {
-                    MessageBox.Show("You have not selected any classes!");
+                    MessageBox.Show("Не сте избрали класове");
                 }
                 else
                 {
-                    if (MessageBox.Show("Do you really want to remove these classes?", "Are you sure?",
+                    if (MessageBox.Show("Наистина ли искате да премахнете тези класове?", "Сигурен ли сте?",
                         MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         client.RemoveClasses(classes.ToArray());
-                        MessageBox.Show("Classes removed successfully!");
+                        MessageBox.Show("Класовете бяха премахнати успешно!");
                         this.dataGridClasses.ItemsSource = client.GetClasses();
                     }
                 }   
@@ -96,13 +103,13 @@ namespace VirtualClassroom.AdminClient
 
                     if (classes.Count == 0)
                     {
-                        MessageBox.Show("You have not selected any classes!");
+                        MessageBox.Show("Не сте избрали класове");
                     }
                     else
                     {
                         Subject subject = new Subject() { Id = addToSubjectWindow.SubjectId };
                         client.AddClassesToSubject(subject, classes.ToArray());
-                        MessageBox.Show("Classes added to subject successfully!");
+                        MessageBox.Show("Класовете бяха добавени към предмета успешно");
                     }
                 }
             }

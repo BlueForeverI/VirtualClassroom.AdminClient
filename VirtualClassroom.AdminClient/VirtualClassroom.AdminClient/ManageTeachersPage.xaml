@@ -5,23 +5,23 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       Width="auto" Height="auto"
-	Title="Manage Teachers">
+	Title="Учители">
 
     <Grid>
-        <GroupBox Header="Teachers" Padding="5 10 10 10" HorizontalAlignment="Center">
+        <GroupBox Header="Учители" Padding="5 10 10 10" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <DataGrid x:Name="dataGridTeachers" AutoGenerateColumns="False" Margin="0 0 10 0"
                           VerticalScrollBarVisibility="Auto" MaxHeight="600">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Username" Binding="{Binding Path=Username}" />
-                        <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}" />
-                        <DataGridTextColumn Header="Middle Name" Binding="{Binding Path=MiddleName}" />
-                        <DataGridTextColumn Header="Last Name" Binding="{Binding Path=LastName}" />
+                        <DataGridTextColumn Header="Потребителско име" Binding="{Binding Path=Username}" />
+                        <DataGridTextColumn Header="Име" Binding="{Binding Path=FirstName}" />
+                        <DataGridTextColumn Header="Презиме" Binding="{Binding Path=MiddleName}" />
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Path=LastName}" />
                     </DataGrid.Columns>
                 </DataGrid>
                 <StackPanel>
-                    <Button x:Name="btnAddTeacher" Click="btnAddTeacher_Click">Add Teacher</Button>
-                    <Button x:Name="btnRemoveTeacher" Click="btnRemoveTeacher_Click">Remove Teachers</Button>
+                    <Button x:Name="btnAddTeacher" Click="btnAddTeacher_Click">Добави учител</Button>
+                    <Button x:Name="btnRemoveTeacher" Click="btnRemoveTeacher_Click">Премахни учители</Button>
                 </StackPanel>
             </StackPanel>
         </GroupBox>

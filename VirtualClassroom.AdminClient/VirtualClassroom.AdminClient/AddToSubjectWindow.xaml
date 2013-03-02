@@ -2,12 +2,12 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-        Title="Add to Subject" SizeToContent="WidthAndHeight"
+        Title="Добави към предмет" SizeToContent="WidthAndHeight"
         Background="{DynamicResource WindowBackgroundBrush}" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel>
             <WrapPanel Margin="10">
-                <Label>Subject: </Label>
+                <Label>Предмет: </Label>
                 <ComboBox x:Name="comboSubjects" SelectedIndex="0" Margin="10 0 0 0" >
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
@@ -17,8 +17,8 @@
                 </ComboBox>
             </WrapPanel>
             <WrapPanel HorizontalAlignment="Right">
-                <Button x:Name="btnAdd" Click="btnAdd_Click" Margin="10" >Add</Button>
-                <Button x:Name="btnCancel" Click="btnCancel_Click" Margin="10" >Cancel</Button>
+                <Button x:Name="btnAdd" Click="btnAdd_Click" Margin="10" >Добави</Button>
+                <Button x:Name="btnCancel" Click="btnCancel_Click" Margin="10" >Отказ</Button>
             </WrapPanel>
         </StackPanel>
     </Grid>

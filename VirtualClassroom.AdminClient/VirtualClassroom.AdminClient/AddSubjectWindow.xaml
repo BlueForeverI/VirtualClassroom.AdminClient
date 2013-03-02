@@ -1,17 +1,17 @@
 ﻿<Window x:Class="VirtualClassroom.AdminClient.AddSubjectWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Add Subject" SizeToContent="WidthAndHeight"
+        Title="Добавяне на предмет" SizeToContent="WidthAndHeight"
         Background="{DynamicResource WindowBackgroundBrush}" ResizeMode="NoResize" 
         Topmost="True" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
     <Grid>
         <StackPanel>
             <WrapPanel Margin="10">
-                <Label>Name: </Label>
+                <Label>Име: </Label>
                 <TextBox x:Name="txtName" Width="120" Margin="10 0 0 0"/>
             </WrapPanel>
             <WrapPanel Margin="10">
-                <Label>Teacher: </Label>
+                <Label>Учител: </Label>
                 <ComboBox x:Name="comboTeachers" SelectedIndex="0" Margin="10 0 0 0">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
@@ -27,8 +27,8 @@
                 </ComboBox>
             </WrapPanel>
             <WrapPanel Margin="10" HorizontalAlignment="Right">
-                <Button x:Name="btnAdd" Click="btnAdd_Click" Margin="10" >Add</Button>
-                <Button x:Name="btnCancel" Click="btnCancel_Click" Margin="10" >Cencel</Button>
+                <Button x:Name="btnAdd" Click="btnAdd_Click" Margin="10" >Добави</Button>
+                <Button x:Name="btnCancel" Click="btnCancel_Click" Margin="10" >Отказ</Button>
             </WrapPanel>
         </StackPanel>
     </Grid>

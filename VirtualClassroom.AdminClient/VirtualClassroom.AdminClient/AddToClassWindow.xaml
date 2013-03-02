@@ -1,13 +1,13 @@
 ﻿<Window x:Class="VirtualClassroom.AdminClient.AddToClassWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Add to Class" SizeToContent="WidthAndHeight"
+        Title="Добави към клас" SizeToContent="WidthAndHeight"
         Background="{DynamicResource WindowBackgroundBrush}" ResizeMode="NoResize" 
         ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel>
             <WrapPanel Margin="10">
-                <Label>Class: </Label>
+                <Label>Клас: </Label>
                 <ComboBox x:Name="comboClasses" SelectedIndex="0" Margin="10 0 0 0" >
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
@@ -20,8 +20,8 @@
                 </ComboBox>
             </WrapPanel>
             <WrapPanel HorizontalAlignment="Right">
-                <Button x:Name="btnAdd" Margin="10" Click="btnAdd_Click" >Add</Button>
-                <Button x:Name="btnCancel" Margin="10" Click="btnCancel_Click">Cancel</Button>
+                <Button x:Name="btnAdd" Margin="10" Click="btnAdd_Click" >Добави</Button>
+                <Button x:Name="btnCancel" Margin="10" Click="btnCancel_Click">Отказ</Button>
             </WrapPanel>
         </StackPanel>
     </Grid>

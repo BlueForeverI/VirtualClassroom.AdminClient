@@ -32,14 +32,17 @@ namespace VirtualClassroom.AdminClient
 
         private void ValidateInput()
         {
-            if(string.IsNullOrEmpty(this.txtName.Text) || string.IsNullOrWhiteSpace(this.txtName.Text))
+            if(string.IsNullOrEmpty(this.txtName.Text) 
+                || string.IsNullOrWhiteSpace(this.txtName.Text))
             {
-                throw new Exception("The subject name cannot be an empty string!");
+                throw new Exception("Не сте въвели име на предмета");
             }
 
             if(this.txtName.Text.Length > MAX_SUBJECT_LENGTH)
             {
-                throw new Exception(string.Format("The subject name cannot be more than {0} characters", MAX_SUBJECT_LENGTH));
+                throw new Exception(string.Format(
+                    "Името не предмета не може да е по-дълго от {0} символа",
+                    MAX_SUBJECT_LENGTH));
             }
         }
 
@@ -59,7 +62,7 @@ namespace VirtualClassroom.AdminClient
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Invalid input");
+                MessageBox.Show(ex.Message, "Грешно въведена информация");
             }
         }
 

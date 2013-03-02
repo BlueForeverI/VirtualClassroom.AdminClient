@@ -5,21 +5,21 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       mc:Ignorable="d"
       Width="Auto" Height="Auto"
-	Title="Manage Classes">
+	Title="Класове">
     <Grid>
-        <GroupBox Header="Classes" Padding="5 10 10 10" HorizontalAlignment="Center">
+        <GroupBox Header="Класове" Padding="5 10 10 10" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <DataGrid x:Name="dataGridClasses" AutoGenerateColumns="False" Margin="0 0 10 0" 
                           VerticalScrollBarVisibility="Auto" MaxHeight="600">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Number" Binding="{Binding Path=Number}" />
-                        <DataGridTextColumn Header="Letter" Binding="{Binding Path=Letter}" />
+                        <DataGridTextColumn Header="Клас" Binding="{Binding Path=Number}" />
+                        <DataGridTextColumn Header="Паралелка" Binding="{Binding Path=Letter}" />
                     </DataGrid.Columns>        
                 </DataGrid>
                 <StackPanel>
-                    <Button x:Name="btnAddClass" Click="btnAddClass_Click">Add Class</Button>
-                    <Button x:Name="btnRemoveClass" Click="btnRemoveClass_Click">Remove Classes</Button>
-                    <Button x:Name="btnAddToSubject" Click="btnAddToSubject_Click">Add to Subject</Button>
+                    <Button x:Name="btnAddClass" Click="btnAddClass_Click">Добави клас</Button>
+                    <Button x:Name="btnRemoveClass" Click="btnRemoveClass_Click">Премахни класове</Button>
+                    <Button x:Name="btnAddToSubject" Click="btnAddToSubject_Click">Добави към предмет</Button>
                 </StackPanel>
             </StackPanel>
         </GroupBox>

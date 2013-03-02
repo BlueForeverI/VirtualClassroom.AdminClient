@@ -24,10 +24,18 @@ namespace VirtualClassroom.AdminClient
 
         public ManageSubjectsPage()
         {
-            InitializeComponent();
+            try
+            {
 
-            this.dataGridSubjects.Items.Clear();
-            this.dataGridSubjects.ItemsSource = client.GetSubjectViews();
+                InitializeComponent();
+
+                this.dataGridSubjects.Items.Clear();
+                this.dataGridSubjects.ItemsSource = client.GetSubjectViews();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnAddSubject_Click(object sender, RoutedEventArgs e)
@@ -42,7 +50,7 @@ namespace VirtualClassroom.AdminClient
                     subject.TeacherId = addSubjectWindow.TeacherId;
 
                     client.AddSubject(subject);
-                    MessageBox.Show("Subject added successfully!");
+                    MessageBox.Show("Предметът беше добавен успешно");
                     this.dataGridSubjects.ItemsSource = client.GetSubjectViews();
                 }
             }
@@ -65,15 +73,15 @@ namespace VirtualClassroom.AdminClient
 
                 if (subjects.Count == 0)
                 {
-                    MessageBox.Show("You have not selected any subjects!");
+                    MessageBox.Show("Не сте избрали предмети");
                 }
                 else
                 {
-                    if (MessageBox.Show("Do you really want to remove these subjects?", "Are you sure?",
+                    if (MessageBox.Show("Наистина ли искате да премахнете тези предмети?", "Сигурен ли сте?",
                         MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         client.RemoveSubjects(subjects.ToArray());
-                        MessageBox.Show("Subjects removed successfully!");
+                        MessageBox.Show("Предметите бяха премахнати успешно");
                         this.dataGridSubjects.ItemsSource = client.GetSubjectViews();
                     }
                 }
@@ -98,7 +106,7 @@ namespace VirtualClassroom.AdminClient
 
                 if (subjects.Count == 0)
                 {
-                    MessageBox.Show("You have not selected any subjects!");
+                    MessageBox.Show("Не сте избрали предмети");
                 }
                 else
                 {
@@ -107,7 +115,7 @@ namespace VirtualClassroom.AdminClient
                     {
                         Class c = new Class() {Id = addToClassWindow.ClassId};
                         client.AddSubjectsToClass(c, subjects.ToArray());
-                        MessageBox.Show("Subjects added successfully!");
+                        MessageBox.Show("Предметите бяха добавени към класа успешно");
                     }
                 }
             }

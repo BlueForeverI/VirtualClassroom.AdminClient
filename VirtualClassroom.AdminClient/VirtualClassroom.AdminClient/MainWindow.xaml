@@ -1,16 +1,16 @@
 ﻿<Window x:Class="VirtualClassroom.AdminClient.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Admin Client" SizeToContent="WidthAndHeight" MinHeight="350" MinWidth="600" 
+        Title="Администратор - Виртуална класна стая" SizeToContent="WidthAndHeight" MinHeight="350" MinWidth="600" 
         Background="{DynamicResource WindowBackgroundBrush}"
         Closing="Window_Closing" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
             <WrapPanel x:Name="navigation" VerticalAlignment="Top"  HorizontalAlignment="Center" Margin="0 10 0 20" >
-                <Button x:Name="btnManageClasses" Click="btnManageClasses_Click" Padding="20">Manage Classes</Button>
-                <Button x:Name="btnManageTeachers" Click="btnManageTeachers_Click" Padding="20">Manage Teachers</Button>
-                <Button x:Name="btnManageStudents" Click="btnManageStudents_Click" Padding="20">Manage Students</Button>
-                <Button x:Name="btnManageSubjects" Click="btnManageSubjects_Click" Padding="20">Manage Subjects</Button>
+                <Button x:Name="btnManageClasses" Click="btnManageClasses_Click" Padding="20">Класове</Button>
+                <Button x:Name="btnManageTeachers" Click="btnManageTeachers_Click" Padding="20">Учители</Button>
+                <Button x:Name="btnManageStudents" Click="btnManageStudents_Click" Padding="20">Ученици</Button>
+                <Button x:Name="btnManageSubjects" Click="btnManageSubjects_Click" Padding="20">Предмети</Button>
             </WrapPanel>
             
             <StackPanel>

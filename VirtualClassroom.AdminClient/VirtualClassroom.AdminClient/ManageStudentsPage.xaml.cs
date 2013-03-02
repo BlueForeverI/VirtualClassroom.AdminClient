@@ -25,10 +25,18 @@ namespace VirtualClassroom.AdminClient
 
         public ManageStudentsPage()
         {
-            InitializeComponent();
+            try
+            {
 
-            this.dataGridStudents.Items.Clear();
-            this.dataGridStudents.ItemsSource = client.GetStudentViews();
+                InitializeComponent();
+
+                this.dataGridStudents.Items.Clear();
+                this.dataGridStudents.ItemsSource = client.GetStudentViews();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnAddStudent_Click(object sender, RoutedEventArgs e)
@@ -52,7 +60,7 @@ namespace VirtualClassroom.AdminClient
                     client.RegisterStudent(student,
                         Crypto.EncryptStringAES(addStudentWindow.Password, secret), secret);
 
-                    MessageBox.Show("Student added successfully!");
+                    MessageBox.Show("Ученикът беше добавен успешно");
                     this.dataGridStudents.ItemsSource = client.GetStudentViews();
                 }
             }
@@ -76,15 +84,15 @@ namespace VirtualClassroom.AdminClient
 
                 if(students.Count == 0)
                 {
-                    MessageBox.Show("You have not selected any students");
+                    MessageBox.Show("Не сте избрали ученици");
                 }
                 else
                 {
-                    if (MessageBox.Show("Do you really want to remove these students?",
-                        "Are you sure?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    if (MessageBox.Show("Наистина ли искате да премахнете тези ученици?",
+                        "Сигурен ли сте?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         client.RemoveStudents(students.ToArray());
-                        MessageBox.Show("Students removed successfully!");
+                        MessageBox.Show("Учениците бяха премахнати успешно");
                         this.dataGridStudents.ItemsSource = client.GetStudentViews();
                     }
                 }

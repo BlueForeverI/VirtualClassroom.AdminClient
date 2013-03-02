@@ -25,9 +25,16 @@ namespace VirtualClassroom.AdminClient
 
         public ManageTeachersPage()
         {
-            InitializeComponent();
-            this.dataGridTeachers.Items.Clear();
-            this.dataGridTeachers.ItemsSource = client.GetTeachers();
+            try
+            {
+                InitializeComponent();
+                this.dataGridTeachers.Items.Clear();
+                this.dataGridTeachers.ItemsSource = client.GetTeachers();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnAddTeacher_Click(object sender, RoutedEventArgs e)
@@ -58,7 +65,7 @@ namespace VirtualClassroom.AdminClient
                         Crypto.EncryptStringAES(addTeacherWindow.Password, secret),
                         secret);
 
-                    MessageBox.Show("Teacher added successfully!");
+                    MessageBox.Show("Учителят беше добавен успешно");
                     this.dataGridTeachers.ItemsSource = client.GetTeachers();
                 }
             }
@@ -80,15 +87,15 @@ namespace VirtualClassroom.AdminClient
 
                 if (teachers.Count == 0)
                 {
-                    MessageBox.Show("You have not selected any teachers!");
+                    MessageBox.Show("Не сте избрали учители");
                 }
                 else
                 {
-                    if (MessageBox.Show("Do you really want to remove these teachers?", "Are you sure?",
+                    if (MessageBox.Show("Наистина ли искате да премахнете тези учители?", "Сигурен ли сте?",
                         MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         client.RemoveTeachers(teachers.ToArray());
-                        MessageBox.Show("Teachers removed successfully!");
+                        MessageBox.Show("Учителите бяха премахнати успешно");
                         this.dataGridTeachers.ItemsSource = client.GetTeachers();
                     }
                 }

@@ -31,28 +31,28 @@ namespace VirtualClassroom.AdminClient
         {
             if(string.IsNullOrEmpty(this.txtNumber.Text) || string.IsNullOrWhiteSpace(this.txtNumber.Text))
             {
-                throw new Exception("The number cannot be an empty string!");
+                throw new Exception("Не сте въвели клас");
             }
 
             if(!Regex.IsMatch(this.txtNumber.Text, "[0-9]+"))
             {
-                throw new Exception("Invalid number value!");
+                throw new Exception("Невалидна стойност за клас");
             }
 
             int number = int.Parse(this.txtNumber.Text);
             if(number < 1 || number > 12)
             {
-                throw new Exception("The number should be between 1 and 12!");
+                throw new Exception("Класът трябва да е между 1 и 12");
             }
 
             if(string.IsNullOrEmpty(this.txtLetter.Text) || string.IsNullOrWhiteSpace(this.txtLetter.Text))
             {
-                throw new Exception("The letter cannot be an empty string!");
+                throw new Exception("Не сте въвели паралелка");
             }
 
-            if (!Regex.IsMatch(this.txtLetter.Text, "[A-Za-z]") || this.txtLetter.Text.Length > 1)
+            if (!Regex.IsMatch(this.txtLetter.Text, "[а-яА-Я]") || this.txtLetter.Text.Length > 1)
             {
-                throw new Exception("Invalid letter value!");
+                throw new Exception("Невалидна стойност за паралелка");
             }
         }
 
@@ -68,7 +68,7 @@ namespace VirtualClassroom.AdminClient
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Invalid input");
+                MessageBox.Show(ex.Message, "Грешно въведена информация");
             }
         }
 
