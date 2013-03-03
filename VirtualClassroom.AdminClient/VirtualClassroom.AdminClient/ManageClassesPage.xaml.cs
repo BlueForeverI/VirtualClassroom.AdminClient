@@ -92,26 +92,27 @@ namespace VirtualClassroom.AdminClient
         {
             try
             {
-                AddToSubjectWindow addToSubjectWindow = new AddToSubjectWindow();
-                if (addToSubjectWindow.ShowDialog() == true)
+                List<Class> classes = new List<Class>();
+                foreach (var selected in this.dataGridClasses.SelectedItems)
                 {
-                    List<Class> classes = new List<Class>();
-                    foreach (var selected in this.dataGridClasses.SelectedItems)
-                    {
-                        classes.Add(new Class() { Id = (selected as Class).Id });
-                    }
+                    classes.Add(new Class() { Id = (selected as Class).Id });
+                }
 
-                    if (classes.Count == 0)
+                if (classes.Count == 0)
+                {
+                    MessageBox.Show("Не сте избрали класове");
+                }
+                else
+                {
+                    AddToSubjectWindow addToSubjectWindow = new AddToSubjectWindow();
+                    if (addToSubjectWindow.ShowDialog() == true)
                     {
-                        MessageBox.Show("Не сте избрали класове");
-                    }
-                    else
-                    {
-                        Subject subject = new Subject() { Id = addToSubjectWindow.SubjectId };
+                        Subject subject = new Subject() {Id = addToSubjectWindow.SubjectId};
                         client.AddClassesToSubject(subject, classes.ToArray());
                         MessageBox.Show("Класовете бяха добавени към предмета успешно");
                     }
                 }
+                
             }
             catch (Exception ex)
             {
