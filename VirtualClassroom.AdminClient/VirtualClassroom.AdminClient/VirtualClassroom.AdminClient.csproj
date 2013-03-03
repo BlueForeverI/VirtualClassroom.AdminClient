@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>school.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -241,6 +244,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\AdminService\AdminService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="school.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Oxygen-Icons.org-Oxygen-Categories-applications-education-school.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
