@@ -1,21 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Windows.Threading;
 using VirtualClassroom.AdminClient.AdminService;
-using VirtualClassroom.Services.Services;
-using Xceed.Wpf.Toolkit;
 using MessageBox = System.Windows.MessageBox;
 
 namespace VirtualClassroom.AdminClient
@@ -42,20 +28,23 @@ namespace VirtualClassroom.AdminClient
             string username = txtUsername.Text;
             string password = txtPassword.Password;
 
+            //call the service in another thread, while
+            //showing user-friendly message
             worker.DoWork += (o, ea) =>
-                                 {
-                                     try
-                                     {
-                                         string secret = Crypto.GenerateRandomSecret(30);
-                                         admin = client.LoginAdmin(Crypto.EncryptStringAES(username, secret),
-                                                                   Crypto.EncryptStringAES(password, secret),
-                                                                   secret);
-                                     }
-                                     catch (Exception ex)
-                                     {
-                                         MessageBox.Show(ex.Message);
-                                     }
-                                 };
+            {
+                try
+                {
+                    //encrypt login details
+                    string secret = Crypto.GenerateRandomSecret(30);
+                    admin = client.LoginAdmin(Crypto.EncryptStringAES(username, secret),
+                                            Crypto.EncryptStringAES(password, secret),
+                                            secret);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            };
 
             worker.RunWorkerCompleted += (o, ea) =>
             {
@@ -67,6 +56,7 @@ namespace VirtualClassroom.AdminClient
                 }
                 else
                 {
+                    //login successfull
                     this.DialogResult = true;
                     this.Close();
                 }

@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using VirtualClassroom.AdminClient.AdminService;
 
 namespace VirtualClassroom.AdminClient
@@ -33,6 +23,9 @@ namespace VirtualClassroom.AdminClient
             this.comboClasses.ItemsSource = client.GetClasses();
         }
 
+        /// <summary>
+        /// Checks whether the user input is valid
+        /// </summary>
         private void ValidateInput()
         {
             if(string.IsNullOrEmpty(this.txtUsername.Text) 
@@ -131,6 +124,11 @@ namespace VirtualClassroom.AdminClient
             }
         }
 
+        /// <summary>
+        /// Checks the the given EGN for errors
+        /// </summary>
+        /// <param name="egn">The EGN to test</param>
+        /// <returns>Whether the EGN is valid</returns>
         private bool IsEgnValid(string egn)
         {
             if (string.IsNullOrEmpty(egn))

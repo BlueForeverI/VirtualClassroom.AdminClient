@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!--Load dark theme-->
         <ResourceDictionary Source="Theme.xaml"/>
     </Application.Resources>
 </Application>

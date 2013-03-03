@@ -1,15 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using VirtualClassroom.AdminClient.AdminService;
 
 namespace VirtualClassroom.AdminClient
@@ -30,6 +20,9 @@ namespace VirtualClassroom.AdminClient
             this.comboTeachers.ItemsSource = client.GetTeachers();
         }
 
+        /// <summary>
+        /// Checks whether the user input is valid
+        /// </summary>
         private void ValidateInput()
         {
             if(string.IsNullOrEmpty(this.txtName.Text) 
