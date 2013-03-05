@@ -37,12 +37,10 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml.cs" caret="13" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToClassWindow.xaml.cs" caret="13" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToSubjectWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="98" fromTop="2" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="408" fromTop="9" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="390" fromTop="7" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="963" fromTop="18" />
     </RecentFiles>
     <RecentEdits>
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddSubjectWindow.xaml.cs" caret="719" fromTop="16" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml.cs" caret="612" fromTop="23" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml.cs" caret="5030" fromTop="16" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml" caret="331" fromTop="4" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ClientManager.cs" caret="246" fromTop="9" />
@@ -71,6 +69,8 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToSubjectWindow.xaml.cs" caret="13" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="98" fromTop="2" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="306" fromTop="5" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="747" fromTop="13" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="944" fromTop="18" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
