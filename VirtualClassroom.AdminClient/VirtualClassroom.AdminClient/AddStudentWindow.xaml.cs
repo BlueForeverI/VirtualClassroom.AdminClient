@@ -210,7 +210,7 @@ namespace VirtualClassroom.AdminClient
             {
                 this.ValidateInput();
 
-                 this.Username = this.txtUsername.Text;
+                this.Username = this.txtUsername.Text;
                 this.FirstName = this.txtFirstName.Text;
                 this.MiddleName = this.txtMiddleName.Text;
                 this.LastName = this.txtLastName.Text;

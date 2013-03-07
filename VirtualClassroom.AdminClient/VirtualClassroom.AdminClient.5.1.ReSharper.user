@@ -9,68 +9,68 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Service References/d:AdminService/f:Reference.cs" caret="460" fromTop="8" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:Theme.xaml" caret="109132" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml" caret="1100" fromTop="3" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml" caret="1495" fromTop="8" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml" caret="1405" fromTop="13" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml" caret="1505" fromTop="17" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddClassWindow.xaml" caret="1053" fromTop="18" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml" caret="2428" fromTop="8" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddSubjectWindow.xaml" caret="1711" fromTop="6" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToClassWindow.xaml" caret="1312" fromTop="6" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToSubjectWindow.xaml" caret="1006" fromTop="3" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml" caret="480" fromTop="6" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClassesPage.xaml" caret="368" fromTop="5" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:Crypto.cs" caret="7145" fromTop="160" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml" caret="331" fromTop="4" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ClientManager.cs" caret="879" fromTop="30" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="13" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClassesPage.xaml.cs" caret="48" fromTop="1" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="868" fromTop="30" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml.cs" caret="473" fromTop="16" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="48" fromTop="1" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddClassWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml.cs" caret="13" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddSubjectWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml.cs" caret="13" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToClassWindow.xaml.cs" caret="13" fromTop="0" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="360" fromTop="6" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToSubjectWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="390" fromTop="7" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="963" fromTop="18" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="2103" fromTop="12" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml" caret="448" fromTop="5" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml" caret="2486" fromTop="4" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="1185" fromTop="23" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml" caret="1463" fromTop="9" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml.cs" caret="638" fromTop="0" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml" caret="2340" fromTop="4" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml" caret="1623" fromTop="6" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml" caret="1687" fromTop="5" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml.cs" caret="523" fromTop="3" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="1034" fromTop="0" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml" caret="1476" fromTop="11" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="813" fromTop="20" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="3555" fromTop="2" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="3985" fromTop="21" />
     </RecentFiles>
     <RecentEdits>
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml.cs" caret="5030" fromTop="16" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml" caret="331" fromTop="4" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ClientManager.cs" caret="246" fromTop="9" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ClientManager.cs" caret="541" fromTop="12" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ClientManager.cs" caret="879" fromTop="24" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml.cs" caret="2022" fromTop="23" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml.cs" caret="1571" fromTop="4" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml.cs" caret="1571" fromTop="4" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml.cs" caret="1571" fromTop="4" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml.cs" caret="1571" fromTop="4" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml.cs" caret="1571" fromTop="4" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml.cs" caret="1571" fromTop="4" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml.cs" caret="1110" fromTop="7" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageClassesPage.xaml.cs" caret="48" fromTop="1" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="48" fromTop="1" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="505" fromTop="9" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageSubjectsPage.xaml.cs" caret="48" fromTop="1" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="48" fromTop="1" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddClassWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddSubjectWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToClassWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToSubjectWindow.xaml.cs" caret="13" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="98" fromTop="2" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="306" fromTop="5" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="747" fromTop="13" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="944" fromTop="18" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="8133" fromTop="28" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml.cs" caret="6997" fromTop="9" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="8133" fromTop="25" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="8118" fromTop="23" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="7978" fromTop="15" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml" caret="1492" fromTop="9" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="1185" fromTop="23" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="4907" fromTop="13" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml" caret="2340" fromTop="4" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml" caret="231" fromTop="3" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml" caret="1623" fromTop="6" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="4591" fromTop="33" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="1197" fromTop="11" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="941" fromTop="11" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="1367" fromTop="17" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="1034" fromTop="15" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="1132" fromTop="14" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="5475" fromTop="32" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="5297" fromTop="23" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="5157" fromTop="28" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml" caret="1502" fromTop="11" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="4907" fromTop="8" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="5002" fromTop="28" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="3555" fromTop="11" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="5097" fromTop="29" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="813" fromTop="20" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="4337" fromTop="20" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="4851" fromTop="29" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="3802" fromTop="17" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="3984" fromTop="21" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -95,7 +95,7 @@
       <Item value="Uri" priority="4" />
       <Item value="UriKind`0" priority="2" />
       <Item value="ManageClasses`0" priority="1" />
-      <Item value="public" priority="19" />
+      <Item value="public" priority="21" />
       <Item value="static" priority="6" />
       <Item value="List`0" priority="5" />
       <Item value="Classes" priority="0" />
@@ -104,28 +104,28 @@
       <Item value="AdminService" priority="2" />
       <Item value="AdminServiceClient`0" priority="6" />
       <Item value="AdminServiceClient" priority="3" />
-      <Item value="client" priority="38" />
-      <Item value="var" priority="14" />
+      <Item value="client" priority="43" />
+      <Item value="var" priority="17" />
       <Item value="classes" priority="16" />
       <Item value="ToArray`1" priority="1" />
-      <Item value="Class`0" priority="14" />
+      <Item value="Class`0" priority="15" />
       <Item value="ToList`1" priority="0" />
-      <Item value="new" priority="49" />
-      <Item value="this" priority="100" />
+      <Item value="new" priority="53" />
+      <Item value="this" priority="145" />
       <Item value="IEnumerable" priority="0" />
-      <Item value="null" priority="2" />
-      <Item value="if" priority="40" />
+      <Item value="null" priority="4" />
+      <Item value="if" priority="48" />
       <Item value="clientInstance" priority="4" />
       <Item value="return" priority="0" />
       <Item value="ClientManager`0" priority="7" />
       <Item value="void" priority="6" />
-      <Item value="string" priority="30" />
+      <Item value="string" priority="31" />
       <Item value="xamlPath" priority="0" />
       <Item value="Relative" priority="0" />
-      <Item value="int" priority="19" />
+      <Item value="int" priority="21" />
       <Item value="DialogResult" priority="0" />
-      <Item value="true" priority="12" />
-      <Item value="false" priority="13" />
+      <Item value="true" priority="14" />
+      <Item value="false" priority="14" />
       <Item value="AddClass`0" priority="0" />
       <Item value="AddClassWindow`0" priority="0" />
       <Item value="addClassWindow" priority="6" />
@@ -135,7 +135,7 @@
       <Item value="letter" priority="0" />
       <Item value="Number" priority="0" />
       <Item value="number" priority="2" />
-      <Item value="MessageBox`0" priority="40" />
+      <Item value="MessageBox`0" priority="48" />
       <Item value="dataGridClasses" priority="0" />
       <Item value="MessageBox" priority="0" />
       <Item value="MessageBoxButton`0" priority="3" />
@@ -143,8 +143,8 @@
       <Item value="AddTeacherWindow`0" priority="0" />
       <Item value="addTeacherWindow" priority="8" />
       <Item value="AddTeacherWindow" priority="0" />
-      <Item value="teacher" priority="4" />
-      <Item value="Teacher" priority="1" />
+      <Item value="teacher" priority="14" />
+      <Item value="Teacher" priority="2" />
       <Item value="Username" priority="1" />
       <Item value="username" priority="2" />
       <Item value="FirstName" priority="0" />
@@ -154,13 +154,13 @@
       <Item value="LastName" priority="0" />
       <Item value="lastName" priority="0" />
       <Item value="password" priority="2" />
-      <Item value="Teacher`0" priority="3" />
+      <Item value="Teacher`0" priority="4" />
       <Item value="AddStudentWindow`0" priority="0" />
       <Item value="addStudentWindow" priority="10" />
       <Item value="AddStudentWindow" priority="0" />
-      <Item value="Student`0" priority="4" />
-      <Item value="Student" priority="2" />
-      <Item value="student" priority="14" />
+      <Item value="Student`0" priority="6" />
+      <Item value="Student" priority="3" />
+      <Item value="student" priority="28" />
       <Item value="Uri`0" priority="0" />
       <Item value="UpdateDataGrid`0" priority="5" />
       <Item value="students" priority="3" />
@@ -168,7 +168,7 @@
       <Item value="select" priority="1" />
       <Item value="c" priority="1" />
       <Item value="list" priority="1" />
-      <Item value="dynamic" priority="4" />
+      <Item value="dynamic" priority="6" />
       <Item value="selected" priority="12" />
       <Item value="subjects" priority="7" />
       <Item value="teachers" priority="3" />
@@ -180,7 +180,7 @@
       <Item value="AddSubjectWindow" priority="0" />
       <Item value="Subject`0" priority="5" />
       <Item value="Id" priority="8" />
-      <Item value="as" priority="7" />
+      <Item value="as" priority="10" />
       <Item value="AddToSubjectWindow`0" priority="0" />
       <Item value="addToSubjectWindow" priority="2" />
       <Item value="AddToSubjectWindow" priority="0" />
@@ -200,7 +200,7 @@
       <Item value="loginWindow" priority="3" />
       <Item value="LoginWindow" priority="0" />
       <Item value="Thread" priority="0" />
-      <Item value="txtUsername" priority="1" />
+      <Item value="txtUsername" priority="2" />
       <Item value="Dispatcher" priority="1" />
       <Item value="Thread`0" priority="1" />
       <Item value="worker" priority="10" />
@@ -208,7 +208,7 @@
       <Item value="busyIndicator" priority="2" />
       <Item value="bool" priority="1" />
       <Item value="result" priority="4" />
-      <Item value="else" priority="4" />
+      <Item value="else" priority="8" />
       <Item value="txtPassword" priority="0" />
       <Item value="admin" priority="0" />
       <Item value="while" priority="0" />
@@ -222,8 +222,8 @@
       <Item value="throw" priority="17" />
       <Item value="Exception" priority="17" />
       <Item value="Regex`0" priority="1" />
-      <Item value="try" priority="19" />
-      <Item value="ex" priority="20" />
+      <Item value="try" priority="23" />
+      <Item value="ex" priority="24" />
       <Item value="const" priority="3" />
       <Item value="MAX_NAME_LENGTH" priority="3" />
       <Item value="IsEgnValid`0" priority="0" />
@@ -231,12 +231,23 @@
       <Item value="MAX_PASS_LENGTH" priority="1" />
       <Item value="ValidateInput`0" priority="0" />
       <Item value="MAX_SUBJECT_LENGTH" priority="1" />
-      <Item value="catch" priority="1" />
-      <Item value="Exception`0" priority="2" />
+      <Item value="catch" priority="2" />
+      <Item value="Exception`0" priority="3" />
       <Item value="MainWindow`0" priority="0" />
       <Item value="GenerateRandomSecret`0" priority="0" />
-      <Item value="Crypto`0" priority="7" />
-      <Item value="secret" priority="3" />
+      <Item value="Crypto`0" priority="13" />
+      <Item value="secret" priority="5" />
+      <Item value="txtFirstName" priority="0" />
+      <Item value="txtMiddleName" priority="0" />
+      <Item value="txtLastName" priority="0" />
+      <Item value="EditStudentWindow`0" priority="0" />
+      <Item value="editStudentWindow" priority="2" />
+      <Item value="EditStudentWindow" priority="0" />
+      <Item value="studentId" priority="0" />
+      <Item value="EditTeacherWindow`0" priority="0" />
+      <Item value="editTeacherWindow" priority="2" />
+      <Item value="EditTeacherWindow" priority="0" />
+      <Item value="teacherId" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.UriKind">
       <Item value="Relative" priority="3" />
@@ -247,9 +258,10 @@
     <ItemStatistics item="Qualified:System.Windows.Controls.DataGrid">
       <Item value="ItemsSource" priority="12" />
       <Item value="Items" priority="3" />
-      <Item value="SelectedItem" priority="5" />
-      <Item value="SelectedItems" priority="6" />
+      <Item value="SelectedItem" priority="7" />
+      <Item value="SelectedItems" priority="8" />
       <Item value="Visibility" priority="0" />
+      <Item value="SelectedIndex" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.AdminService.AdminServiceClient">
       <Item value="GetClasses`0" priority="10" />
@@ -273,6 +285,10 @@
       <Item value="GetStudentViews`0" priority="0" />
       <Item value="GetSubjectViews`0" priority="1" />
       <Item value="Close`0" priority="0" />
+      <Item value="GetStudentById`0" priority="0" />
+      <Item value="EditStudent`0" priority="0" />
+      <Item value="GetTeacherById`0" priority="0" />
+      <Item value="EditTeacher`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@VirtualClassroom.AdminClient.ManageClasses">
       <Item value="Classes" priority="0" />
@@ -294,7 +310,7 @@
       <Item value="DialogResult" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Controls.TextBox">
-      <Item value="Text" priority="29" />
+      <Item value="Text" priority="47" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int32">
       <Item value="Parse`0" priority="7" />
@@ -309,7 +325,7 @@
       <Item value="Owner" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.MessageBox">
-      <Item value="Show`0" priority="39" />
+      <Item value="Show`0" priority="47" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.ManageClassesPage">
       <Item value="dataGridClasses" priority="8" />
@@ -334,10 +350,10 @@
       <Item value="ShowDialog`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.ManageTeachersPage">
-      <Item value="dataGridTeachers" priority="5" />
+      <Item value="dataGridTeachers" priority="8" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.ManageStudentsPage">
-      <Item value="dataGridStudents" priority="6" />
+      <Item value="dataGridStudents" priority="9" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.AddStudentWindow">
       <Item value="EGN" priority="1" />
@@ -358,16 +374,17 @@
       <Item value="txtPassword" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.AdminService.Student">
-      <Item value="Username" priority="5" />
-      <Item value="FirstName" priority="2" />
-      <Item value="MiddleName" priority="1" />
-      <Item value="LastName" priority="1" />
-      <Item value="EGN" priority="1" />
-      <Item value="ClassId" priority="1" />
+      <Item value="Username" priority="9" />
+      <Item value="FirstName" priority="4" />
+      <Item value="MiddleName" priority="3" />
+      <Item value="LastName" priority="3" />
+      <Item value="EGN" priority="3" />
+      <Item value="ClassId" priority="2" />
       <Item value="Id" priority="2" />
+      <Item value="PasswordHash" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.AdminService.Class">
-      <Item value="Id" priority="4" />
+      <Item value="Id" priority="5" />
       <Item value="Number" priority="1" />
       <Item value="Letter" priority="0" />
     </ItemStatistics>
@@ -379,7 +396,7 @@
     <ItemStatistics item="Qualified:System.Windows.Controls.ComboBox">
       <Item value="Items" priority="3" />
       <Item value="ItemsSource" priority="3" />
-      <Item value="SelectedItem" priority="3" />
+      <Item value="SelectedItem" priority="4" />
       <Item value="SelectedIndex" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.ManageSubjectsPage">
@@ -392,9 +409,11 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.AdminService.Teacher">
       <Item value="Id" priority="2" />
-      <Item value="FirstName" priority="0" />
-      <Item value="LastName" priority="0" />
-      <Item value="Username" priority="1" />
+      <Item value="FirstName" priority="2" />
+      <Item value="LastName" priority="2" />
+      <Item value="Username" priority="5" />
+      <Item value="MiddleName" priority="1" />
+      <Item value="PasswordHash" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.AddSubjectWindow">
       <Item value="comboTeachers" priority="2" />
@@ -458,7 +477,7 @@
       <Item value="Visible" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Controls.PasswordBox">
-      <Item value="Password" priority="6" />
+      <Item value="Password" priority="8" />
       <Item value="MaxLength" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.AdminService.SubjectView">
@@ -469,7 +488,7 @@
       <Item value="IsMatch`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Exception">
-      <Item value="Message" priority="20" />
+      <Item value="Message" priority="24" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
       <Item value="Length" priority="5" />
@@ -480,6 +499,39 @@
     <ItemStatistics item="Qualified:@VirtualClassroom.Services.Services.Crypto">
       <Item value="GenerateRandomSecret`0" priority="2" />
       <Item value="EncryptStringAES`0" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.EditStudentWindow">
+      <Item value="txtUsername" priority="1" />
+      <Item value="txtFirstName" priority="0" />
+      <Item value="txtMiddleName" priority="0" />
+      <Item value="txtEgn" priority="1" />
+      <Item value="ValidateInput`0" priority="0" />
+      <Item value="Student" priority="8" />
+      <Item value="txtPassword" priority="0" />
+      <Item value="comboClasses" priority="0" />
+      <Item value="DialogResult" priority="0" />
+      <Item value="client" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.IList">
+      <Item value="Count" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@VirtualClassroom.AdminClient.Crypto">
+      <Item value="GenerateRandomSecret`0" priority="1" />
+      <Item value="EncryptStringAES`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.EditTeacherWindow">
+      <Item value="Teacher" priority="6" />
+      <Item value="txtUsername" priority="2" />
+      <Item value="txtFirstName" priority="1" />
+      <Item value="txtLastName" priority="1" />
+      <Item value="DialogResult" priority="2" />
+      <Item value="Close`0" priority="1" />
+      <Item value="ValidateInput`0" priority="0" />
+      <Item value="txtMiddleName" priority="0" />
+      <Item value="txtPassword" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

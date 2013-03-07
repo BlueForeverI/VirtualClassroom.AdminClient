@@ -95,5 +95,44 @@ namespace VirtualClassroom.AdminClient
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnEditTeacher_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if(this.dataGridTeachers.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Не сте избрали учител");
+                }
+                else if(this.dataGridTeachers.SelectedItems.Count > 1)
+                {
+                    MessageBox.Show("Трябва да изберете един учител");
+                }
+                else
+                {
+                    int teacherId = (this.dataGridTeachers.SelectedItem as dynamic).Id;
+
+                    EditTeacherWindow editTeacherWindow = new EditTeacherWindow(
+                        client.GetTeacherById(teacherId));
+
+                    if(editTeacherWindow.ShowDialog() == true)
+                    {
+                        var teacher = editTeacherWindow.Teacher;
+                        string secret = Crypto.GenerateRandomSecret(40);
+                        teacher.Username = Crypto.EncryptStringAES(teacher.Username, secret);
+                        teacher.PasswordHash = Crypto.EncryptStringAES(teacher.PasswordHash, secret);
+
+                        client.EditTeacher(teacherId, teacher, secret);
+
+                        MessageBox.Show("Учителят беше редактиран успешно");
+                        this.dataGridTeachers.ItemsSource = client.GetTeachers();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -37,6 +37,12 @@
   <wsdl:message name="IAdminService_GetClasses_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetClassesResponse" />
   </wsdl:message>
+  <wsdl:message name="IAdminService_AddClassesToSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddClassesToSubject" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddClassesToSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClassesToSubjectResponse" />
+  </wsdl:message>
   <wsdl:message name="IAdminService_RegisterStudent_InputMessage">
     <wsdl:part name="parameters" element="tns:RegisterStudent" />
   </wsdl:message>
@@ -54,6 +60,18 @@
   </wsdl:message>
   <wsdl:message name="IAdminService_GetStudentViews_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetStudentViewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_EditStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditStudent" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_EditStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetStudentById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentById" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetStudentById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentByIdResponse" />
   </wsdl:message>
   <wsdl:message name="IAdminService_AddSubject_InputMessage">
     <wsdl:part name="parameters" element="tns:AddSubject" />
@@ -73,6 +91,18 @@
   <wsdl:message name="IAdminService_GetSubjectViews_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetSubjectViewsResponse" />
   </wsdl:message>
+  <wsdl:message name="IAdminService_AddSubjectsToClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubjectsToClass" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddSubjectsToClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubjectsToClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetSubjectsByClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectsByClass" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetSubjectsByClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectsByClassResponse" />
+  </wsdl:message>
   <wsdl:message name="IAdminService_RegisterTeacher_InputMessage">
     <wsdl:part name="parameters" element="tns:RegisterTeacher" />
   </wsdl:message>
@@ -91,23 +121,17 @@
   <wsdl:message name="IAdminService_GetTeachers_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetTeachersResponse" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_AddClassesToSubject_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddClassesToSubject" />
+  <wsdl:message name="IAdminService_EditTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditTeacher" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_AddClassesToSubject_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddClassesToSubjectResponse" />
+  <wsdl:message name="IAdminService_EditTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditTeacherResponse" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_AddSubjectsToClass_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddSubjectsToClass" />
+  <wsdl:message name="IAdminService_GetTeacherById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeacherById" />
   </wsdl:message>
-  <wsdl:message name="IAdminService_AddSubjectsToClass_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddSubjectsToClassResponse" />
-  </wsdl:message>
-  <wsdl:message name="IAdminService_GetSubjectsByClass_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetSubjectsByClass" />
-  </wsdl:message>
-  <wsdl:message name="IAdminService_GetSubjectsByClass_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetSubjectsByClassResponse" />
+  <wsdl:message name="IAdminService_GetTeacherById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeacherByIdResponse" />
   </wsdl:message>
   <wsdl:message name="IAdminService_RegisterAdmin_InputMessage">
     <wsdl:part name="parameters" element="tns:RegisterAdmin" />
@@ -134,6 +158,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetClasses" message="tns:IAdminService_GetClasses_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetClassesResponse" message="tns:IAdminService_GetClasses_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddClassesToSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddClassesToSubject" message="tns:IAdminService_AddClassesToSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddClassesToSubjectResponse" message="tns:IAdminService_AddClassesToSubject_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RegisterStudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterStudent" message="tns:IAdminService_RegisterStudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterStudentResponse" message="tns:IAdminService_RegisterStudent_OutputMessage" />
@@ -145,6 +173,14 @@
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetStudentViews">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetStudentViews" message="tns:IAdminService_GetStudentViews_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetStudentViewsResponse" message="tns:IAdminService_GetStudentViews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="EditStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/EditStudent" message="tns:IAdminService_EditStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/EditStudentResponse" message="tns:IAdminService_EditStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetStudentById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetStudentById" message="tns:IAdminService_GetStudentById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetStudentByIdResponse" message="tns:IAdminService_GetStudentById_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddSubject">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddSubject" message="tns:IAdminService_AddSubject_InputMessage" />
@@ -158,6 +194,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjectViews" message="tns:IAdminService_GetSubjectViews_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSubjectViewsResponse" message="tns:IAdminService_GetSubjectViews_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddSubjectsToClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddSubjectsToClass" message="tns:IAdminService_AddSubjectsToClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddSubjectsToClassResponse" message="tns:IAdminService_AddSubjectsToClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSubjectsByClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsByClass" message="tns:IAdminService_GetSubjectsByClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsByClassResponse" message="tns:IAdminService_GetSubjectsByClass_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RegisterTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterTeacher" message="tns:IAdminService_RegisterTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterTeacherResponse" message="tns:IAdminService_RegisterTeacher_OutputMessage" />
@@ -170,17 +214,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetTeachers" message="tns:IAdminService_GetTeachers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetTeachersResponse" message="tns:IAdminService_GetTeachers_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddClassesToSubject">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddClassesToSubject" message="tns:IAdminService_AddClassesToSubject_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddClassesToSubjectResponse" message="tns:IAdminService_AddClassesToSubject_OutputMessage" />
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="EditTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/EditTeacher" message="tns:IAdminService_EditTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/EditTeacherResponse" message="tns:IAdminService_EditTeacher_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddSubjectsToClass">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddSubjectsToClass" message="tns:IAdminService_AddSubjectsToClass_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddSubjectsToClassResponse" message="tns:IAdminService_AddSubjectsToClass_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSubjectsByClass">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsByClass" message="tns:IAdminService_GetSubjectsByClass_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSubjectsByClassResponse" message="tns:IAdminService_GetSubjectsByClass_OutputMessage" />
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetTeacherById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetTeacherById" message="tns:IAdminService_GetTeacherById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetTeacherByIdResponse" message="tns:IAdminService_GetTeacherById_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RegisterAdmin">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterAdmin" message="tns:IAdminService_RegisterAdmin_InputMessage" />
@@ -221,6 +261,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="AddClassesToSubject">
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/AddClassesToSubject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="RegisterStudent">
       <soap12:operation soapAction="http://tempuri.org/IAdminService/RegisterStudent" style="document" />
       <wsdl:input>
@@ -241,6 +290,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetStudentViews">
       <soap12:operation soapAction="http://tempuri.org/IAdminService/GetStudentViews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditStudent">
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/EditStudent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentById">
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/GetStudentById" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -275,6 +342,24 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="AddSubjectsToClass">
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/AddSubjectsToClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectsByClass">
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/GetSubjectsByClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="RegisterTeacher">
       <soap12:operation soapAction="http://tempuri.org/IAdminService/RegisterTeacher" style="document" />
       <wsdl:input>
@@ -302,8 +387,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddClassesToSubject">
-      <soap12:operation soapAction="http://tempuri.org/IAdminService/AddClassesToSubject" style="document" />
+    <wsdl:operation name="EditTeacher">
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/EditTeacher" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -311,17 +396,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddSubjectsToClass">
-      <soap12:operation soapAction="http://tempuri.org/IAdminService/AddSubjectsToClass" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetSubjectsByClass">
-      <soap12:operation soapAction="http://tempuri.org/IAdminService/GetSubjectsByClass" style="document" />
+    <wsdl:operation name="GetTeacherById">
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/GetTeacherById" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

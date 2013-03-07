@@ -21,6 +21,7 @@
                 </DataGrid>
                 <StackPanel>
                     <Button x:Name="btnAddStudent" Click="btnAddStudent_Click">Добави ученик</Button>
+                    <Button x:Name="btnEditStudent" Click="btnEditStudent_Click">Редактирай ученик</Button>
                     <Button x:Name="btnRemoveStudent" Click="btnRemoveStudent_Click">Премахни ученици</Button>
                 </StackPanel>
             </StackPanel>
