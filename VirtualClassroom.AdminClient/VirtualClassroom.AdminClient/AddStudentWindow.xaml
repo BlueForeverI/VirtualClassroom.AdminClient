@@ -19,7 +19,7 @@
                 <TextBox x:Name="txtMiddleName" Width="130" Margin="10 0 0 0"/>
             </WrapPanel>
             <WrapPanel Margin="10">
-                <Label>фамилия:</Label>
+                <Label>Фамилия:</Label>
                 <TextBox x:Name="txtLastName" Width="130" Margin="10 0 0 0"/>
             </WrapPanel>
             <WrapPanel Margin="10">
