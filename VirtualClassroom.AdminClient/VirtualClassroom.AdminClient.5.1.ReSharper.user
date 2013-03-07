@@ -36,9 +36,9 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddTeacherWindow.xaml.cs" caret="523" fromTop="3" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="1034" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml" caret="1476" fromTop="11" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="813" fromTop="20" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="3555" fromTop="2" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="3985" fromTop="21" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="3717" fromTop="102" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="457" fromTop="9" />
     </RecentFiles>
     <RecentEdits>
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="8133" fromTop="28" />
@@ -66,11 +66,11 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="5002" fromTop="28" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="3555" fromTop="11" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="5097" fromTop="29" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="813" fromTop="20" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="4337" fromTop="20" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="4851" fromTop="29" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="3802" fromTop="17" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="3984" fromTop="21" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageTeachersPage.xaml.cs" caret="3717" fromTop="102" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="837" fromTop="20" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
