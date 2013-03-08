@@ -9,7 +9,6 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddSubjectWindow.xaml" caret="1711" fromTop="6" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToClassWindow.xaml" caret="1312" fromTop="6" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToSubjectWindow.xaml" caret="1006" fromTop="3" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:LoginWindow.xaml" caret="480" fromTop="6" />
@@ -26,7 +25,6 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddToSubjectWindow.xaml.cs" caret="13" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="2103" fromTop="12" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml" caret="448" fromTop="5" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="1185" fromTop="23" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml" caret="1463" fromTop="9" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml.cs" caret="638" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml" caret="1623" fromTop="6" />
@@ -39,10 +37,10 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml" caret="1099" fromTop="8" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="457" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml" caret="1104" fromTop="21" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="844" fromTop="17" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddSubjectWindow.xaml" caret="727" fromTop="4" />
     </RecentFiles>
     <RecentEdits>
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="8118" fromTop="23" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml.cs" caret="7978" fromTop="15" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml" caret="1492" fromTop="9" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="1185" fromTop="23" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:ManageStudentsPage.xaml.cs" caret="4907" fromTop="13" />
@@ -71,6 +69,8 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditTeacherWindow.xaml.cs" caret="433" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddStudentWindow.xaml" caret="1099" fromTop="8" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:EditStudentWindow.xaml" caret="1104" fromTop="5" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="944" fromTop="18" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:AddSubjectWindow.xaml" caret="601" fromTop="1" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
