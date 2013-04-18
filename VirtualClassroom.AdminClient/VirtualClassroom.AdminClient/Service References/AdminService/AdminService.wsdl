@@ -25,6 +25,12 @@
   <wsdl:message name="IAdminService_AddClass_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddClassResponse" />
   </wsdl:message>
+  <wsdl:message name="IAdminService_AddClasses_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddClasses" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddClasses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClassesResponse" />
+  </wsdl:message>
   <wsdl:message name="IAdminService_RemoveClasses_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveClasses" />
   </wsdl:message>
@@ -48,6 +54,12 @@
   </wsdl:message>
   <wsdl:message name="IAdminService_RegisterStudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegisterStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_RegisterStudents_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterStudents" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_RegisterStudents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterStudentsResponse" />
   </wsdl:message>
   <wsdl:message name="IAdminService_RemoveStudents_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveStudents" />
@@ -109,6 +121,12 @@
   <wsdl:message name="IAdminService_RegisterTeacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegisterTeacherResponse" />
   </wsdl:message>
+  <wsdl:message name="IAdminService_RegisterTeachers_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterTeachers" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_RegisterTeachers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterTeachersResponse" />
+  </wsdl:message>
   <wsdl:message name="IAdminService_RemoveTeachers_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveTeachers" />
   </wsdl:message>
@@ -150,6 +168,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddClass" message="tns:IAdminService_AddClass_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddClassResponse" message="tns:IAdminService_AddClass_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddClasses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddClasses" message="tns:IAdminService_AddClasses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddClassesResponse" message="tns:IAdminService_AddClasses_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RemoveClasses">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveClasses" message="tns:IAdminService_RemoveClasses_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveClassesResponse" message="tns:IAdminService_RemoveClasses_OutputMessage" />
@@ -165,6 +187,10 @@
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RegisterStudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterStudent" message="tns:IAdminService_RegisterStudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterStudentResponse" message="tns:IAdminService_RegisterStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RegisterStudents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterStudents" message="tns:IAdminService_RegisterStudents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterStudentsResponse" message="tns:IAdminService_RegisterStudents_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RemoveStudents">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveStudents" message="tns:IAdminService_RemoveStudents_InputMessage" />
@@ -206,6 +232,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterTeacher" message="tns:IAdminService_RegisterTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterTeacherResponse" message="tns:IAdminService_RegisterTeacher_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RegisterTeachers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RegisterTeachers" message="tns:IAdminService_RegisterTeachers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RegisterTeachersResponse" message="tns:IAdminService_RegisterTeachers_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RemoveTeachers">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/RemoveTeachers" message="tns:IAdminService_RemoveTeachers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/RemoveTeachersResponse" message="tns:IAdminService_RemoveTeachers_OutputMessage" />
@@ -243,6 +273,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="AddClasses">
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/AddClasses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="RemoveClasses">
       <soap12:operation soapAction="http://tempuri.org/IAdminService/RemoveClasses" style="document" />
       <wsdl:input>
@@ -272,6 +311,15 @@
     </wsdl:operation>
     <wsdl:operation name="RegisterStudent">
       <soap12:operation soapAction="http://tempuri.org/IAdminService/RegisterStudent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterStudents">
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/RegisterStudents" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -362,6 +410,15 @@
     </wsdl:operation>
     <wsdl:operation name="RegisterTeacher">
       <soap12:operation soapAction="http://tempuri.org/IAdminService/RegisterTeacher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterTeachers">
+      <soap12:operation soapAction="http://tempuri.org/IAdminService/RegisterTeachers" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

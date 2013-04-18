@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Windows;
 using System.Windows.Controls;
+using Microsoft.Win32;
 using VirtualClassroom.AdminClient.AdminService;
 
 namespace VirtualClassroom.AdminClient
@@ -132,6 +134,84 @@ namespace VirtualClassroom.AdminClient
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Get all teachers from an Access database
+        /// </summary>
+        /// <param name="fileName">Access database file</param>
+        /// <param name="secret">Key to encrypt usernames and passwords</param>
+        /// <returns>All teachers from the database as a collection of VitualClassroom students</returns>
+        private Teacher[] GetTeachersFromAccess(string fileName, string secret)
+        {
+            // open connection
+            OleDbConnection conn = new OleDbConnection(
+                "Provider=Microsoft.Jet.OLEDB.4.0; " +
+                "Data Source=" + fileName);
+
+            conn.Open();
+
+            OleDbCommand cmd = new OleDbCommand("SELECT [First name], [Second name], [Family name], [ID Number] " +
+                "FROM [Teachers - personal status]", conn);
+
+            OleDbDataReader reader = cmd.ExecuteReader();
+
+            List<Teacher> teachers = new List<Teacher>();
+            while (reader.Read())
+            {
+                string firstName = reader["First name"].ToString();
+                string middleName = reader["Second name"].ToString();
+                string lastName = reader["Family name"].ToString();
+                string egn = reader["ID Number"].ToString();
+                egn = egn.PadLeft(10, '0');
+                string username = string.Format("{0}.{1}.{2}",
+                                                firstName, lastName, egn.Substring(7, 2));
+
+                Teacher teacher = new Teacher()
+                {
+                    FirstName = firstName,
+                    MiddleName = middleName,
+                    LastName = lastName,
+                    Username = Crypto.EncryptStringAES(username, secret),
+                    PasswordHash = Crypto.EncryptStringAES(username, secret)
+                };
+
+                teachers.Add(teacher);
+            }
+
+            reader.Close();
+            conn.Close();
+
+            return teachers.ToArray();
+        }
+
+        private void btnImportTeachers_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "MS Access files (*.mdb)|*.mdb";
+            if (dialog.ShowDialog() == true)
+            {
+                if (dialog.FileName.EndsWith(".mdb"))
+                {
+                    try
+                    {
+                        string secret = Crypto.GenerateRandomSecret(40);
+                        var teachers = GetTeachersFromAccess(dialog.FileName, secret);
+
+                        client.RegisterTeachers(teachers, secret);
+                        MessageBox.Show("Учителите бяха импортирани успешно");
+                        this.dataGridTeachers.ItemsSource = client.GetTeachers();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Грешка при импортирането. Учителите не бяха добавени");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Програмата поддържа само MS Access файлове (.mdb)");
+                }
             }
         }
     }

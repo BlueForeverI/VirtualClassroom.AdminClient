@@ -11,7 +11,8 @@
         <GroupBox Header="Ученици" Padding="5 10 10 10" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <DataGrid x:Name="dataGridStudents" AutoGenerateColumns="False" Margin="0 0 10 0"
-                          VerticalScrollBarVisibility="Auto" MaxHeight="600">
+                          VerticalScrollBarVisibility="Auto" MaxHeight="400" 
+                          ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Потребителско име" Binding="{Binding Path=Username}" />
                         <DataGridTextColumn Header="Три имена" Binding="{Binding Path=FullName}" />
@@ -23,6 +24,7 @@
                     <Button x:Name="btnAddStudent" Click="btnAddStudent_Click">Добави ученик</Button>
                     <Button x:Name="btnEditStudent" Click="btnEditStudent_Click">Редактирай ученик</Button>
                     <Button x:Name="btnRemoveStudent" Click="btnRemoveStudent_Click">Премахни ученици</Button>
+                    <Button x:Name="btnImportStudents" Click="btnImportStudents_Click">Импортирай ученици</Button>
                 </StackPanel>
             </StackPanel>
         </GroupBox>

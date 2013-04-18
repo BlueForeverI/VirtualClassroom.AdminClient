@@ -9,8 +9,9 @@
     <Grid>
         <GroupBox Header="Класове" Padding="5 10 10 10" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
-                <DataGrid x:Name="dataGridClasses" AutoGenerateColumns="False" Margin="0 0 10 0" 
-                          VerticalScrollBarVisibility="Auto" MaxHeight="600">
+                <DataGrid x:Name="dataGridClasses" AutoGenerateColumns="False" Margin="0 0 10 0"
+                          VerticalScrollBarVisibility="Auto" MaxHeight="400" 
+                          ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Клас" Binding="{Binding Path=Number}" />
                         <DataGridTextColumn Header="Паралелка" Binding="{Binding Path=Letter}" />
@@ -20,6 +21,7 @@
                     <Button x:Name="btnAddClass" Click="btnAddClass_Click">Добави клас</Button>
                     <Button x:Name="btnRemoveClass" Click="btnRemoveClass_Click">Премахни класове</Button>
                     <Button x:Name="btnAddToSubject" Click="btnAddToSubject_Click">Добави към предмет</Button>
+                    <Button x:Name="btnImportClasses" Click="btnImportClasses_Click">Импортирай класове</Button>
                 </StackPanel>
             </StackPanel>
         </GroupBox>

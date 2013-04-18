@@ -11,7 +11,8 @@
         <GroupBox Header="Предмети" Padding="5 10 10 10" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <DataGrid x:Name="dataGridSubjects" AutoGenerateColumns="False" Margin="0 0 10 0"
-                          VerticalScrollBarVisibility="Auto" MaxHeight="600">
+                          VerticalScrollBarVisibility="Auto" MaxHeight="400" 
+                          ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Име" Binding="{Binding Path=Name}" />
                         <DataGridTextColumn Header="Учител" Binding="{Binding Path=TeacherFullName}" />
