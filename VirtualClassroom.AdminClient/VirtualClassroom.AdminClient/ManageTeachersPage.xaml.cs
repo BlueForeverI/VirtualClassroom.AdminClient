@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.OleDb;
 using System.Windows;
 using System.Windows.Controls;
@@ -196,12 +197,27 @@ namespace VirtualClassroom.AdminClient
                 {
                     try
                     {
-                        string secret = Crypto.GenerateRandomSecret(40);
-                        var teachers = GetTeachersFromAccess(dialog.FileName, secret);
+                        BackgroundWorker worker = new BackgroundWorker();
 
-                        client.RegisterTeachers(teachers, secret);
-                        MessageBox.Show("Учителите бяха импортирани успешно");
-                        this.dataGridTeachers.ItemsSource = client.GetTeachers();
+                        worker.DoWork += (o, ea) =>
+                        {
+                            string secret = Crypto.GenerateRandomSecret(40);
+                            var teachers = GetTeachersFromAccess(dialog.FileName, secret);
+
+                            client.RegisterTeachers(teachers, secret);
+                            Dispatcher.BeginInvoke(
+                                new Action(() =>
+                                    this.dataGridTeachers.ItemsSource = client.GetTeachers()));
+                        };
+
+                        worker.RunWorkerCompleted += (o, ea) =>
+                        {
+                            this.busyIndicator.IsBusy = false;
+                            MessageBox.Show("Учителите бяха импортирани успешно");
+                        };
+
+                        this.busyIndicator.IsBusy = true;
+                        worker.RunWorkerAsync();
                     }
                     catch (Exception ex)
                     {

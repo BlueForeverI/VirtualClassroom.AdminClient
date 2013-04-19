@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -184,12 +185,27 @@ namespace VirtualClassroom.AdminClient
                 {
                     try
                     {
-                        var classes = GetClassesFromAccess(dialog.FileName);
+                        BackgroundWorker worker = new BackgroundWorker();
 
-                        client.AddClasses(classes);
-                        MessageBox.Show("Класовете бяха импортирани успешно");
-                        this.dataGridClasses.ItemsSource = client.GetClasses();
+                        worker.DoWork += (o, ea) =>
+                        {
+                            var classes = GetClassesFromAccess(dialog.FileName);
+                            client.AddClasses(classes);
 
+                            Dispatcher.BeginInvoke(
+                                new Action(() =>
+                                    this.dataGridClasses.ItemsSource = client.GetClasses()));
+                        };
+
+                        worker.RunWorkerCompleted += (o, ea) =>
+                        {
+                            this.busyIndicator.IsBusy = false;
+                            MessageBox.Show("Класовете бяха импортирани успешно");
+
+                        };
+
+                        this.busyIndicator.IsBusy = true;
+                        worker.RunWorkerAsync();
                     }
                     catch (Exception ex)
                     {

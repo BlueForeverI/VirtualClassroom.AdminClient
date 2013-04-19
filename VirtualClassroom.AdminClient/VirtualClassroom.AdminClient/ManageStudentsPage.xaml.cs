@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.OleDb;
 using System.Linq;
 using System.Windows;
@@ -288,13 +289,27 @@ namespace VirtualClassroom.AdminClient
                 {
                     try
                     {
-                        string secret = Crypto.GenerateRandomSecret(40);
-                        var students = GetStudentsFromAccess(dialog.FileName, secret);
+                        BackgroundWorker worker = new BackgroundWorker();
 
-                        client.RegisterStudents(students.ToArray(), secret);
-                        MessageBox.Show("Учениците бяха импортирани успешно");
-                        this.dataGridStudents.ItemsSource = client.GetStudentViews();
+                        worker.DoWork += (o, ea) =>
+                        {
+                            string secret = Crypto.GenerateRandomSecret(40);
+                            var students = GetStudentsFromAccess(dialog.FileName, secret);
 
+                            client.RegisterStudents(students.ToArray(), secret);
+                            Dispatcher.BeginInvoke(
+                                new Action(() =>
+                                    this.dataGridStudents.ItemsSource = client.GetStudentViews()));
+                        };
+
+                        worker.RunWorkerCompleted += (o, ea) =>
+                        {
+                            this.busyIndicator.IsBusy = false;
+                            MessageBox.Show("Учениците бяха импортирани успешно");
+                        };
+
+                        this.busyIndicator.IsBusy = true;
+                        worker.RunWorkerAsync();
                     }
                     catch (Exception ex)
                     {
