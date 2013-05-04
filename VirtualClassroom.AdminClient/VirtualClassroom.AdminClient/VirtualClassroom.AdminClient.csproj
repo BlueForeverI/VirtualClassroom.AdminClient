@@ -79,45 +79,47 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddClassWindow.xaml.cs">
+    <Compile Include="Utils\AccessDatabaseHelper.cs" />
+    <Compile Include="Utils\CyrilicStringConverter.cs" />
+    <Compile Include="Windows\AddClassWindow.xaml.cs">
       <DependentUpon>AddClassWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddStudentWindow.xaml.cs">
+    <Compile Include="Windows\AddStudentWindow.xaml.cs">
       <DependentUpon>AddStudentWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddSubjectWindow.xaml.cs">
+    <Compile Include="Windows\AddSubjectWindow.xaml.cs">
       <DependentUpon>AddSubjectWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddTeacherWindow.xaml.cs">
+    <Compile Include="Windows\AddTeacherWindow.xaml.cs">
       <DependentUpon>AddTeacherWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddToClassWindow.xaml.cs">
+    <Compile Include="Windows\AddToClassWindow.xaml.cs">
       <DependentUpon>AddToClassWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddToSubjectWindow.xaml.cs">
+    <Compile Include="Windows\AddToSubjectWindow.xaml.cs">
       <DependentUpon>AddToSubjectWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ClientManager.cs" />
-    <Compile Include="Crypto.cs" />
-    <Compile Include="EditStudentWindow.xaml.cs">
+    <Compile Include="Utils\ClientManager.cs" />
+    <Compile Include="Utils\Crypto.cs" />
+    <Compile Include="Windows\EditStudentWindow.xaml.cs">
       <DependentUpon>EditStudentWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EditTeacherWindow.xaml.cs">
+    <Compile Include="Windows\EditTeacherWindow.xaml.cs">
       <DependentUpon>EditTeacherWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LoginWindow.xaml.cs">
+    <Compile Include="Windows\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManageClassesPage.xaml.cs">
+    <Compile Include="Pages\ManageClassesPage.xaml.cs">
       <DependentUpon>ManageClassesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManageStudentsPage.xaml.cs">
+    <Compile Include="Pages\ManageStudentsPage.xaml.cs">
       <DependentUpon>ManageStudentsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManageSubjectsPage.xaml.cs">
+    <Compile Include="Pages\ManageSubjectsPage.xaml.cs">
       <DependentUpon>ManageSubjectsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManageTeachersPage.xaml.cs">
+    <Compile Include="Pages\ManageTeachersPage.xaml.cs">
       <DependentUpon>ManageTeachersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service References\AdminService\Reference.cs">
@@ -125,39 +127,39 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Page Include="AddClassWindow.xaml">
+    <Page Include="Windows\AddClassWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddStudentWindow.xaml">
+    <Page Include="Windows\AddStudentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddSubjectWindow.xaml">
+    <Page Include="Windows\AddSubjectWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddTeacherWindow.xaml">
+    <Page Include="Windows\AddTeacherWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddToClassWindow.xaml">
+    <Page Include="Windows\AddToClassWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddToSubjectWindow.xaml">
+    <Page Include="Windows\AddToSubjectWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EditStudentWindow.xaml">
+    <Page Include="Windows\EditStudentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EditTeacherWindow.xaml">
+    <Page Include="Windows\EditTeacherWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoginWindow.xaml">
+    <Page Include="Windows\LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -173,19 +175,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ManageClassesPage.xaml">
+    <Page Include="Pages\ManageClassesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ManageStudentsPage.xaml">
+    <Page Include="Pages\ManageStudentsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ManageSubjectsPage.xaml">
+    <Page Include="Pages\ManageSubjectsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ManageTeachersPage.xaml">
+    <Page Include="Pages\ManageTeachersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

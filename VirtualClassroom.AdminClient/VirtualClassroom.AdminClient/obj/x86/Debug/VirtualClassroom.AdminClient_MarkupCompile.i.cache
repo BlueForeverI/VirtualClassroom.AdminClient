@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\Dev\Projects\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\VirtualClassroom.AdminClient\App.xaml
-15278088699
+151622813612
 
-221547619963
+241144763742
 152137708754
-AddClassWindow.xaml;AddStudentWindow.xaml;AddSubjectWindow.xaml;AddTeacherWindow.xaml;AddToClassWindow.xaml;AddToSubjectWindow.xaml;EditStudentWindow.xaml;EditTeacherWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ManageClassesPage.xaml;ManageStudentsPage.xaml;ManageSubjectsPage.xaml;ManageTeachersPage.xaml;Theme.xaml;
+Windows\AddClassWindow.xaml;Windows\AddStudentWindow.xaml;Windows\AddSubjectWindow.xaml;Windows\AddTeacherWindow.xaml;Windows\AddToClassWindow.xaml;Windows\AddToSubjectWindow.xaml;Windows\EditStudentWindow.xaml;Windows\EditTeacherWindow.xaml;Windows\LoginWindow.xaml;MainWindow.xaml;Pages\ManageClassesPage.xaml;Pages\ManageStudentsPage.xaml;Pages\ManageSubjectsPage.xaml;Pages\ManageTeachersPage.xaml;Theme.xaml;
 
 False
 

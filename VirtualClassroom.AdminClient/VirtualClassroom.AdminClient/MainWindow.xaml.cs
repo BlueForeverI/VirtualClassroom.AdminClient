@@ -26,7 +26,7 @@ namespace VirtualClassroom.AdminClient
         {
             try
             {
-                this.frameMainContent.Source = new Uri("ManageClassesPage.xaml", UriKind.Relative);
+                this.frameMainContent.Source = new Uri("Pages/ManageClassesPage.xaml", UriKind.Relative);
             }
             catch (Exception ex)
             {
@@ -38,7 +38,7 @@ namespace VirtualClassroom.AdminClient
         {
             try
             {
-                this.frameMainContent.Source = new Uri("ManageTeachersPage.xaml", UriKind.Relative);
+                this.frameMainContent.Source = new Uri("Pages/ManageTeachersPage.xaml", UriKind.Relative);
             }
             catch (Exception ex)
             {
@@ -50,7 +50,7 @@ namespace VirtualClassroom.AdminClient
         {
             try
             {
-                this.frameMainContent.Source = new Uri("ManageStudentsPage.xaml", UriKind.Relative);
+                this.frameMainContent.Source = new Uri("Pages/ManageStudentsPage.xaml", UriKind.Relative);
             }
             catch (Exception ex)
             {
@@ -62,7 +62,7 @@ namespace VirtualClassroom.AdminClient
         {
             try
             {
-                this.frameMainContent.Source = new Uri("ManageSubjectsPage.xaml", UriKind.Relative);
+                this.frameMainContent.Source = new Uri("Pages/ManageSubjectsPage.xaml", UriKind.Relative);
             }
             catch (Exception ex)
             {
