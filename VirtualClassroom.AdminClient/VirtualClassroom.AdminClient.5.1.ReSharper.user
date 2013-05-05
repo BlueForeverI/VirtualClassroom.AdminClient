@@ -22,8 +22,6 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml" caret="669" fromTop="6" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml" caret="2232" fromTop="20" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:CyrilicStringConverter.cs" caret="701" fromTop="4" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:AccessDatabaseHelper.cs" caret="778" fromTop="21" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="549" fromTop="8" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddClassWindow.xaml.cs" caret="0" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddStudentWindow.xaml.cs" caret="4731" fromTop="7" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddSubjectWindow.xaml.cs" caret="0" fromTop="0" />
@@ -34,43 +32,45 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:EditTeacherWindow.xaml.cs" caret="0" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:LoginWindow.xaml.cs" caret="2159" fromTop="25" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:ClientManager.cs" caret="448" fromTop="16" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="4313" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="5538" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageSubjectsPage.xaml.cs" caret="4525" fromTop="22" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="6498" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="2981" fromTop="9" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="532" fromTop="23" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="910" fromTop="14" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageSubjectsPage.xaml.cs" caret="756" fromTop="16" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="830" fromTop="13" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="542" fromTop="12" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="1017" fromTop="7" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:AccessDatabaseHelper.cs" caret="7660" fromTop="18" />
     </RecentFiles>
     <RecentEdits>
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="3923" fromTop="20" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="549" fromTop="8" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:LoginWindow.xaml.cs" caret="1972" fromTop="17" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="5693" fromTop="17" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="5693" fromTop="17" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:LoginWindow.xaml.cs" caret="2544" fromTop="11" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:LoginWindow.xaml.cs" caret="1617" fromTop="14" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:LoginWindow.xaml.cs" caret="2159" fromTop="25" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="949" fromTop="24" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="1851" fromTop="18" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="3155" fromTop="26" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="4483" fromTop="26" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="939" fromTop="30" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="2418" fromTop="17" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="3814" fromTop="12" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="5538" fromTop="15" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageSubjectsPage.xaml.cs" caret="867" fromTop="28" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageSubjectsPage.xaml.cs" caret="1823" fromTop="18" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageSubjectsPage.xaml.cs" caret="3186" fromTop="24" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageSubjectsPage.xaml.cs" caret="4525" fromTop="22" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="939" fromTop="29" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="2616" fromTop="23" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="3925" fromTop="19" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="5639" fromTop="20" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="6430" fromTop="13" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="946" fromTop="18" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="1444" fromTop="19" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="1942" fromTop="17" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="2440" fromTop="18" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:MainWindow.xaml.cs" caret="2889" fromTop="19" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="5498" fromTop="12" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="891" fromTop="23" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="891" fromTop="27" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="1054" fromTop="23" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="2405" fromTop="18" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="3732" fromTop="18" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="5415" fromTop="23" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="6683" fromTop="2" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageSubjectsPage.xaml.cs" caret="982" fromTop="24" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageSubjectsPage.xaml.cs" caret="1807" fromTop="24" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageSubjectsPage.xaml.cs" caret="3099" fromTop="26" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="1056" fromTop="23" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="2607" fromTop="24" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="3849" fromTop="13" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="5526" fromTop="13" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="6815" fromTop="8" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="717" fromTop="18" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="830" fromTop="13" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageSubjectsPage.xaml.cs" caret="756" fromTop="22" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="668" fromTop="20" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="15" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="598" fromTop="12" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="884" fromTop="18" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:AccessDatabaseHelper.cs" caret="9756" fromTop="22" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -99,18 +99,18 @@
       <Item value="static" priority="9" />
       <Item value="List`0" priority="5" />
       <Item value="Classes" priority="0" />
-      <Item value="private" priority="15" />
+      <Item value="private" priority="19" />
       <Item value="AdminClient" priority="1" />
       <Item value="AdminService" priority="2" />
       <Item value="AdminServiceClient`0" priority="6" />
       <Item value="AdminServiceClient" priority="3" />
       <Item value="client" priority="50" />
-      <Item value="var" priority="22" />
-      <Item value="classes" priority="23" />
+      <Item value="var" priority="26" />
+      <Item value="classes" priority="24" />
       <Item value="ToArray`1" priority="1" />
       <Item value="Class`0" priority="19" />
       <Item value="ToList`1" priority="0" />
-      <Item value="new" priority="58" />
+      <Item value="new" priority="62" />
       <Item value="this" priority="154" />
       <Item value="IEnumerable" priority="0" />
       <Item value="null" priority="4" />
@@ -118,7 +118,7 @@
       <Item value="clientInstance" priority="4" />
       <Item value="return" priority="2" />
       <Item value="ClientManager`0" priority="7" />
-      <Item value="void" priority="6" />
+      <Item value="void" priority="10" />
       <Item value="string" priority="39" />
       <Item value="xamlPath" priority="0" />
       <Item value="Relative" priority="0" />
@@ -163,16 +163,16 @@
       <Item value="student" priority="29" />
       <Item value="Uri`0" priority="0" />
       <Item value="UpdateDataGrid`0" priority="5" />
-      <Item value="students" priority="7" />
+      <Item value="students" priority="8" />
       <Item value="where" priority="1" />
       <Item value="select" priority="1" />
       <Item value="c" priority="1" />
       <Item value="list" priority="1" />
       <Item value="dynamic" priority="6" />
       <Item value="selected" priority="12" />
-      <Item value="subjects" priority="7" />
-      <Item value="teachers" priority="4" />
-      <Item value="t" priority="1" />
+      <Item value="subjects" priority="8" />
+      <Item value="teachers" priority="5" />
+      <Item value="t" priority="2" />
       <Item value="subject" priority="9" />
       <Item value="Subject" priority="5" />
       <Item value="AddSubjectWindow`0" priority="0" />
@@ -199,12 +199,12 @@
       <Item value="LoginWindow`0" priority="0" />
       <Item value="loginWindow" priority="3" />
       <Item value="LoginWindow" priority="0" />
-      <Item value="Thread" priority="0" />
+      <Item value="Thread" priority="2" />
       <Item value="txtUsername" priority="2" />
-      <Item value="Dispatcher" priority="2" />
+      <Item value="Dispatcher" priority="3" />
       <Item value="Thread`0" priority="1" />
-      <Item value="worker" priority="17" />
-      <Item value="BackgroundWorker" priority="2" />
+      <Item value="worker" priority="23" />
+      <Item value="BackgroundWorker" priority="4" />
       <Item value="busyIndicator" priority="2" />
       <Item value="bool" priority="1" />
       <Item value="result" priority="4" />
@@ -213,7 +213,7 @@
       <Item value="admin" priority="0" />
       <Item value="while" priority="2" />
       <Item value="InitializeComponent`0" priority="1" />
-      <Item value="BackgroundWorker`0" priority="0" />
+      <Item value="BackgroundWorker`0" priority="2" />
       <Item value="handler" priority="0" />
       <Item value="indicator" priority="1" />
       <Item value="RunWorkerCompletedEventHandler`0" priority="0" />
@@ -272,7 +272,7 @@
       <Item value="GetClasses`0" priority="0" />
       <Item value="GetTeachersFromAccess`0" priority="0" />
       <Item value="ear" priority="1" />
-      <Item value="object" priority="1" />
+      <Item value="object" priority="2" />
       <Item value="e" priority="0" />
       <Item value="App`0" priority="1" />
       <Item value="AppDomainSetup`0" priority="0" />
@@ -281,6 +281,11 @@
       <Item value="Application`0" priority="0" />
       <Item value="OK" priority="0" />
       <Item value="Error" priority="0" />
+      <Item value="UpdateClassViews`0" priority="3" />
+      <Item value="thread" priority="0" />
+      <Item value="UpdateStudentViews`0" priority="3" />
+      <Item value="UpdateSubjectViews`0" priority="2" />
+      <Item value="UpdateTeacherViews`0" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.UriKind">
       <Item value="Relative" priority="3" />
@@ -301,7 +306,7 @@
       <Item value="AddClass`0" priority="0" />
       <Item value="RemoveClass`0" priority="0" />
       <Item value="RegisterTeacher`0" priority="0" />
-      <Item value="GetTeachers`0" priority="5" />
+      <Item value="GetTeachers`0" priority="6" />
       <Item value="RemoveTeacher`0" priority="0" />
       <Item value="GetStudents`0" priority="2" />
       <Item value="RegisterStudent`0" priority="0" />
@@ -315,8 +320,8 @@
       <Item value="RemoveTeachers`0" priority="0" />
       <Item value="AddSubjectsToClass`0" priority="0" />
       <Item value="LoginAdmin`0" priority="1" />
-      <Item value="GetStudentViews`0" priority="1" />
-      <Item value="GetSubjectViews`0" priority="1" />
+      <Item value="GetStudentViews`0" priority="2" />
+      <Item value="GetSubjectViews`0" priority="2" />
       <Item value="Close`0" priority="0" />
       <Item value="GetStudentById`0" priority="0" />
       <Item value="EditStudent`0" priority="0" />
@@ -387,11 +392,11 @@
       <Item value="ShowDialog`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.ManageTeachersPage">
-      <Item value="dataGridTeachers" priority="9" />
+      <Item value="dataGridTeachers" priority="10" />
       <Item value="busyIndicator" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.ManageStudentsPage">
-      <Item value="dataGridStudents" priority="10" />
+      <Item value="dataGridStudents" priority="11" />
       <Item value="busyIndicator" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.AddStudentWindow">
@@ -439,7 +444,7 @@
       <Item value="SelectedIndex" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.ManageSubjectsPage">
-      <Item value="dataGridSubjects" priority="4" />
+      <Item value="dataGridSubjects" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.AdminClient.AdminService.Subject">
       <Item value="TeacherId" priority="1" />
@@ -497,19 +502,19 @@
       <Item value="ExecuteWorker`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Threading.Thread">
-      <Item value="Start`0" priority="0" />
+      <Item value="Start`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Threading.Dispatcher">
       <Item value="Invoke`0" priority="0" />
-      <Item value="BeginInvoke`0" priority="1" />
+      <Item value="BeginInvoke`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Threading.Thread">
       <Item value="Sleep`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.ComponentModel.BackgroundWorker">
-      <Item value="DoWork" priority="5" />
+      <Item value="DoWork" priority="8" />
       <Item value="RunWorkerCompleted" priority="5" />
-      <Item value="RunWorkerAsync`0" priority="5" />
+      <Item value="RunWorkerAsync`0" priority="7" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.Visibility">
       <Item value="Hidden" priority="0" />

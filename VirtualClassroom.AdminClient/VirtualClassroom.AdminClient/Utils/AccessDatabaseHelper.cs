@@ -251,12 +251,6 @@ namespace VirtualClassroom.AdminClient
                     };
 
                     students.Add(student);
-
-                    // for test purposes only - REMOVE IN PRODUCTION
-                    if (students.Count >= 20)
-                    {
-                        break;
-                    }
                 }
             }
 

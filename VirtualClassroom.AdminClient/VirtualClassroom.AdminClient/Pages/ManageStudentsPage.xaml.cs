@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
@@ -16,14 +17,24 @@ namespace VirtualClassroom.AdminClient
     {
         private AdminServiceClient client = ClientManager.GetClient();
 
+        private void UpdateStudentViews()
+        {
+            Thread thread = new Thread(() => Dispatcher.BeginInvoke(
+                new Action(() =>
+                {
+                    var students = client.GetStudentViews();
+                    this.dataGridStudents.ItemsSource = students;
+                })));
+            thread.Start();
+        }
+
         public ManageStudentsPage()
         {
             try
             {
                 InitializeComponent();
+                UpdateStudentViews();
 
-                this.dataGridStudents.Items.Clear();
-                this.dataGridStudents.ItemsSource = client.GetStudentViews();
             }
             catch (Exception ex)
             {
@@ -53,8 +64,8 @@ namespace VirtualClassroom.AdminClient
                     client.RegisterStudent(student,
                         Crypto.EncryptStringAES(addStudentWindow.Password, secret), secret);
 
-                    MessageBox.Show("Ученикът беше добавен успешно");
-                    this.dataGridStudents.ItemsSource = client.GetStudentViews();
+                    UpdateStudentViews();
+                    MessageBox.Show("Ученикът беше добавен успешно");;
                 }
             }
             catch (Exception ex)
@@ -86,8 +97,8 @@ namespace VirtualClassroom.AdminClient
                         "Сигурен ли сте?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         client.RemoveStudents(students.ToArray());
+                        UpdateStudentViews();
                         MessageBox.Show("Учениците бяха премахнати успешно");
-                        this.dataGridStudents.ItemsSource = client.GetStudentViews();
                     }
                 }
             }
@@ -124,9 +135,8 @@ namespace VirtualClassroom.AdminClient
                         student.PasswordHash = Crypto.EncryptStringAES(student.PasswordHash, secret);
 
                         client.EditStudent(studentId, student, secret);
-
+                        UpdateStudentViews();
                         MessageBox.Show("Ученикът беше редактиран успешно");
-                        this.dataGridStudents.ItemsSource = client.GetStudentViews();
                     }
                 }
             }
@@ -156,10 +166,7 @@ namespace VirtualClassroom.AdminClient
                                 dialog.FileName, secret, client.GetClasses());
 
                             client.RegisterStudents(students.ToArray(), secret);
-                            Dispatcher.BeginInvoke(
-                                new Action(() =>
-                                    this.dataGridStudents.ItemsSource = 
-                                        client.GetStudentViews()));
+                            UpdateStudentViews();
                         };
 
                         worker.RunWorkerCompleted += (o, ea) =>

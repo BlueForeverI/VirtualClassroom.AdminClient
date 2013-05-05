@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using VirtualClassroom.AdminClient.AdminService;
@@ -13,15 +14,24 @@ namespace VirtualClassroom.AdminClient
     {
         private AdminServiceClient client = ClientManager.GetClient();
 
+        private void UpdateSubjectViews()
+        {
+            Thread thread = new Thread(() => Dispatcher.BeginInvoke(
+                new Action(() =>
+                {
+                    var subjects = client.GetSubjectViews();
+                    this.dataGridSubjects.ItemsSource = subjects;
+                })));
+            thread.Start();
+        }
+
         public ManageSubjectsPage()
         {
             try
             {
 
                 InitializeComponent();
-
-                this.dataGridSubjects.Items.Clear();
-                this.dataGridSubjects.ItemsSource = client.GetSubjectViews();
+                UpdateSubjectViews();
             }
             catch (Exception ex)
             {
@@ -42,8 +52,8 @@ namespace VirtualClassroom.AdminClient
                     subject.TeacherId = addSubjectWindow.TeacherId;
 
                     client.AddSubject(subject);
+                    UpdateSubjectViews();
                     MessageBox.Show("Предметът беше добавен успешно");
-                    this.dataGridSubjects.ItemsSource = client.GetSubjectViews();
                 }
             }
             catch (Exception ex)
@@ -74,8 +84,8 @@ namespace VirtualClassroom.AdminClient
                         MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         client.RemoveSubjects(subjects.ToArray());
+                        UpdateSubjectViews();
                         MessageBox.Show("Предметите бяха премахнати успешно");
-                        this.dataGridSubjects.ItemsSource = client.GetSubjectViews();
                     }
                 }
             }

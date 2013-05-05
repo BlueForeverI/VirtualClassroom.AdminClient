@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.OleDb;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
@@ -16,13 +17,23 @@ namespace VirtualClassroom.AdminClient
     {
         private AdminServiceClient client = ClientManager.GetClient();
 
+        private void UpdateTeacherViews()
+        {
+            Thread thread = new Thread(() => Dispatcher.BeginInvoke(
+                new Action(() =>
+                {
+                    var teachers = client.GetTeachers();
+                    this.dataGridTeachers.ItemsSource = teachers;
+                })));
+            thread.Start();
+        }
+
         public ManageTeachersPage()
         {
             try
             {
                 InitializeComponent();
-                this.dataGridTeachers.Items.Clear();
-                this.dataGridTeachers.ItemsSource = client.GetTeachers();
+                UpdateTeacherViews();
             }
             catch (Exception ex)
             {
@@ -59,8 +70,8 @@ namespace VirtualClassroom.AdminClient
                         Crypto.EncryptStringAES(addTeacherWindow.Password, secret),
                         secret);
 
+                    UpdateTeacherViews();
                     MessageBox.Show("Учителят беше добавен успешно");
-                    this.dataGridTeachers.ItemsSource = client.GetTeachers();
                 }
             }
             catch (Exception ex)
@@ -90,8 +101,8 @@ namespace VirtualClassroom.AdminClient
                         MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         client.RemoveTeachers(teachers.ToArray());
+                        UpdateTeacherViews();
                         MessageBox.Show("Учителите бяха премахнати успешно");
-                        this.dataGridTeachers.ItemsSource = client.GetTeachers();
                     }
                 }
             }
@@ -129,9 +140,8 @@ namespace VirtualClassroom.AdminClient
                         teacher.PasswordHash = Crypto.EncryptStringAES(teacher.PasswordHash, secret);
 
                         client.EditTeacher(teacherId, teacher, secret);
-
+                        UpdateTeacherViews();
                         MessageBox.Show("Учителят беше редактиран успешно");
-                        this.dataGridTeachers.ItemsSource = client.GetTeachers();
                     }
                 }
             }
@@ -161,9 +171,7 @@ namespace VirtualClassroom.AdminClient
                                 AccessDatabaseHelper.GetTeachersFromAccess(dialog.FileName, secret);
 
                             client.RegisterTeachers(teachers, secret);
-                            Dispatcher.BeginInvoke(
-                                new Action(() =>
-                                    this.dataGridTeachers.ItemsSource = client.GetTeachers()));
+                            UpdateTeacherViews();
                         };
 
                         worker.RunWorkerCompleted += (o, ea) =>

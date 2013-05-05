@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
@@ -17,13 +18,23 @@ namespace VirtualClassroom.AdminClient
     {
         private AdminServiceClient client = ClientManager.GetClient();
 
+        private void UpdateClassViews()
+        {
+            Thread thread = new Thread(() =>Dispatcher.BeginInvoke(
+                new Action(() =>
+                {
+                    var classes = client.GetClasses();
+                    this.dataGridClasses.ItemsSource = classes;
+                })));
+            thread.Start();
+        }
+
         public ManageClassesPage()
         {
             try
             {
                 InitializeComponent();
-                this.dataGridClasses.Items.Clear();
-                this.dataGridClasses.ItemsSource = client.GetClasses();
+                UpdateClassViews();
             }
             catch (Exception ex)
             {
@@ -42,8 +53,8 @@ namespace VirtualClassroom.AdminClient
                     string letter = addClassWindow.Letter;
                     int number = addClassWindow.Number;
                     client.AddClass(new Class() { Letter = letter, Number = number });
+                    UpdateClassViews();
                     MessageBox.Show("Класът беше добавен успешно");
-                    this.dataGridClasses.ItemsSource = client.GetClasses();
                 }
             }
             catch (Exception ex)
@@ -73,8 +84,8 @@ namespace VirtualClassroom.AdminClient
                         MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         client.RemoveClasses(classes.ToArray());
+                        UpdateClassViews();
                         MessageBox.Show("Класовете бяха премахнати успешно!");
-                        this.dataGridClasses.ItemsSource = client.GetClasses();
                     }
                 }   
             }
@@ -134,10 +145,7 @@ namespace VirtualClassroom.AdminClient
                         {
                             var classes = AccessDatabaseHelper.GetClassesFromAccess(dialog.FileName);
                             client.AddClasses(classes);
-
-                            Dispatcher.BeginInvoke(
-                                new Action(() =>
-                                    this.dataGridClasses.ItemsSource = client.GetClasses()));
+                            UpdateClassViews();
                         };
 
                         worker.RunWorkerCompleted += (o, ea) =>
