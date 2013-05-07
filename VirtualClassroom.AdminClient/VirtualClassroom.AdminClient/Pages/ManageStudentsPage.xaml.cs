@@ -58,7 +58,7 @@ namespace VirtualClassroom.AdminClient
                     student.EGN = addStudentWindow.EGN;
                     student.ClassId = addStudentWindow.ClassId;
 
-                    string secret = Crypto.GenerateRandomSecret(30);
+                    string secret = Crypto.GenerateRandomSecret();
                     student.Username = Crypto.EncryptStringAES(student.Username, secret);
 
                     client.RegisterStudent(student,
@@ -130,7 +130,7 @@ namespace VirtualClassroom.AdminClient
                     if (editStudentWindow.ShowDialog() == true)
                     {
                         var student = editStudentWindow.Student;
-                        string secret = Crypto.GenerateRandomSecret(40);
+                        string secret = Crypto.GenerateRandomSecret();
                         student.Username = Crypto.EncryptStringAES(student.Username, secret);
                         student.PasswordHash = Crypto.EncryptStringAES(student.PasswordHash, secret);
 
@@ -161,7 +161,7 @@ namespace VirtualClassroom.AdminClient
 
                         worker.DoWork += (o, ea) =>
                         {
-                            string secret = Crypto.GenerateRandomSecret(40);
+                            string secret = Crypto.GenerateRandomSecret();
                             var students = AccessDatabaseHelper.GetStudentsFromAccess(
                                 dialog.FileName, secret, client.GetClasses());
 

@@ -35,7 +35,7 @@ namespace VirtualClassroom.AdminClient
                 try
                 {
                     //encrypt login details
-                    string secret = Crypto.GenerateRandomSecret(30);
+                    string secret = Crypto.GenerateRandomSecret();
                     admin = client.LoginAdmin(Crypto.EncryptStringAES(username, secret),
                                             Crypto.EncryptStringAES(password, secret),
                                             secret);
