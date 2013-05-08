@@ -9,7 +9,6 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:EditTeacherWindow.xaml" caret="1623" fromTop="6" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddTeacherWindow.xaml" caret="1687" fromTop="5" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddStudentWindow.xaml" caret="1099" fromTop="8" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:EditStudentWindow.xaml" caret="1104" fromTop="21" />
@@ -21,9 +20,7 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml" caret="2232" fromTop="20" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:CyrilicStringConverter.cs" caret="701" fromTop="4" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddClassWindow.xaml.cs" caret="0" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddStudentWindow.xaml.cs" caret="4731" fromTop="7" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddSubjectWindow.xaml.cs" caret="0" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddTeacherWindow.xaml.cs" caret="0" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddToClassWindow.xaml.cs" caret="0" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddToSubjectWindow.xaml.cs" caret="0" fromTop="0" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:EditStudentWindow.xaml.cs" caret="0" fromTop="0" />
@@ -33,22 +30,17 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:App.xaml" caret="910" fromTop="14" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:AccessDatabaseHelper.cs" caret="7660" fromTop="18" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:LoginWindow.xaml.cs" caret="1330" fromTop="10" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:Crypto.cs" caret="5702" fromTop="3" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/f:app.config" caret="1182" fromTop="23" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageSubjectsPage.xaml.cs" caret="0" fromTop="0" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="718" fromTop="15" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="6327" fromTop="79" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageStudentsPage.xaml.cs" caret="3387" fromTop="17" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="2205" fromTop="16" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:Crypto.cs" caret="0" fromTop="0" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:EgnValidator.cs" caret="130" fromTop="5" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddStudentWindow.xaml.cs" caret="3992" fromTop="66" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddTeacherWindow.xaml.cs" caret="650" fromTop="11" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="1314" fromTop="21" />
     </RecentFiles>
     <RecentEdits>
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="584" fromTop="14" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="598" fromTop="12" />
-      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="884" fromTop="18" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:AccessDatabaseHelper.cs" caret="9756" fromTop="22" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:Crypto.cs" caret="5702" fromTop="3" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:Crypto.cs" caret="6414" fromTop="24" />
@@ -71,6 +63,14 @@
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="1931" fromTop="16" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="1598" fromTop="8" />
       <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageTeachersPage.xaml.cs" caret="2205" fromTop="16" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:Crypto.cs" caret="0" fromTop="0" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:EgnValidator.cs" caret="2551" fromTop="33" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:EgnValidator.cs" caret="509" fromTop="9" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:EgnValidator.cs" caret="482" fromTop="16" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddStudentWindow.xaml.cs" caret="4477" fromTop="4" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Utils/f:EgnValidator.cs" caret="130" fromTop="5" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Windows/f:AddStudentWindow.xaml.cs" caret="3656" fromTop="12" />
+      <File id="1497C0D2-DD54-4005-B5B0-D592DECB842B/d:Pages/f:ManageClassesPage.xaml.cs" caret="1023" fromTop="14" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -286,6 +286,7 @@
       <Item value="UpdateStudentViews`0" priority="3" />
       <Item value="UpdateSubjectViews`0" priority="2" />
       <Item value="UpdateTeacherViews`0" priority="4" />
+      <Item value="EgnValidator`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.UriKind">
       <Item value="Relative" priority="3" />
@@ -615,6 +616,9 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Application">
       <Item value="Resources" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@VirtualClassroom.AdminClient.EgnValidator">
+      <Item value="IsEgnValid`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

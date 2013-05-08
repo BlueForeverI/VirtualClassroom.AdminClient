@@ -81,6 +81,7 @@
     </ApplicationDefinition>
     <Compile Include="Utils\AccessDatabaseHelper.cs" />
     <Compile Include="Utils\CyrilicStringConverter.cs" />
+    <Compile Include="Utils\EgnValidator.cs" />
     <Compile Include="Windows\AddClassWindow.xaml.cs">
       <DependentUpon>AddClassWindow.xaml</DependentUpon>
     </Compile>
