@@ -1595,7 +1595,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
     public interface IAdminService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddClass", ReplyAction="http://tempuri.org/IAdminService/AddClassResponse")]
-        void AddClass(VirtualClassroom.AdminClient.AdminService.Class c);
+        bool AddClass(VirtualClassroom.AdminClient.AdminService.Class c);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddClasses", ReplyAction="http://tempuri.org/IAdminService/AddClassesResponse")]
         void AddClasses(VirtualClassroom.AdminClient.AdminService.Class[] classes);
@@ -1610,7 +1610,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
         void AddClassesToSubject(VirtualClassroom.AdminClient.AdminService.Subject subject, VirtualClassroom.AdminClient.AdminService.Class[] classes);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RegisterStudent", ReplyAction="http://tempuri.org/IAdminService/RegisterStudentResponse")]
-        void RegisterStudent(VirtualClassroom.AdminClient.AdminService.Student student, string passwordCrypt, string secret);
+        bool RegisterStudent(VirtualClassroom.AdminClient.AdminService.Student student, string passwordCrypt, string secret);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RegisterStudents", ReplyAction="http://tempuri.org/IAdminService/RegisterStudentsResponse")]
         void RegisterStudents(VirtualClassroom.AdminClient.AdminService.Student[] students, string secret);
@@ -1643,7 +1643,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
         VirtualClassroom.AdminClient.AdminService.Subject[] GetSubjectsByClass(int classId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RegisterTeacher", ReplyAction="http://tempuri.org/IAdminService/RegisterTeacherResponse")]
-        void RegisterTeacher(VirtualClassroom.AdminClient.AdminService.Teacher teacher, string passwordCrypt, string secret);
+        bool RegisterTeacher(VirtualClassroom.AdminClient.AdminService.Teacher teacher, string passwordCrypt, string secret);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RegisterTeachers", ReplyAction="http://tempuri.org/IAdminService/RegisterTeachersResponse")]
         void RegisterTeachers(VirtualClassroom.AdminClient.AdminService.Teacher[] teachers, string secret);
@@ -1661,7 +1661,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
         VirtualClassroom.AdminClient.AdminService.Teacher GetTeacherById(int teacherId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/RegisterAdmin", ReplyAction="http://tempuri.org/IAdminService/RegisterAdminResponse")]
-        void RegisterAdmin(VirtualClassroom.AdminClient.AdminService.Admin admin, string passwordCrypt, string secret);
+        bool RegisterAdmin(VirtualClassroom.AdminClient.AdminService.Admin admin, string passwordCrypt, string secret);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/LoginAdmin", ReplyAction="http://tempuri.org/IAdminService/LoginAdminResponse")]
         VirtualClassroom.AdminClient.AdminService.Admin LoginAdmin(string usernameCrypt, string passwordCrypt, string secret);
@@ -1694,8 +1694,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
                 base(binding, remoteAddress) {
         }
         
-        public void AddClass(VirtualClassroom.AdminClient.AdminService.Class c) {
-            base.Channel.AddClass(c);
+        public bool AddClass(VirtualClassroom.AdminClient.AdminService.Class c) {
+            return base.Channel.AddClass(c);
         }
         
         public void AddClasses(VirtualClassroom.AdminClient.AdminService.Class[] classes) {
@@ -1714,8 +1714,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
             base.Channel.AddClassesToSubject(subject, classes);
         }
         
-        public void RegisterStudent(VirtualClassroom.AdminClient.AdminService.Student student, string passwordCrypt, string secret) {
-            base.Channel.RegisterStudent(student, passwordCrypt, secret);
+        public bool RegisterStudent(VirtualClassroom.AdminClient.AdminService.Student student, string passwordCrypt, string secret) {
+            return base.Channel.RegisterStudent(student, passwordCrypt, secret);
         }
         
         public void RegisterStudents(VirtualClassroom.AdminClient.AdminService.Student[] students, string secret) {
@@ -1758,8 +1758,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
             return base.Channel.GetSubjectsByClass(classId);
         }
         
-        public void RegisterTeacher(VirtualClassroom.AdminClient.AdminService.Teacher teacher, string passwordCrypt, string secret) {
-            base.Channel.RegisterTeacher(teacher, passwordCrypt, secret);
+        public bool RegisterTeacher(VirtualClassroom.AdminClient.AdminService.Teacher teacher, string passwordCrypt, string secret) {
+            return base.Channel.RegisterTeacher(teacher, passwordCrypt, secret);
         }
         
         public void RegisterTeachers(VirtualClassroom.AdminClient.AdminService.Teacher[] teachers, string secret) {
@@ -1782,8 +1782,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
             return base.Channel.GetTeacherById(teacherId);
         }
         
-        public void RegisterAdmin(VirtualClassroom.AdminClient.AdminService.Admin admin, string passwordCrypt, string secret) {
-            base.Channel.RegisterAdmin(admin, passwordCrypt, secret);
+        public bool RegisterAdmin(VirtualClassroom.AdminClient.AdminService.Admin admin, string passwordCrypt, string secret) {
+            return base.Channel.RegisterAdmin(admin, passwordCrypt, secret);
         }
         
         public VirtualClassroom.AdminClient.AdminService.Admin LoginAdmin(string usernameCrypt, string passwordCrypt, string secret) {

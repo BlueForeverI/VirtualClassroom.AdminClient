@@ -50,22 +50,29 @@ namespace VirtualClassroom.AdminClient
                 AddStudentWindow addStudentWindow = new AddStudentWindow();
                 if (addStudentWindow.ShowDialog() == true)
                 {
-                    Student student = new Student();
-                    student.Username = addStudentWindow.Username;
-                    student.FirstName = addStudentWindow.FirstName;
-                    student.MiddleName = addStudentWindow.MiddleName;
-                    student.LastName = addStudentWindow.LastName;
-                    student.EGN = addStudentWindow.EGN;
-                    student.ClassId = addStudentWindow.ClassId;
+                    Student student = new Student()
+                    {
+                        Username = addStudentWindow.Username,
+                        FirstName = addStudentWindow.FirstName,
+                        MiddleName = addStudentWindow.MiddleName,
+                        LastName = addStudentWindow.LastName,
+                        EGN = addStudentWindow.EGN,
+                        ClassId = addStudentWindow.ClassId
+                    };
 
                     string secret = Crypto.GenerateRandomSecret();
                     student.Username = Crypto.EncryptStringAES(student.Username, secret);
+                    string password = Crypto.EncryptStringAES(addStudentWindow.Password, secret);
 
-                    client.RegisterStudent(student,
-                        Crypto.EncryptStringAES(addStudentWindow.Password, secret), secret);
-
-                    UpdateStudentViews();
-                    MessageBox.Show("Ученикът беше добавен успешно");;
+                    if(client.RegisterStudent(student, password, secret))
+                    {
+                        UpdateStudentViews();
+                        MessageBox.Show("Ученикът беше добавен успешно");   
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ученикът не е валиден или вече съществува");
+                    }
                 }
             }
             catch (Exception ex)

@@ -52,9 +52,16 @@ namespace VirtualClassroom.AdminClient
                 {
                     string letter = addClassWindow.Letter;
                     int number = addClassWindow.Number;
-                    client.AddClass(new Class() { Letter = letter, Number = number });
-                    UpdateClassViews();
-                    MessageBox.Show("Класът беше добавен успешно");
+                    Class c = new Class() {Letter = letter, Number = number};
+                    if(client.AddClass(c))
+                    {
+                        UpdateClassViews();
+                        MessageBox.Show("Класът беше добавен успешно");   
+                    }
+                    else
+                    {
+                        MessageBox.Show("Класът не е валиден или вече съществува");
+                    }
                 }
             }
             catch (Exception ex)
