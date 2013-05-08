@@ -67,7 +67,7 @@ namespace VirtualClassroom.AdminClient
             if (string.IsNullOrEmpty(this.txtMiddleName.Text) 
                 || string.IsNullOrWhiteSpace(this.txtMiddleName.Text))
             {
-                throw new Exception("Не сте въвели презима");
+                throw new Exception("Не сте въвели презиме");
             }
 
             if (!Regex.IsMatch(this.txtMiddleName.Text, "\\A[а-яА-Я]+(-)?[а-яА-Я]+\\Z"))
