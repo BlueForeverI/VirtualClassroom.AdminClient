@@ -18,7 +18,9 @@
                               ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Потребителско име" Binding="{Binding Path=Username}" />
-                            <DataGridTextColumn Header="Три имена" Binding="{Binding Path=FullName}" />
+                            <DataGridTextColumn Header="Име" Binding="{Binding Path=FirstName}" />
+                            <DataGridTextColumn Header="Презиме" Binding="{Binding Path=MiddleName}" />
+                            <DataGridTextColumn Header="Фамилия" Binding="{Binding Path=LastName}" />
                             <DataGridTextColumn Header="ЕГН" Binding="{Binding Path=EGN}" />
                             <DataGridTextColumn Header="Клас" Binding="{Binding Path=Class}" />
                         </DataGrid.Columns>
