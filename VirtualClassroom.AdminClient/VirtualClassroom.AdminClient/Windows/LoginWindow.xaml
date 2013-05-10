@@ -3,7 +3,8 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Вход - Администратор" SizeToContent="WidthAndHeight"
-        Background="{DynamicResource WindowBackgroundBrush}" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="False">
+        Background="{DynamicResource WindowBackgroundBrush}" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
+        Topmost="False">
     <Grid>
         <xctk:BusyIndicator x:Name="busyIndicator" IsBusy="False" BusyContent="Моля, изчакайте...">
             <StackPanel>

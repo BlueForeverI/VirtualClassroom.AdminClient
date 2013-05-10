@@ -100,7 +100,7 @@ namespace VirtualClassroom.AdminClient
                     MAX_NAME_LENGTH));
             }
 
-            if (EgnValidator.IsEgnValid(this.txtEgn.Text))
+            if (!EgnValidator.IsEgnValid(this.txtEgn.Text))
             {
                 throw new Exception("Невалидно ЕГН");
             }

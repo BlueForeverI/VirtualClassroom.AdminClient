@@ -1622,7 +1622,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
         VirtualClassroom.AdminClient.AdminService.StudentView[] GetStudentViews();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/EditStudent", ReplyAction="http://tempuri.org/IAdminService/EditStudentResponse")]
-        void EditStudent(int studentId, VirtualClassroom.AdminClient.AdminService.Student student, string secret);
+        bool EditStudent(int studentId, VirtualClassroom.AdminClient.AdminService.Student student, string secret);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetStudentById", ReplyAction="http://tempuri.org/IAdminService/GetStudentByIdResponse")]
         VirtualClassroom.AdminClient.AdminService.Student GetStudentById(int studentId);
@@ -1655,7 +1655,7 @@ namespace VirtualClassroom.AdminClient.AdminService {
         VirtualClassroom.AdminClient.AdminService.Teacher[] GetTeachers();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/EditTeacher", ReplyAction="http://tempuri.org/IAdminService/EditTeacherResponse")]
-        void EditTeacher(int teacherId, VirtualClassroom.AdminClient.AdminService.Teacher teacher, string secret);
+        bool EditTeacher(int teacherId, VirtualClassroom.AdminClient.AdminService.Teacher teacher, string secret);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetTeacherById", ReplyAction="http://tempuri.org/IAdminService/GetTeacherByIdResponse")]
         VirtualClassroom.AdminClient.AdminService.Teacher GetTeacherById(int teacherId);
@@ -1730,8 +1730,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
             return base.Channel.GetStudentViews();
         }
         
-        public void EditStudent(int studentId, VirtualClassroom.AdminClient.AdminService.Student student, string secret) {
-            base.Channel.EditStudent(studentId, student, secret);
+        public bool EditStudent(int studentId, VirtualClassroom.AdminClient.AdminService.Student student, string secret) {
+            return base.Channel.EditStudent(studentId, student, secret);
         }
         
         public VirtualClassroom.AdminClient.AdminService.Student GetStudentById(int studentId) {
@@ -1774,8 +1774,8 @@ namespace VirtualClassroom.AdminClient.AdminService {
             return base.Channel.GetTeachers();
         }
         
-        public void EditTeacher(int teacherId, VirtualClassroom.AdminClient.AdminService.Teacher teacher, string secret) {
-            base.Channel.EditTeacher(teacherId, teacher, secret);
+        public bool EditTeacher(int teacherId, VirtualClassroom.AdminClient.AdminService.Teacher teacher, string secret) {
+            return base.Channel.EditTeacher(teacherId, teacher, secret);
         }
         
         public VirtualClassroom.AdminClient.AdminService.Teacher GetTeacherById(int teacherId) {

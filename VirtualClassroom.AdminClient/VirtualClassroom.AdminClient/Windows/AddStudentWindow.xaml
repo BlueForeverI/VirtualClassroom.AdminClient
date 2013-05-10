@@ -2,8 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Добавяне на ученик" SizeToContent="WidthAndHeight"
-        Background="{DynamicResource WindowBackgroundBrush}" ShowInTaskbar="False" 
-        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True">
+        Background="{DynamicResource WindowBackgroundBrush}" ShowInTaskbar="True" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="False">
     <Grid>
         <StackPanel>
             <WrapPanel Margin="10">

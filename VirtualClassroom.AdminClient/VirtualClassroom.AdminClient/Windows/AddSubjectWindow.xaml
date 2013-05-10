@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Добавяне на предмет" SizeToContent="WidthAndHeight"
         Background="{DynamicResource WindowBackgroundBrush}" ResizeMode="NoResize" 
-        Topmost="True" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+        Topmost="False" WindowStartupLocation="CenterScreen" ShowInTaskbar="True">
     <Grid>
         <StackPanel>
             <WrapPanel Margin="10">

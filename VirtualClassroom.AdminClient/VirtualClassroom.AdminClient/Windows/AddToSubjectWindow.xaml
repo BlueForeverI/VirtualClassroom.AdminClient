@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         Title="Добави към предмет" SizeToContent="WidthAndHeight"
-        Background="{DynamicResource WindowBackgroundBrush}" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterScreen">
+        Background="{DynamicResource WindowBackgroundBrush}" ResizeMode="NoResize" ShowInTaskbar="True" 
+        Topmost="False" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel>
             <WrapPanel Margin="10">

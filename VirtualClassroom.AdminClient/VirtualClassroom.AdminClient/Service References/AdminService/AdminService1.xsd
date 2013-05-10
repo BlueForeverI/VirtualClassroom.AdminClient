@@ -129,7 +129,9 @@
   </xs:element>
   <xs:element name="EditStudentResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditStudentResult" type="xs:boolean" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetStudentById">
@@ -273,7 +275,9 @@
   </xs:element>
   <xs:element name="EditTeacherResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditTeacherResult" type="xs:boolean" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetTeacherById">

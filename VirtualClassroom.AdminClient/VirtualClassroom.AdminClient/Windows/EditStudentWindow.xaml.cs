@@ -119,7 +119,7 @@ namespace VirtualClassroom.AdminClient
                     MAX_NAME_LENGTH));
             }
 
-            if (!IsEgnValid(this.txtEgn.Text))
+            if (!EgnValidator.IsEgnValid(this.txtEgn.Text))
             {
                 throw new Exception("Невалидно ЕГН");
             }
@@ -141,78 +141,6 @@ namespace VirtualClassroom.AdminClient
             {
                 throw new Exception("Не сте избрали клас");
             }
-        }
-
-        /// <summary>
-        /// Checks the the given EGN for errors
-        /// </summary>
-        /// <param name="egn">The EGN to test</param>
-        /// <returns>Whether the EGN is valid</returns>
-        private bool IsEgnValid(string egn)
-        {
-            if (string.IsNullOrEmpty(egn))
-            {
-                return false;
-            }
-
-            if (egn.Length != 10)
-            {
-                return false;
-            }
-
-            double num;
-            if (!double.TryParse(egn, out num))
-            {
-                return false;
-            }
-
-            int[] weights = { 2, 4, 8, 5, 10, 9, 7, 3, 6 };
-            string date = string.Empty;
-            DateTime dt;
-            int year = Int16.Parse(egn.Substring(0, 2));
-            int month = Int16.Parse(egn.Substring(2, 2));
-            int day = Int16.Parse(egn.Substring(4, 2));
-
-            if (month > 40)
-            {
-                date = (month - 40) + "-" + day + "-" + (year + 2000);
-            }
-            else if (month > 20)
-            {
-                date = (month - 20) + "-" + day + "-" + (year + 1800);
-            }
-            else
-            {
-                date = month + "-" + day + "-" + (year + 1900);
-            }
-
-            if (DateTime.TryParse(date, out dt) == false)
-            {
-                return false;
-            }
-
-            int checkSum = Int32.Parse(egn.Substring(9, 1));
-            int egnSum = 0;
-            int validCheckSum = 0;
-
-            for (int i = 0; i < 9; i++)
-            {
-                egnSum += int.Parse(egn.Substring(i, 1)) * weights[i];
-            }
-
-            validCheckSum = egnSum % 11;
-
-            if (validCheckSum == 10)
-            {
-                validCheckSum = 0;
-            }
-
-            if (checkSum == validCheckSum)
-            {
-                return true;
-            }
-
-            return false;
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

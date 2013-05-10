@@ -97,7 +97,9 @@ namespace VirtualClassroom.AdminClient
                 string egn = reader["ID Number"].ToString();
                 egn = egn.PadLeft(10, '0');
                 string username = string.Format("{0}.{1}.{2}",
-                                                firstName, lastName, egn.Substring(7, 2));
+                                                firstName.ToLower(), 
+                                                lastName.ToLower(), 
+                                                egn.Substring(7, 2));
                 username = username.ConvertCyrillicToLatinLetters();
 
                 Teacher teacher = new Teacher()

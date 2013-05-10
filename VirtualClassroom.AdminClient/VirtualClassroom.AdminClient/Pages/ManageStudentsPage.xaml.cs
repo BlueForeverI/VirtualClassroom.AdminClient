@@ -141,9 +141,16 @@ namespace VirtualClassroom.AdminClient
                         student.Username = Crypto.EncryptStringAES(student.Username, secret);
                         student.PasswordHash = Crypto.EncryptStringAES(student.PasswordHash, secret);
 
-                        client.EditStudent(studentId, student, secret);
-                        UpdateStudentViews();
-                        MessageBox.Show("Ученикът беше редактиран успешно");
+                        if (client.EditStudent(studentId, student, secret))
+                        {
+                            UpdateStudentViews();
+                            MessageBox.Show("Ученикът беше редактиран успешно");
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "Ученикът НЕ беше редактиран успешно поради грешно въведена информация");
+                        }
                     }
                 }
             }
